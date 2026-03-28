@@ -48,10 +48,9 @@
         "subtitle": "Full landing page assembly with SEO optimization",
         "roleType": "dual",
         "toolChain": [
-          "landing-page-copy",
-          "photo-gen",
+          "copy-generator",
+          "master-prod-image",
           "image-grading",
-          "banner-gen",
           "copy-qa",
           "image-qa",
           "translation-tool",
@@ -68,9 +67,9 @@
         "subtitle": "End-to-end newsletter production",
         "roleType": "dual",
         "toolChain": [
-          "newsletter-brief",
-          "article-copy",
-          "photo-gen",
+          "brief-engine",
+          "copy-generator",
+          "master-prod-image",
           "image-grading",
           "copy-qa",
           "translation-tool",
@@ -85,10 +84,8 @@
         "subtitle": "Multi-platform social media campaigns",
         "roleType": "dual",
         "toolChain": [
-          "social-media-copy",
-          "photo-gen",
+          "copy-generator",
           "master-prod-image",
-          "banner-gen",
           "copy-qa",
           "image-qa",
           "copy-repurposing",
@@ -103,8 +100,8 @@
         "subtitle": "Targeted email campaign production",
         "roleType": "dual",
         "toolChain": [
-          "target-email-copy",
-          "photo-gen",
+          "copy-generator",
+          "master-prod-image",
           "image-grading",
           "copy-qa",
           "translation-tool",
@@ -119,8 +116,8 @@
         "subtitle": "Display advertising production",
         "roleType": "dual",
         "toolChain": [
-          "banner-copy",
-          "banner-gen",
+          "copy-generator",
+          "master-prod-image",
           "image-qa",
           "brand-compliance-qa",
           "channel-publisher"
@@ -134,10 +131,10 @@
         "subtitle": "SEO-optimized editorial content",
         "roleType": "dual",
         "toolChain": [
-          "article-copy",
+          "copy-generator",
           "researcher",
           "seo-geo",
-          "photo-gen",
+          "master-prod-image",
           "image-grading",
           "copy-qa",
           "smart-summaries",
@@ -152,7 +149,7 @@
         "subtitle": "Google Ads & paid search campaigns",
         "roleType": "dual",
         "toolChain": [
-          "google-ads-copy",
+          "copy-generator",
           "researcher",
           "audience-creator",
           "copy-qa",
@@ -183,7 +180,7 @@
         "roleType": "dual",
         "toolChain": [
           "researcher",
-          "content-brief",
+          "brief-engine",
           "copy-qa",
           "translation-tool",
           "channel-publisher"
@@ -197,8 +194,8 @@
         "subtitle": "LinkedIn-specific content & campaigns",
         "roleType": "dual",
         "toolChain": [
-          "social-media-copy",
-          "photo-gen",
+          "copy-generator",
+          "master-prod-image",
           "copy-qa",
           "copy-repurposing",
           "channel-publisher"
@@ -265,6 +262,127 @@
         "knowledgeDeps": [
           "brand-identity",
           "guardrails"
+        ]
+      },
+      {
+        "id": "copy-generator",
+        "title": "Copy Generator",
+        "icon": "✍️",
+        "subtitle": "Context-driven multi-channel copy creation",
+        "description": "8-agent copy generation system. Creates net new copy for any channel from a brief. Channel Parameters and Brand Identity drive tone, format, and specs — one tool, many outputs.",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "copy-orchestrator",
+            "title": "Orchestrator Agent",
+            "icon": "🎛️",
+            "description": "Routes briefs to the right channel agent based on Campaign Brief and Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "email-copy-agent",
+            "title": "Email Copy Agent",
+            "icon": "📧",
+            "description": "Produces email marketing copy using Channel Parameters and email Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "web-copy-agent",
+            "title": "Web / Landing Page Copy Agent",
+            "icon": "🌐",
+            "description": "Produces landing page and site copy using web Channel Parameters, SEO context, and Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "social-copy-agent",
+            "title": "Social Copy Agent",
+            "icon": "📱",
+            "description": "Produces platform-specific social media copy per META, LinkedIn, and other channel specs.",
+            "subAgents": []
+          },
+          {
+            "id": "ads-copy-agent",
+            "title": "Ads Copy Agent",
+            "icon": "📢",
+            "description": "Produces search and display ad copy per Google Ads, programmatic, and banner Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "article-copy-agent",
+            "title": "Article / Editorial Copy Agent",
+            "icon": "📰",
+            "description": "Produces long-form editorial, article, and guide content using Brand Identity tone and Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "banner-copy-agent",
+            "title": "Banner Copy Agent",
+            "icon": "🖼️",
+            "description": "Produces display banner headlines and CTAs per IAB specs and Bannerflow Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "copy-gen-qa",
+            "title": "QA Agent",
+            "icon": "✅",
+            "description": "Shared sub-agent (S8). Runs Copy QA for quality verification on all channel outputs.",
+            "subAgents": [],
+            "sharedId": "S8"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "channel-params",
+          "templates",
+          "performance"
+        ]
+      },
+      {
+        "id": "brief-engine",
+        "title": "Brief Engine",
+        "icon": "📋",
+        "subtitle": "Variant-driven brief generation",
+        "description": "3-agent brief system. Generates campaign, newsletter, or content briefs from Templates, Market Intelligence, and Performance data. Template-driven — one engine, multiple brief types.",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "campaign-brief-agent",
+            "title": "Campaign Brief Agent",
+            "icon": "📣",
+            "description": "Generates structured campaign briefs with objectives, audiences, and channel mix from Market Intelligence and Performance.",
+            "subAgents": []
+          },
+          {
+            "id": "newsletter-brief-agent",
+            "title": "Newsletter Brief Agent",
+            "icon": "📰",
+            "description": "Plans newsletter structure, editorial angles, and content slots using Brand Identity and Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "content-brief-agent",
+            "title": "Content Brief Agent",
+            "icon": "📄",
+            "description": "Creates content strategy briefs with SEO angles, topic clusters, and format recommendations.",
+            "subAgents": []
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "performance",
+          "templates"
         ]
       },
       {
@@ -755,78 +873,23 @@
         ]
       },
       {
-        "id": "master-prod-text",
-        "title": "Master Production — Text",
-        "icon": "📄",
-        "subtitle": "Agentic multi-channel text production",
-        "description": "6-agent text production system. Orchestrates channel-specific copy agents for email, web, social, and ads, with QA verification.",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "text-orchestrator",
-            "title": "Orchestrator Agent",
-            "icon": "🎛️",
-            "description": "Coordinates channel-specific copy agents based on Campaign Brief and Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "email-channel-copy",
-            "title": "Email Channel Copy Agent",
-            "icon": "📧",
-            "description": "Produces email-specific copy using Channel Parameters and email Templates.",
-            "subAgents": []
-          },
-          {
-            "id": "web-channel-copy",
-            "title": "Web Channel Copy Agent",
-            "icon": "🌐",
-            "description": "Produces web-specific copy using site Channel Parameters and web Templates.",
-            "subAgents": []
-          },
-          {
-            "id": "social-channel-copy",
-            "title": "Social Channel Copy Agent",
-            "icon": "📱",
-            "description": "Produces social media copy per platform specs.",
-            "subAgents": []
-          },
-          {
-            "id": "ad-channel-copy",
-            "title": "Ad Channel Copy Agent",
-            "icon": "📢",
-            "description": "Produces advertising copy per ad Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "text-qa-agent",
-            "title": "QA Agent",
-            "icon": "✅",
-            "description": "Shared sub-agent (S8). Runs Copy QA for quality verification on all channel outputs.",
-            "subAgents": [],
-            "sharedId": "S8"
-          }
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "product-offer",
-          "channel-params",
-          "templates"
-        ]
-      },
-      {
         "id": "master-prod-image",
         "title": "Master Production — Image",
         "icon": "🖼️",
         "subtitle": "AI image generation & adaptation",
-        "description": "4-agent image production system. Generates images, assesses quality via Image QA, refines based on feedback, and adapts formats per channel.",
+        "description": "5-agent image production system. Generates product photography and creative images, assesses quality via Image QA, refines based on feedback, and adapts formats per channel.",
         "roleType": "agent",
         "accessTags": [
           "agent"
         ],
         "subAgents": [
+          {
+            "id": "photo-gen-agent",
+            "title": "Product Photography Agent",
+            "icon": "📷",
+            "description": "Generates AI product photography based on Brand Identity visual style and Product & Offer catalog data.",
+            "subAgents": []
+          },
           {
             "id": "image-gen-agent",
             "title": "Image Generation Agent",
@@ -1020,159 +1083,6 @@
         ]
       },
       {
-        "id": "target-email-copy",
-        "title": "Target Email Copy",
-        "icon": "📧",
-        "subtitle": "Personalized email marketing copy",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence",
-          "product-offer",
-          "templates"
-        ]
-      },
-      {
-        "id": "article-copy",
-        "title": "Article Copy",
-        "icon": "📰",
-        "subtitle": "Editorial & article content",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence",
-          "product-offer",
-          "templates"
-        ]
-      },
-      {
-        "id": "google-ads-copy",
-        "title": "Google Ads Copy",
-        "icon": "🔍",
-        "subtitle": "Search ad headlines & descriptions",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence",
-          "product-offer",
-          "performance"
-        ]
-      },
-      {
-        "id": "landing-page-copy",
-        "title": "Landing Page Copy",
-        "icon": "🖥️",
-        "subtitle": "Conversion-optimized page copy",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence",
-          "product-offer",
-          "templates"
-        ]
-      },
-      {
-        "id": "banner-copy",
-        "title": "Banner Copy",
-        "icon": "🖼️",
-        "subtitle": "Display advertising copy",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "product-offer",
-          "channel-params",
-          "templates"
-        ]
-      },
-      {
-        "id": "social-media-copy",
-        "title": "Social Media Copy",
-        "icon": "📱",
-        "subtitle": "Platform-specific social content",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence",
-          "product-offer",
-          "channel-params"
-        ]
-      },
-      {
-        "id": "campaign-brief",
-        "title": "Campaign Brief",
-        "icon": "📋",
-        "subtitle": "Structured campaign brief generation",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "market-intelligence",
-          "product-offer",
-          "performance",
-          "templates"
-        ]
-      },
-      {
-        "id": "newsletter-brief",
-        "title": "Newsletter Brief",
-        "icon": "📰",
-        "subtitle": "Newsletter planning & structure",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence",
-          "product-offer",
-          "templates"
-        ]
-      },
-      {
-        "id": "content-brief",
-        "title": "Content Brief",
-        "icon": "📄",
-        "subtitle": "Content strategy & briefs",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence",
-          "product-offer",
-          "templates"
-        ]
-      },
-      {
         "id": "text-to-voice",
         "title": "Text to Voice",
         "icon": "🔊",
@@ -1274,37 +1184,6 @@
         ],
         "knowledgeDeps": [
           "channel-params"
-        ]
-      },
-      {
-        "id": "photo-gen",
-        "title": "Photo Gen",
-        "icon": "📷",
-        "subtitle": "AI product photography generation",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "product-offer"
-        ]
-      },
-      {
-        "id": "banner-gen",
-        "title": "Banner Gen",
-        "icon": "🖼️",
-        "subtitle": "Display banner generation",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "channel-params",
-          "templates"
         ]
       },
       {
