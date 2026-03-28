@@ -1,0 +1,1892 @@
+[
+  {
+    "id": "DUSTIN-Dir-001-rr4z",
+    "component": "Director",
+    "type": "Director",
+    "icon": "🎬",
+    "story": "As the Director, I want to set the creative brief and provide final approval, so that all output aligns with brand and business goals.",
+    "acceptance": "Brief is captured, approval workflow is defined, Director can approve/reject deliverables.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Dir-002-rr4z",
+    "component": "Director",
+    "type": "Director",
+    "icon": "🎬",
+    "story": "As the Director, I want to sets the brief, so that the studio operates with clear human oversight.",
+    "acceptance": "The \"Sets the brief\" capability is functional and accessible to the Director role.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Dir-003-rr4z",
+    "component": "Director",
+    "type": "Director",
+    "icon": "🎬",
+    "story": "As the Director, I want to creative authority, so that the studio operates with clear human oversight.",
+    "acceptance": "The \"Creative authority\" capability is functional and accessible to the Director role.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Dir-004-rr4z",
+    "component": "Director",
+    "type": "Director",
+    "icon": "🎬",
+    "story": "As the Director, I want to final approval, so that the studio operates with clear human oversight.",
+    "acceptance": "The \"Final approval\" capability is functional and accessible to the Director role.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Prod-001-rr4z",
+    "component": "Producer",
+    "type": "Producer",
+    "icon": "🎛️",
+    "story": "As the Producer, I want to orchestrate specialists and follow playbooks, so that campaigns are executed consistently and efficiently.",
+    "acceptance": "Producer can trigger playbooks, assign specialists, and track campaign progress.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Prod-002-rr4z",
+    "component": "Producer",
+    "type": "Producer",
+    "icon": "🎛️",
+    "story": "As the Producer, I want to follows playbooks, so that the production workflow is smooth and automated.",
+    "acceptance": "The \"Follows playbooks\" capability is functional within the Producer's workflow.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Prod-003-rr4z",
+    "component": "Producer",
+    "type": "Producer",
+    "icon": "🎛️",
+    "story": "As the Producer, I want to orchestrates specialists, so that the production workflow is smooth and automated.",
+    "acceptance": "The \"Orchestrates specialists\" capability is functional within the Producer's workflow.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Prod-004-rr4z",
+    "component": "Producer",
+    "type": "Producer",
+    "icon": "🎛️",
+    "story": "As the Producer, I want to assembles campaign, so that the production workflow is smooth and automated.",
+    "acceptance": "The \"Assembles campaign\" capability is functional within the Producer's workflow.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-001-rr4z",
+    "component": "Landing Page Specialist",
+    "type": "Specialist",
+    "icon": "🖥️",
+    "story": "As the Producer, I want to delegate tasks to the Landing Page Specialist specialist (Full landing page assembly with SEO optimization), so that domain-specific work is handled by a purpose-built agent.",
+    "acceptance": "Landing Page Specialist can receive tasks, process them according to its configuration, and return completed artifacts.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-002-rr4z",
+    "component": "Landing Page Specialist",
+    "type": "Specialist",
+    "icon": "🖥️",
+    "story": "As the Director, I want to review and approve output from the Landing Page Specialist specialist, so that quality standards are maintained.",
+    "acceptance": "Landing Page Specialist output is reviewable and the Director can request revisions.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-003-rr4z",
+    "component": "Newsletter Specialist",
+    "type": "Specialist",
+    "icon": "📰",
+    "story": "As the Producer, I want to delegate tasks to the Newsletter Specialist specialist (End-to-end newsletter production), so that domain-specific work is handled by a purpose-built agent.",
+    "acceptance": "Newsletter Specialist can receive tasks, process them according to its configuration, and return completed artifacts.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-004-rr4z",
+    "component": "Newsletter Specialist",
+    "type": "Specialist",
+    "icon": "📰",
+    "story": "As the Director, I want to review and approve output from the Newsletter Specialist specialist, so that quality standards are maintained.",
+    "acceptance": "Newsletter Specialist output is reviewable and the Director can request revisions.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-005-rr4z",
+    "component": "Social Campaign Specialist",
+    "type": "Specialist",
+    "icon": "📱",
+    "story": "As the Producer, I want to delegate tasks to the Social Campaign Specialist specialist (Multi-platform social media campaigns), so that domain-specific work is handled by a purpose-built agent.",
+    "acceptance": "Social Campaign Specialist can receive tasks, process them according to its configuration, and return completed artifacts.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-006-rr4z",
+    "component": "Social Campaign Specialist",
+    "type": "Specialist",
+    "icon": "📱",
+    "story": "As the Director, I want to review and approve output from the Social Campaign Specialist specialist, so that quality standards are maintained.",
+    "acceptance": "Social Campaign Specialist output is reviewable and the Director can request revisions.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-007-rr4z",
+    "component": "Email Specialist",
+    "type": "Specialist",
+    "icon": "📧",
+    "story": "As the Producer, I want to delegate tasks to the Email Specialist specialist (Targeted email campaign production), so that domain-specific work is handled by a purpose-built agent.",
+    "acceptance": "Email Specialist can receive tasks, process them according to its configuration, and return completed artifacts.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-008-rr4z",
+    "component": "Email Specialist",
+    "type": "Specialist",
+    "icon": "📧",
+    "story": "As the Director, I want to review and approve output from the Email Specialist specialist, so that quality standards are maintained.",
+    "acceptance": "Email Specialist output is reviewable and the Director can request revisions.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-009-rr4z",
+    "component": "Banner/Display Specialist",
+    "type": "Specialist",
+    "icon": "🖼️",
+    "story": "As the Producer, I want to delegate tasks to the Banner/Display Specialist specialist (Display advertising production), so that domain-specific work is handled by a purpose-built agent.",
+    "acceptance": "Banner/Display Specialist can receive tasks, process them according to its configuration, and return completed artifacts.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-010-rr4z",
+    "component": "Banner/Display Specialist",
+    "type": "Specialist",
+    "icon": "🖼️",
+    "story": "As the Director, I want to review and approve output from the Banner/Display Specialist specialist, so that quality standards are maintained.",
+    "acceptance": "Banner/Display Specialist output is reviewable and the Director can request revisions.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-011-rr4z",
+    "component": "Article/SEO Specialist",
+    "type": "Specialist",
+    "icon": "📝",
+    "story": "As the Producer, I want to delegate tasks to the Article/SEO Specialist specialist (SEO-optimized editorial content), so that domain-specific work is handled by a purpose-built agent.",
+    "acceptance": "Article/SEO Specialist can receive tasks, process them according to its configuration, and return completed artifacts.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-012-rr4z",
+    "component": "Article/SEO Specialist",
+    "type": "Specialist",
+    "icon": "📝",
+    "story": "As the Director, I want to review and approve output from the Article/SEO Specialist specialist, so that quality standards are maintained.",
+    "acceptance": "Article/SEO Specialist output is reviewable and the Director can request revisions.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-013-rr4z",
+    "component": "Paid Search Specialist",
+    "type": "Specialist",
+    "icon": "🔍",
+    "story": "As the Producer, I want to delegate tasks to the Paid Search Specialist specialist (Google Ads & paid search campaigns), so that domain-specific work is handled by a purpose-built agent.",
+    "acceptance": "Paid Search Specialist can receive tasks, process them according to its configuration, and return completed artifacts.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-014-rr4z",
+    "component": "Paid Search Specialist",
+    "type": "Specialist",
+    "icon": "🔍",
+    "story": "As the Director, I want to review and approve output from the Paid Search Specialist specialist, so that quality standards are maintained.",
+    "acceptance": "Paid Search Specialist output is reviewable and the Director can request revisions.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-015-rr4z",
+    "component": "Video Campaign Specialist",
+    "type": "Specialist",
+    "icon": "🎬",
+    "story": "As the Producer, I want to delegate tasks to the Video Campaign Specialist specialist (Video content production & localization), so that domain-specific work is handled by a purpose-built agent.",
+    "acceptance": "Video Campaign Specialist can receive tasks, process them according to its configuration, and return completed artifacts.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-016-rr4z",
+    "component": "Video Campaign Specialist",
+    "type": "Specialist",
+    "icon": "🎬",
+    "story": "As the Director, I want to review and approve output from the Video Campaign Specialist specialist, so that quality standards are maintained.",
+    "acceptance": "Video Campaign Specialist output is reviewable and the Director can request revisions.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-017-rr4z",
+    "component": "Product Facts Specialist",
+    "type": "Specialist",
+    "icon": "📊",
+    "story": "As the Producer, I want to delegate tasks to the Product Facts Specialist specialist (Product data sheets & fact content), so that domain-specific work is handled by a purpose-built agent.",
+    "acceptance": "Product Facts Specialist can receive tasks, process them according to its configuration, and return completed artifacts.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-018-rr4z",
+    "component": "Product Facts Specialist",
+    "type": "Specialist",
+    "icon": "📊",
+    "story": "As the Director, I want to review and approve output from the Product Facts Specialist specialist, so that quality standards are maintained.",
+    "acceptance": "Product Facts Specialist output is reviewable and the Director can request revisions.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-019-rr4z",
+    "component": "LinkedIn Specialist",
+    "type": "Specialist",
+    "icon": "💼",
+    "story": "As the Producer, I want to delegate tasks to the LinkedIn Specialist specialist (LinkedIn-specific content & campaigns), so that domain-specific work is handled by a purpose-built agent.",
+    "acceptance": "LinkedIn Specialist can receive tasks, process them according to its configuration, and return completed artifacts.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Spec-020-rr4z",
+    "component": "LinkedIn Specialist",
+    "type": "Specialist",
+    "icon": "💼",
+    "story": "As the Director, I want to review and approve output from the LinkedIn Specialist specialist, so that quality standards are maintained.",
+    "acceptance": "LinkedIn Specialist output is reviewable and the Director can request revisions.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-001-rr4z",
+    "component": "Brief Builder",
+    "type": "Tool",
+    "icon": "📋",
+    "story": "As a specialist or producer, I want to use the Brief Builder tool (Structures the campaign brief), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Brief Builder is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-002-rr4z",
+    "component": "QA & Sign-off",
+    "type": "Tool",
+    "icon": "✅",
+    "story": "As a specialist or producer, I want to use the QA & Sign-off tool (Reviews & approves output), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "QA & Sign-off is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-003-rr4z",
+    "component": "AI Translations",
+    "type": "Tool",
+    "icon": "🌐",
+    "story": "As a specialist or producer, I want to use the AI Translations tool (MAATS — Multi-Agent Automated Translation System), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "AI Translations is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-001-rr4z",
+    "component": "AI Translations → Translator",
+    "type": "Sub-Agent",
+    "icon": "🔤",
+    "story": "As AI Translations, I want to delegate to the \"Translator\" sub-agent (Core translation engine using LLM + RAG + Translation Memory. Produces the initial translation from source to target language.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Translator\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-002-rr4z",
+    "component": "AI Translations → Accuracy Assessment Agent",
+    "type": "Sub-Agent",
+    "icon": "🎯",
+    "story": "As AI Translations, I want to delegate to the \"Accuracy Assessment Agent\" sub-agent (Prevents meaning drift. Catches mistranslations, omissions, additions, and false friends by comparing source and target semantics.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Accuracy Assessment Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-003-rr4z",
+    "component": "AI Translations → Terminology Assessment Agent",
+    "type": "Sub-Agent",
+    "icon": "📖",
+    "story": "As AI Translations, I want to delegate to the \"Terminology Assessment Agent\" sub-agent (Ensures correct use of product terms and branded terminology. Validates against Product & Offer glossary and Brand Identity terminology.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Terminology Assessment Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-004-rr4z",
+    "component": "AI Translations → Linguistic Conventions Agent",
+    "type": "Sub-Agent",
+    "icon": "📝",
+    "story": "As AI Translations, I want to delegate to the \"Linguistic Conventions Agent\" sub-agent (Validates grammar, spelling, and language-specific rules per market profile and locale.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Linguistic Conventions Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-005-rr4z",
+    "component": "AI Translations → Style Assessment Agent",
+    "type": "Sub-Agent",
+    "icon": "🎨",
+    "story": "As AI Translations, I want to delegate to the \"Style Assessment Agent\" sub-agent (Aligns tone of voice across global and local channels. Ensures brand voice consistency from Brand Identity and Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Style Assessment Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-006-rr4z",
+    "component": "AI Translations → Audience Appropriateness Agent",
+    "type": "Sub-Agent",
+    "icon": "👥",
+    "story": "As AI Translations, I want to delegate to the \"Audience Appropriateness Agent\" sub-agent (Shared sub-agent (S7). Ensures the tone is appropriate for the target demographic. Flags culturally insensitive or unnatural expressions using Market Intelligence.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Audience Appropriateness Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-007-rr4z",
+    "component": "AI Translations → Locale Conventions Agent",
+    "type": "Sub-Agent",
+    "icon": "📍",
+    "story": "As AI Translations, I want to delegate to the \"Locale Conventions Agent\" sub-agent (Verifies date, time, currency, and measurement formats per market profile. Ensures locale-specific conventions are correctly applied.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Locale Conventions Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-008-rr4z",
+    "component": "AI Translations → Design & Markup Agent",
+    "type": "Sub-Agent",
+    "icon": "🖌️",
+    "story": "As AI Translations, I want to delegate to the \"Design & Markup Agent\" sub-agent (Validates formatting integrity — character limits, HTML rules, and channel-specific markup from Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Design & Markup Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-009-rr4z",
+    "component": "AI Translations → Editor Agent",
+    "type": "Sub-Agent",
+    "icon": "📋",
+    "story": "As AI Translations, I want to delegate to the \"Editor Agent\" sub-agent (Shared sub-agent (S1). Synthesizes reports from all assessment agents (1.2–1.8). Prioritizes and weighs errors by severity to produce a holistic editorial assessment.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Editor Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-010-rr4z",
+    "component": "AI Translations → Editor Agent → Rewriting Agent",
+    "type": "Sub-Agent",
+    "icon": "✏️",
+    "story": "As AI Translations → Editor Agent, I want to delegate to the \"Rewriting Agent\" sub-agent (Shared sub-agent (S2). Produces improved alternatives based on the Editor's verdict and original translation.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Rewriting Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-004-rr4z",
+    "component": "Video Localization",
+    "type": "Tool",
+    "icon": "🎬",
+    "story": "As a specialist or producer, I want to use the Video Localization tool (Video translation & cultural adaptation), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Video Localization is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-011-rr4z",
+    "component": "Video Localization → Video Translator Agent",
+    "type": "Sub-Agent",
+    "icon": "🔤",
+    "story": "As Video Localization, I want to delegate to the \"Video Translator Agent\" sub-agent (Uses AI Translations (1) for script translation in video context.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Video Translator Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-012-rr4z",
+    "component": "Video Localization → Subtitle Generation Agent",
+    "type": "Sub-Agent",
+    "icon": "💬",
+    "story": "As Video Localization, I want to delegate to the \"Subtitle Generation Agent\" sub-agent (Generates subtitles from translated script, respecting Channel Parameters for format and timing.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Subtitle Generation Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-013-rr4z",
+    "component": "Video Localization → Cultural Adaptation Agent",
+    "type": "Sub-Agent",
+    "icon": "🌍",
+    "story": "As Video Localization, I want to delegate to the \"Cultural Adaptation Agent\" sub-agent (Adapts cultural references using Market Intelligence market profiles and Guardrails.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Cultural Adaptation Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-014-rr4z",
+    "component": "Video Localization → Timing/Sync Agent",
+    "type": "Sub-Agent",
+    "icon": "⏱️",
+    "story": "As Video Localization, I want to delegate to the \"Timing/Sync Agent\" sub-agent (Synchronizes subtitle timing with source video pacing.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Timing/Sync Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-015-rr4z",
+    "component": "Video Localization → Editor Agent",
+    "type": "Sub-Agent",
+    "icon": "📋",
+    "story": "As Video Localization, I want to delegate to the \"Editor Agent\" sub-agent (Shared sub-agent (S1). Synthesizes outputs from all video localization agents.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Editor Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-016-rr4z",
+    "component": "Video Localization → Editor Agent → Rewriting Agent",
+    "type": "Sub-Agent",
+    "icon": "✏️",
+    "story": "As Video Localization → Editor Agent, I want to delegate to the \"Rewriting Agent\" sub-agent (Shared sub-agent (S2). Produces improved alternatives based on Editor verdict.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Rewriting Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-005-rr4z",
+    "component": "SEO & GEO Localizations",
+    "type": "Tool",
+    "icon": "🔎",
+    "story": "As a specialist or producer, I want to use the SEO & GEO Localizations tool (Agentic search optimization per market), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "SEO & GEO Localizations is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-017-rr4z",
+    "component": "SEO & GEO Localizations → Keyword Research Agent",
+    "type": "Sub-Agent",
+    "icon": "🔑",
+    "story": "As SEO & GEO Localizations, I want to delegate to the \"Keyword Research Agent\" sub-agent (Identifies high-value keywords per locale using Market Intelligence and Product & Offer data.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Keyword Research Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-018-rr4z",
+    "component": "SEO & GEO Localizations → SERP Analysis Agent",
+    "type": "Sub-Agent",
+    "icon": "📊",
+    "story": "As SEO & GEO Localizations, I want to delegate to the \"SERP Analysis Agent\" sub-agent (Analyzes search engine results pages for target keywords. Uses Performance historical ranking data.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"SERP Analysis Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-019-rr4z",
+    "component": "SEO & GEO Localizations → Content Adaptation Agent",
+    "type": "Sub-Agent",
+    "icon": "✍️",
+    "story": "As SEO & GEO Localizations, I want to delegate to the \"Content Adaptation Agent\" sub-agent (Adapts translated content with target keywords while maintaining Brand Identity.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Content Adaptation Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-020-rr4z",
+    "component": "SEO & GEO Localizations → Technical SEO Agent",
+    "type": "Sub-Agent",
+    "icon": "⚙️",
+    "story": "As SEO & GEO Localizations, I want to delegate to the \"Technical SEO Agent\" sub-agent (Validates technical SEO elements — meta tags, structured data, site specs from Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Technical SEO Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-021-rr4z",
+    "component": "SEO & GEO Localizations → Local Search Optimization Agent",
+    "type": "Sub-Agent",
+    "icon": "📍",
+    "story": "As SEO & GEO Localizations, I want to delegate to the \"Local Search Optimization Agent\" sub-agent (Optimizes for local search patterns per market using Market Intelligence.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Local Search Optimization Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-022-rr4z",
+    "component": "SEO & GEO Localizations → Synthesis/Recommendation Agent",
+    "type": "Sub-Agent",
+    "icon": "📋",
+    "story": "As SEO & GEO Localizations, I want to delegate to the \"Synthesis/Recommendation Agent\" sub-agent (Combines outputs from all SEO agents into actionable recommendations.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Synthesis/Recommendation Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-006-rr4z",
+    "component": "Copy QA",
+    "type": "Tool",
+    "icon": "📝",
+    "story": "As a specialist or producer, I want to use the Copy QA tool (Multi-dimensional copy quality assurance), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Copy QA is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-023-rr4z",
+    "component": "Copy QA → Grammar & Spelling Agent",
+    "type": "Sub-Agent",
+    "icon": "✍️",
+    "story": "As Copy QA, I want to delegate to the \"Grammar & Spelling Agent\" sub-agent (Validates grammar and spelling using market-specific language rules.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Grammar & Spelling Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-024-rr4z",
+    "component": "Copy QA → Brand Voice Compliance Agent",
+    "type": "Sub-Agent",
+    "icon": "🎨",
+    "story": "As Copy QA, I want to delegate to the \"Brand Voice Compliance Agent\" sub-agent (Checks tone of voice against Brand Identity approved examples.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Brand Voice Compliance Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-025-rr4z",
+    "component": "Copy QA → Factual Accuracy Agent",
+    "type": "Sub-Agent",
+    "icon": "🎯",
+    "story": "As Copy QA, I want to delegate to the \"Factual Accuracy Agent\" sub-agent (Validates product specs, pricing, and claims against Product & Offer data.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Factual Accuracy Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-026-rr4z",
+    "component": "Copy QA → Tone & Audience Fit Agent",
+    "type": "Sub-Agent",
+    "icon": "👥",
+    "story": "As Copy QA, I want to delegate to the \"Tone & Audience Fit Agent\" sub-agent (Checks audience appropriateness using Market Intelligence buyer personas and Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Tone & Audience Fit Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-027-rr4z",
+    "component": "Copy QA → Legal & Compliance Agent",
+    "type": "Sub-Agent",
+    "icon": "⚖️",
+    "story": "As Copy QA, I want to delegate to the \"Legal & Compliance Agent\" sub-agent (Validates disclaimers, GDPR compliance, and competitor mention rules from Guardrails.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Legal & Compliance Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-028-rr4z",
+    "component": "Copy QA → Editor Agent",
+    "type": "Sub-Agent",
+    "icon": "📋",
+    "story": "As Copy QA, I want to delegate to the \"Editor Agent\" sub-agent (Shared sub-agent (S1). Synthesizes all QA check outputs into a prioritized verdict.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Editor Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-029-rr4z",
+    "component": "Copy QA → Editor Agent → Rewriting Agent",
+    "type": "Sub-Agent",
+    "icon": "✏️",
+    "story": "As Copy QA → Editor Agent, I want to delegate to the \"Rewriting Agent\" sub-agent (Shared sub-agent (S2). Produces improved alternatives based on Editor verdict.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Rewriting Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-007-rr4z",
+    "component": "Image QA",
+    "type": "Tool",
+    "icon": "🖼️",
+    "story": "As a specialist or producer, I want to use the Image QA tool (Visual asset quality assurance), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Image QA is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-030-rr4z",
+    "component": "Image QA → Brand Compliance Agent",
+    "type": "Sub-Agent",
+    "icon": "🎨",
+    "story": "As Image QA, I want to delegate to the \"Brand Compliance Agent\" sub-agent (Shared sub-agent (S4). Checks assets against visual identity rules — logo, colors, typography.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Brand Compliance Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-031-rr4z",
+    "component": "Image QA → Technical Quality Agent",
+    "type": "Sub-Agent",
+    "icon": "🔬",
+    "story": "As Image QA, I want to delegate to the \"Technical Quality Agent\" sub-agent (Validates resolution, dimensions, and technical specs from Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Technical Quality Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-032-rr4z",
+    "component": "Image QA → Accessibility Agent",
+    "type": "Sub-Agent",
+    "icon": "♿",
+    "story": "As Image QA, I want to delegate to the \"Accessibility Agent\" sub-agent (Shared sub-agent (S5). Checks WCAG compliance, contrast ratios, and alt text readiness.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Accessibility Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-033-rr4z",
+    "component": "Image QA → Audience Appropriateness Agent",
+    "type": "Sub-Agent",
+    "icon": "👥",
+    "story": "As Image QA, I want to delegate to the \"Audience Appropriateness Agent\" sub-agent (Shared sub-agent (S7). Checks cultural fit and sensitivity for target market.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Audience Appropriateness Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-034-rr4z",
+    "component": "Image QA → Channel Format Agent",
+    "type": "Sub-Agent",
+    "icon": "📐",
+    "story": "As Image QA, I want to delegate to the \"Channel Format Agent\" sub-agent (Shared sub-agent (S6). Validates asset dimensions, file size, and format specs per platform.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Channel Format Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-035-rr4z",
+    "component": "Image QA → Synthesis Agent",
+    "type": "Sub-Agent",
+    "icon": "📋",
+    "story": "As Image QA, I want to delegate to the \"Synthesis Agent\" sub-agent (Shared sub-agent (S3). Combines quality check results into a pass/fail assessment.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Synthesis Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-008-rr4z",
+    "component": "Video QA",
+    "type": "Tool",
+    "icon": "🎥",
+    "story": "As a specialist or producer, I want to use the Video QA tool (Video asset quality assurance), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Video QA is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-036-rr4z",
+    "component": "Video QA → Audio Quality Agent",
+    "type": "Sub-Agent",
+    "icon": "🔊",
+    "story": "As Video QA, I want to delegate to the \"Audio Quality Agent\" sub-agent (Validates audio quality against Channel Parameters audio specs.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Audio Quality Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-037-rr4z",
+    "component": "Video QA → Subtitle Accuracy Agent",
+    "type": "Sub-Agent",
+    "icon": "💬",
+    "story": "As Video QA, I want to delegate to the \"Subtitle Accuracy Agent\" sub-agent (Checks subtitle accuracy against AI Translations output and source script.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Subtitle Accuracy Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-038-rr4z",
+    "component": "Video QA → Brand Compliance Agent",
+    "type": "Sub-Agent",
+    "icon": "🎨",
+    "story": "As Video QA, I want to delegate to the \"Brand Compliance Agent\" sub-agent (Shared sub-agent (S4). Checks visual identity and motion guidelines.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Brand Compliance Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-039-rr4z",
+    "component": "Video QA → Pacing & Format Agent",
+    "type": "Sub-Agent",
+    "icon": "⏱️",
+    "story": "As Video QA, I want to delegate to the \"Pacing & Format Agent\" sub-agent (Validates duration, aspect ratios, and pacing from Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Pacing & Format Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-040-rr4z",
+    "component": "Video QA → Accessibility Agent",
+    "type": "Sub-Agent",
+    "icon": "♿",
+    "story": "As Video QA, I want to delegate to the \"Accessibility Agent\" sub-agent (Shared sub-agent (S5). Checks accessibility requirements from Guardrails.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Accessibility Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-041-rr4z",
+    "component": "Video QA → Channel Format Agent",
+    "type": "Sub-Agent",
+    "icon": "📐",
+    "story": "As Video QA, I want to delegate to the \"Channel Format Agent\" sub-agent (Shared sub-agent (S6). Validates per-platform video specs.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Channel Format Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-042-rr4z",
+    "component": "Video QA → Synthesis Agent",
+    "type": "Sub-Agent",
+    "icon": "📋",
+    "story": "As Video QA, I want to delegate to the \"Synthesis Agent\" sub-agent (Shared sub-agent (S3). Combines all video QA outputs into pass/fail.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Synthesis Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-009-rr4z",
+    "component": "Brand Compliance QA",
+    "type": "Tool",
+    "icon": "🛡️",
+    "story": "As a specialist or producer, I want to use the Brand Compliance QA tool (Cross-asset brand & legal compliance), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Brand Compliance QA is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-043-rr4z",
+    "component": "Brand Compliance QA → Visual Identity Agent",
+    "type": "Sub-Agent",
+    "icon": "🎨",
+    "story": "As Brand Compliance QA, I want to delegate to the \"Visual Identity Agent\" sub-agent (Validates logo, color, and typography rules from Brand Identity.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Visual Identity Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-044-rr4z",
+    "component": "Brand Compliance QA → Tone of Voice Agent",
+    "type": "Sub-Agent",
+    "icon": "🗣️",
+    "story": "As Brand Compliance QA, I want to delegate to the \"Tone of Voice Agent\" sub-agent (Checks voice guide and approved examples from Brand Identity.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Tone of Voice Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-045-rr4z",
+    "component": "Brand Compliance QA → Legal & Disclaimer Agent",
+    "type": "Sub-Agent",
+    "icon": "⚖️",
+    "story": "As Brand Compliance QA, I want to delegate to the \"Legal & Disclaimer Agent\" sub-agent (Validates legal disclaimers per market from Guardrails.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Legal & Disclaimer Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-046-rr4z",
+    "component": "Brand Compliance QA → GDPR & Privacy Agent",
+    "type": "Sub-Agent",
+    "icon": "🔒",
+    "story": "As Brand Compliance QA, I want to delegate to the \"GDPR & Privacy Agent\" sub-agent (Checks GDPR rules and consent requirements from Guardrails.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"GDPR & Privacy Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-047-rr4z",
+    "component": "Brand Compliance QA → Competitive Claims Agent",
+    "type": "Sub-Agent",
+    "icon": "⚔️",
+    "story": "As Brand Compliance QA, I want to delegate to the \"Competitive Claims Agent\" sub-agent (Validates competitor policy and claim rules from Guardrails and Market Intelligence.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Competitive Claims Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-048-rr4z",
+    "component": "Brand Compliance QA → Synthesis Agent",
+    "type": "Sub-Agent",
+    "icon": "📋",
+    "story": "As Brand Compliance QA, I want to delegate to the \"Synthesis Agent\" sub-agent (Shared sub-agent (S3). Combines all brand compliance outputs.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Synthesis Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-010-rr4z",
+    "component": "Master Production — Text",
+    "type": "Tool",
+    "icon": "📄",
+    "story": "As a specialist or producer, I want to use the Master Production — Text tool (Agentic multi-channel text production), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Master Production — Text is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-049-rr4z",
+    "component": "Master Production — Text → Orchestrator Agent",
+    "type": "Sub-Agent",
+    "icon": "🎛️",
+    "story": "As Master Production — Text, I want to delegate to the \"Orchestrator Agent\" sub-agent (Coordinates channel-specific copy agents based on Campaign Brief and Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Orchestrator Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-050-rr4z",
+    "component": "Master Production — Text → Email Channel Copy Agent",
+    "type": "Sub-Agent",
+    "icon": "📧",
+    "story": "As Master Production — Text, I want to delegate to the \"Email Channel Copy Agent\" sub-agent (Produces email-specific copy using Channel Parameters and email Templates.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Email Channel Copy Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-051-rr4z",
+    "component": "Master Production — Text → Web Channel Copy Agent",
+    "type": "Sub-Agent",
+    "icon": "🌐",
+    "story": "As Master Production — Text, I want to delegate to the \"Web Channel Copy Agent\" sub-agent (Produces web-specific copy using site Channel Parameters and web Templates.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Web Channel Copy Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-052-rr4z",
+    "component": "Master Production — Text → Social Channel Copy Agent",
+    "type": "Sub-Agent",
+    "icon": "📱",
+    "story": "As Master Production — Text, I want to delegate to the \"Social Channel Copy Agent\" sub-agent (Produces social media copy per platform specs.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Social Channel Copy Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-053-rr4z",
+    "component": "Master Production — Text → Ad Channel Copy Agent",
+    "type": "Sub-Agent",
+    "icon": "📢",
+    "story": "As Master Production — Text, I want to delegate to the \"Ad Channel Copy Agent\" sub-agent (Produces advertising copy per ad Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Ad Channel Copy Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-054-rr4z",
+    "component": "Master Production — Text → QA Agent",
+    "type": "Sub-Agent",
+    "icon": "✅",
+    "story": "As Master Production — Text, I want to delegate to the \"QA Agent\" sub-agent (Shared sub-agent (S8). Runs Copy QA for quality verification on all channel outputs.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"QA Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-011-rr4z",
+    "component": "Master Production — Image",
+    "type": "Tool",
+    "icon": "🖼️",
+    "story": "As a specialist or producer, I want to use the Master Production — Image tool (AI image generation & adaptation), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Master Production — Image is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-055-rr4z",
+    "component": "Master Production — Image → Image Generation Agent",
+    "type": "Sub-Agent",
+    "icon": "🎨",
+    "story": "As Master Production — Image, I want to delegate to the \"Image Generation Agent\" sub-agent (Generates images based on Brand Identity visual style and Product & Offer data.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Image Generation Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-056-rr4z",
+    "component": "Master Production — Image → Image Assessment Agent",
+    "type": "Sub-Agent",
+    "icon": "🔍",
+    "story": "As Master Production — Image, I want to delegate to the \"Image Assessment Agent\" sub-agent (Runs Image QA for quality verification on generated images.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Image Assessment Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-057-rr4z",
+    "component": "Master Production — Image → Refinement Agent",
+    "type": "Sub-Agent",
+    "icon": "🔄",
+    "story": "As Master Production — Image, I want to delegate to the \"Refinement Agent\" sub-agent (Shared sub-agent (S9). Iterates on generated assets based on assessment feedback.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Refinement Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-058-rr4z",
+    "component": "Master Production — Image → Format Adaptation Agent",
+    "type": "Sub-Agent",
+    "icon": "📐",
+    "story": "As Master Production — Image, I want to delegate to the \"Format Adaptation Agent\" sub-agent (Shared sub-agent (S10). Resizes, crops, or reformats assets for different channels.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Format Adaptation Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-012-rr4z",
+    "component": "Master Production — Video",
+    "type": "Tool",
+    "icon": "🎬",
+    "story": "As a specialist or producer, I want to use the Master Production — Video tool (AI video generation & adaptation), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Master Production — Video is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-059-rr4z",
+    "component": "Master Production — Video → Video Generation Agent",
+    "type": "Sub-Agent",
+    "icon": "🎥",
+    "story": "As Master Production — Video, I want to delegate to the \"Video Generation Agent\" sub-agent (Generates video content based on Brand Identity motion guidelines and Templates.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Video Generation Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-060-rr4z",
+    "component": "Master Production — Video → Video Assessment Agent",
+    "type": "Sub-Agent",
+    "icon": "🔍",
+    "story": "As Master Production — Video, I want to delegate to the \"Video Assessment Agent\" sub-agent (Runs Video QA for quality verification on generated video.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Video Assessment Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-061-rr4z",
+    "component": "Master Production — Video → Refinement Agent",
+    "type": "Sub-Agent",
+    "icon": "🔄",
+    "story": "As Master Production — Video, I want to delegate to the \"Refinement Agent\" sub-agent (Shared sub-agent (S9). Iterates on video assets based on assessment feedback.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Refinement Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-062-rr4z",
+    "component": "Master Production — Video → Format Adaptation Agent",
+    "type": "Sub-Agent",
+    "icon": "📐",
+    "story": "As Master Production — Video, I want to delegate to the \"Format Adaptation Agent\" sub-agent (Shared sub-agent (S10). Reformats video for different platform specs.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Format Adaptation Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-013-rr4z",
+    "component": "Copy Repurposing",
+    "type": "Tool",
+    "icon": "♻️",
+    "story": "As a specialist or producer, I want to use the Copy Repurposing tool (Channel-specific copy adaptation), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Copy Repurposing is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-063-rr4z",
+    "component": "Copy Repurposing → LinkedIn Rewrite Agent",
+    "type": "Sub-Agent",
+    "icon": "💼",
+    "story": "As Copy Repurposing, I want to delegate to the \"LinkedIn Rewrite Agent\" sub-agent (Adapts copy for LinkedIn format and tone using Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"LinkedIn Rewrite Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-064-rr4z",
+    "component": "Copy Repurposing → Meta/Facebook Rewrite Agent",
+    "type": "Sub-Agent",
+    "icon": "📱",
+    "story": "As Copy Repurposing, I want to delegate to the \"Meta/Facebook Rewrite Agent\" sub-agent (Adapts copy for Meta platforms using Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Meta/Facebook Rewrite Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-065-rr4z",
+    "component": "Copy Repurposing → Banner Headline Rewrite Agent",
+    "type": "Sub-Agent",
+    "icon": "🖼️",
+    "story": "As Copy Repurposing, I want to delegate to the \"Banner Headline Rewrite Agent\" sub-agent (Adapts copy for banner headline constraints using Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Banner Headline Rewrite Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-066-rr4z",
+    "component": "Copy Repurposing → Email Rewrite Agent",
+    "type": "Sub-Agent",
+    "icon": "📧",
+    "story": "As Copy Repurposing, I want to delegate to the \"Email Rewrite Agent\" sub-agent (Adapts copy for email format using Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Email Rewrite Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-067-rr4z",
+    "component": "Copy Repurposing → Google Ads Rewrite Agent",
+    "type": "Sub-Agent",
+    "icon": "🔍",
+    "story": "As Copy Repurposing, I want to delegate to the \"Google Ads Rewrite Agent\" sub-agent (Adapts copy for Google Ads character limits using Channel Parameters.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Google Ads Rewrite Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-068-rr4z",
+    "component": "Copy Repurposing → QA Agent",
+    "type": "Sub-Agent",
+    "icon": "✅",
+    "story": "As Copy Repurposing, I want to delegate to the \"QA Agent\" sub-agent (Shared sub-agent (S8). Runs Copy QA for quality verification on all repurposed outputs.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"QA Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-014-rr4z",
+    "component": "Analyze Customer Feedback",
+    "type": "Tool",
+    "icon": "💬",
+    "story": "As a specialist or producer, I want to use the Analyze Customer Feedback tool (Sentiment, topics & trend analysis), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Analyze Customer Feedback is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-069-rr4z",
+    "component": "Analyze Customer Feedback → Sentiment Analysis Agent",
+    "type": "Sub-Agent",
+    "icon": "😊",
+    "story": "As Analyze Customer Feedback, I want to delegate to the \"Sentiment Analysis Agent\" sub-agent (Analyzes customer sentiment across feedback sources.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Sentiment Analysis Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-070-rr4z",
+    "component": "Analyze Customer Feedback → Topic Clustering Agent",
+    "type": "Sub-Agent",
+    "icon": "🏷️",
+    "story": "As Analyze Customer Feedback, I want to delegate to the \"Topic Clustering Agent\" sub-agent (Clusters feedback by topic using Product & Offer category taxonomy.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Topic Clustering Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-071-rr4z",
+    "component": "Analyze Customer Feedback → Trend Identification Agent",
+    "type": "Sub-Agent",
+    "icon": "📈",
+    "story": "As Analyze Customer Feedback, I want to delegate to the \"Trend Identification Agent\" sub-agent (Identifies trends using Performance historical data for comparison.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Trend Identification Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Agent-072-rr4z",
+    "component": "Analyze Customer Feedback → Insight Extraction Agent",
+    "type": "Sub-Agent",
+    "icon": "💡",
+    "story": "As Analyze Customer Feedback, I want to delegate to the \"Insight Extraction Agent\" sub-agent (Combines outputs from all feedback agents with Market Intelligence to extract actionable insights.), so that a specific sub-task is handled autonomously.",
+    "acceptance": "\"Insight Extraction Agent\" sub-agent receives input from its parent, executes its task, and returns results.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-015-rr4z",
+    "component": "Target Email Copy",
+    "type": "Tool",
+    "icon": "📧",
+    "story": "As a specialist or producer, I want to use the Target Email Copy tool (Personalized email marketing copy), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Target Email Copy is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-016-rr4z",
+    "component": "Article Copy",
+    "type": "Tool",
+    "icon": "📰",
+    "story": "As a specialist or producer, I want to use the Article Copy tool (Editorial & article content), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Article Copy is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-017-rr4z",
+    "component": "Google Ads Copy",
+    "type": "Tool",
+    "icon": "🔍",
+    "story": "As a specialist or producer, I want to use the Google Ads Copy tool (Search ad headlines & descriptions), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Google Ads Copy is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-018-rr4z",
+    "component": "Landing Page Copy",
+    "type": "Tool",
+    "icon": "🖥️",
+    "story": "As a specialist or producer, I want to use the Landing Page Copy tool (Conversion-optimized page copy), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Landing Page Copy is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-019-rr4z",
+    "component": "Banner Copy",
+    "type": "Tool",
+    "icon": "🖼️",
+    "story": "As a specialist or producer, I want to use the Banner Copy tool (Display advertising copy), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Banner Copy is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-020-rr4z",
+    "component": "Social Media Copy",
+    "type": "Tool",
+    "icon": "📱",
+    "story": "As a specialist or producer, I want to use the Social Media Copy tool (Platform-specific social content), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Social Media Copy is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-021-rr4z",
+    "component": "Campaign Brief",
+    "type": "Tool",
+    "icon": "📋",
+    "story": "As a specialist or producer, I want to use the Campaign Brief tool (Structured campaign brief generation), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Campaign Brief is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-022-rr4z",
+    "component": "Newsletter Brief",
+    "type": "Tool",
+    "icon": "📰",
+    "story": "As a specialist or producer, I want to use the Newsletter Brief tool (Newsletter planning & structure), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Newsletter Brief is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-023-rr4z",
+    "component": "Content Brief",
+    "type": "Tool",
+    "icon": "📄",
+    "story": "As a specialist or producer, I want to use the Content Brief tool (Content strategy & briefs), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Content Brief is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-024-rr4z",
+    "component": "Text to Voice",
+    "type": "Tool",
+    "icon": "🔊",
+    "story": "As a specialist or producer, I want to use the Text to Voice tool (AI voiceover generation), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Text to Voice is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-025-rr4z",
+    "component": "Smart Summaries (FAQ)",
+    "type": "Tool",
+    "icon": "❓",
+    "story": "As a specialist or producer, I want to use the Smart Summaries (FAQ) tool (Auto-generated FAQ & summaries), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Smart Summaries (FAQ) is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-026-rr4z",
+    "component": "LLM Data Feeds for GEO",
+    "type": "Tool",
+    "icon": "📡",
+    "story": "As a specialist or producer, I want to use the LLM Data Feeds for GEO tool (Generative engine optimization feeds), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "LLM Data Feeds for GEO is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-027-rr4z",
+    "component": "Audience Creator",
+    "type": "Tool",
+    "icon": "🎯",
+    "story": "As a specialist or producer, I want to use the Audience Creator tool (AI-powered audience segmentation), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Audience Creator is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-028-rr4z",
+    "component": "Researcher",
+    "type": "Tool",
+    "icon": "🔬",
+    "story": "As a specialist or producer, I want to use the Researcher tool (Market & product research agent), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Researcher is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-029-rr4z",
+    "component": "Concept Creator",
+    "type": "Tool",
+    "icon": "💡",
+    "story": "As a specialist or producer, I want to use the Concept Creator tool (Creative concept generation), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Concept Creator is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-030-rr4z",
+    "component": "Channel Publisher",
+    "type": "Tool",
+    "icon": "📤",
+    "story": "As a specialist or producer, I want to use the Channel Publisher tool (Multi-channel asset distribution), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Channel Publisher is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-031-rr4z",
+    "component": "Photo Gen",
+    "type": "Tool",
+    "icon": "📷",
+    "story": "As a specialist or producer, I want to use the Photo Gen tool (AI product photography generation), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Photo Gen is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-032-rr4z",
+    "component": "Banner Gen",
+    "type": "Tool",
+    "icon": "🖼️",
+    "story": "As a specialist or producer, I want to use the Banner Gen tool (Display banner generation), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Banner Gen is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Tool-033-rr4z",
+    "component": "Image Grading",
+    "type": "Tool",
+    "icon": "🎨",
+    "story": "As a specialist or producer, I want to use the Image Grading tool (Image quality evaluation & correction), so that I can complete my tasks with the right capabilities.",
+    "acceptance": "Image Grading is accessible, configured, and returns expected output when invoked.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-KB-001-rr4z",
+    "component": "Brand Identity",
+    "type": "Knowledge",
+    "icon": "🎨",
+    "story": "As a specialist or producer, I want to reference the Brand Identity knowledge base (Brand guidelines, tone of voice, visual identity, photography style, co-branding rules — 10 items), so that my output is informed by accurate domain knowledge.",
+    "acceptance": "Brand Identity knowledge is indexed, searchable, and up to date.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-KB-002-rr4z",
+    "component": "Market Intelligence",
+    "type": "Knowledge",
+    "icon": "👥",
+    "story": "As a specialist or producer, I want to reference the Market Intelligence knowledge base (Buyer personas (SMB/Enterprise/Public), 6 market profiles, competitor intel, seasonal patterns — 13 items), so that my output is informed by accurate domain knowledge.",
+    "acceptance": "Market Intelligence knowledge is indexed, searchable, and up to date.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-KB-003-rr4z",
+    "component": "Product & Offer",
+    "type": "Knowledge",
+    "icon": "📦",
+    "story": "As a specialist or producer, I want to reference the Product & Offer knowledge base (Product catalog, pricing, vendor info, service offerings, cross-sell mappings — 9 items), so that my output is informed by accurate domain knowledge.",
+    "acceptance": "Product & Offer knowledge is indexed, searchable, and up to date.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-KB-004-rr4z",
+    "component": "Guardrails",
+    "type": "Knowledge",
+    "icon": "⚖️",
+    "story": "As a specialist or producer, I want to reference the Guardrails knowledge base (GDPR, legal disclaimers, accessibility, competitor policy, AI disclosure — 10 items), so that my output is informed by accurate domain knowledge.",
+    "acceptance": "Guardrails knowledge is indexed, searchable, and up to date.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-KB-005-rr4z",
+    "component": "Performance",
+    "type": "Knowledge",
+    "icon": "📈",
+    "story": "As a specialist or producer, I want to reference the Performance knowledge base (Campaign history, channel benchmarks, A/B test results, attribution data — 7 items), so that my output is informed by accurate domain knowledge.",
+    "acceptance": "Performance knowledge is indexed, searchable, and up to date.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-KB-006-rr4z",
+    "component": "Channel Parameters",
+    "type": "Knowledge",
+    "icon": "📐",
+    "story": "As a specialist or producer, I want to reference the Channel Parameters knowledge base (META/LinkedIn/Google/YouTube/Display/Email/Site/Bannerflow/Landing page specs — 10 items), so that my output is informed by accurate domain knowledge.",
+    "acceptance": "Channel Parameters knowledge is indexed, searchable, and up to date.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-KB-007-rr4z",
+    "component": "Templates",
+    "type": "Knowledge",
+    "icon": "📄",
+    "story": "As a specialist or producer, I want to reference the Templates knowledge base (Email, landing page, banner, social, article, presentation, product fact sheet templates — 7 items), so that my output is informed by accurate domain knowledge.",
+    "acceptance": "Templates knowledge is indexed, searchable, and up to date.",
+    "priority": "Medium",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-001-rr4z",
+    "component": "Event Seminar",
+    "type": "Playbook",
+    "icon": "🎤",
+    "story": "As the Producer, I want to execute the \"Event Seminar\" playbook (Pre-event promotion, registration drive, post-event follow-up), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Event Seminar\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-002-rr4z",
+    "component": "Event Webinar",
+    "type": "Playbook",
+    "icon": "💻",
+    "story": "As the Producer, I want to execute the \"Event Webinar\" playbook (Webinar promotion, landing page, email sequence, post-event content), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Event Webinar\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-003-rr4z",
+    "component": "Product Launch",
+    "type": "Playbook",
+    "icon": "🚀",
+    "story": "As the Producer, I want to execute the \"Product Launch\" playbook (Multi-channel product introduction with landing page, email, social, and paid search), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Product Launch\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-001-rr4z",
+    "component": "Product Launch → Step 1",
+    "type": "Playbook Step",
+    "icon": "📋",
+    "story": "As the Director, I want to \"Brief Builder\" (Product launch brief & objectives) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 1 \"Brief Builder\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-002-rr4z",
+    "component": "Product Launch → Step 2",
+    "type": "Playbook Step",
+    "icon": "🎛️",
+    "story": "As the Producer, I want to \"Producer\" (Plans workstreams & assigns specialists) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 2 \"Producer\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-003-rr4z",
+    "component": "Product Launch → Step 3",
+    "type": "Playbook Step",
+    "icon": "🖥️",
+    "story": "As the Specialist, I want to \"Landing Page Specialist\" (Tools: LP Copy → Photo Gen → SEO → Banner Gen) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 3 \"Landing Page Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-004-rr4z",
+    "component": "Product Launch → Step 4",
+    "type": "Playbook Step",
+    "icon": "👁️",
+    "story": "As the Director, I want to \"Review Landing Page\" (Approve page design, copy & SEO) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 4 \"Review Landing Page\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-005-rr4z",
+    "component": "Product Launch → Step 5",
+    "type": "Playbook Step",
+    "icon": "📧",
+    "story": "As the Specialist, I want to \"Email Specialist\" (Tools: Email Copy → Photo Gen → Image Grading) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 5 \"Email Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-006-rr4z",
+    "component": "Product Launch → Step 6",
+    "type": "Playbook Step",
+    "icon": "📱",
+    "story": "As the Specialist, I want to \"Social Campaign Specialist\" (Tools: Social Copy → Photo Gen → Banner Gen) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 6 \"Social Campaign Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-007-rr4z",
+    "component": "Product Launch → Step 7",
+    "type": "Playbook Step",
+    "icon": "🔍",
+    "story": "As the Specialist, I want to \"Paid Search Specialist\" (Tools: Google Ads → Researcher → Audience Creator) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 7 \"Paid Search Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-008-rr4z",
+    "component": "Product Launch → Step 8",
+    "type": "Playbook Step",
+    "icon": "👁️",
+    "story": "As the Director, I want to \"Review All Channels\" (Approve email, social & paid search) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 8 \"Review All Channels\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-009-rr4z",
+    "component": "Product Launch → Step 9",
+    "type": "Playbook Step",
+    "icon": "🌐",
+    "story": "As the Specialist, I want to \"AI Translations\" (MAATS: Localize all assets to target markets) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 9 \"AI Translations\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-010-rr4z",
+    "component": "Product Launch → Step 10",
+    "type": "Playbook Step",
+    "icon": "🎛️",
+    "story": "As the Producer, I want to \"Producer\" (Assembles final launch package) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 10 \"Producer\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-011-rr4z",
+    "component": "Product Launch → Step 11",
+    "type": "Playbook Step",
+    "icon": "✅",
+    "story": "As the Director, I want to \"QA & Sign-off\" (Final approval & publish) in the \"Product Launch\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 11 \"QA & Sign-off\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-004-rr4z",
+    "component": "Vendor Push / Product Push",
+    "type": "Playbook",
+    "icon": "📣",
+    "story": "As the Producer, I want to execute the \"Vendor Push / Product Push\" playbook (Vendor partnership promotion across newsletters, landing pages, and display ads), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Vendor Push / Product Push\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-012-rr4z",
+    "component": "Vendor Push / Product Push → Step 1",
+    "type": "Playbook Step",
+    "icon": "📋",
+    "story": "As the Director, I want to \"Brief Builder\" (Vendor campaign brief & objectives) in the \"Vendor Push / Product Push\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 1 \"Brief Builder\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-013-rr4z",
+    "component": "Vendor Push / Product Push → Step 2",
+    "type": "Playbook Step",
+    "icon": "🎛️",
+    "story": "As the Producer, I want to \"Producer\" (Plans workstreams & assigns specialists) in the \"Vendor Push / Product Push\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 2 \"Producer\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-014-rr4z",
+    "component": "Vendor Push / Product Push → Step 3",
+    "type": "Playbook Step",
+    "icon": "📰",
+    "story": "As the Specialist, I want to \"Newsletter Specialist\" (Tools: Article Copy → Photo Gen → Image Grading) in the \"Vendor Push / Product Push\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 3 \"Newsletter Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-015-rr4z",
+    "component": "Vendor Push / Product Push → Step 4",
+    "type": "Playbook Step",
+    "icon": "👁️",
+    "story": "As the Director, I want to \"Review Newsletter\" (Approve content, layout & imagery) in the \"Vendor Push / Product Push\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 4 \"Review Newsletter\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-016-rr4z",
+    "component": "Vendor Push / Product Push → Step 5",
+    "type": "Playbook Step",
+    "icon": "🖥️",
+    "story": "As the Specialist, I want to \"Landing Page Specialist\" (Tools: LP Copy → Photo Gen → Banner Gen → SEO) in the \"Vendor Push / Product Push\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 5 \"Landing Page Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-017-rr4z",
+    "component": "Vendor Push / Product Push → Step 6",
+    "type": "Playbook Step",
+    "icon": "👁️",
+    "story": "As the Director, I want to \"Review Landing Page\" (Approve page design & CTA flow) in the \"Vendor Push / Product Push\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 6 \"Review Landing Page\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-018-rr4z",
+    "component": "Vendor Push / Product Push → Step 7",
+    "type": "Playbook Step",
+    "icon": "🖼️",
+    "story": "As the Specialist, I want to \"Banner/Display Specialist\" (Tools: Banner Copy → Banner Gen → Image QA) in the \"Vendor Push / Product Push\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 7 \"Banner/Display Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-019-rr4z",
+    "component": "Vendor Push / Product Push → Step 8",
+    "type": "Playbook Step",
+    "icon": "🌐",
+    "story": "As the Specialist, I want to \"AI Translations\" (MAATS: Localize all assets) in the \"Vendor Push / Product Push\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 8 \"AI Translations\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-020-rr4z",
+    "component": "Vendor Push / Product Push → Step 9",
+    "type": "Playbook Step",
+    "icon": "🎛️",
+    "story": "As the Producer, I want to \"Producer\" (Assembles final campaign package) in the \"Vendor Push / Product Push\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 9 \"Producer\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-021-rr4z",
+    "component": "Vendor Push / Product Push → Step 10",
+    "type": "Playbook Step",
+    "icon": "✅",
+    "story": "As the Director, I want to \"QA & Sign-off\" (Final approval & publish) in the \"Vendor Push / Product Push\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 10 \"QA & Sign-off\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-005-rr4z",
+    "component": "Spotlight Campaign (Theme)",
+    "type": "Playbook",
+    "icon": "🔦",
+    "story": "As the Producer, I want to execute the \"Spotlight Campaign (Theme)\" playbook (Themed campaign around a seasonal or strategic focus area), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Spotlight Campaign (Theme)\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-006-rr4z",
+    "component": "SEM / Always-On",
+    "type": "Playbook",
+    "icon": "🔁",
+    "story": "As the Producer, I want to execute the \"SEM / Always-On\" playbook (Continuous paid search optimization with rolling ad copy updates), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"SEM / Always-On\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-007-rr4z",
+    "component": "Nurturing Campaign",
+    "type": "Playbook",
+    "icon": "🌱",
+    "story": "As the Producer, I want to execute the \"Nurturing Campaign\" playbook (Multi-touch email nurture sequence with progressive content), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Nurturing Campaign\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-008-rr4z",
+    "component": "Sales Training / Lunch & Learn",
+    "type": "Playbook",
+    "icon": "🎓",
+    "story": "As the Producer, I want to execute the \"Sales Training / Lunch & Learn\" playbook (Internal training content, presentations, and follow-up materials), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Sales Training / Lunch & Learn\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-009-rr4z",
+    "component": "Event / Sales Connect",
+    "type": "Playbook",
+    "icon": "🤝",
+    "story": "As the Producer, I want to execute the \"Event / Sales Connect\" playbook (Event-driven sales enablement with targeted outreach materials), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Event / Sales Connect\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-010-rr4z",
+    "component": "Customer Case / Content",
+    "type": "Playbook",
+    "icon": "📖",
+    "story": "As the Producer, I want to execute the \"Customer Case / Content\" playbook (Customer success story production across article, video, and social), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Customer Case / Content\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-011-rr4z",
+    "component": "Brand / Film Campaign",
+    "type": "Playbook",
+    "icon": "🎬",
+    "story": "As the Producer, I want to execute the \"Brand / Film Campaign\" playbook (Brand video production with localization and multi-channel distribution), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Brand / Film Campaign\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-012-rr4z",
+    "component": "MSP / Incentive",
+    "type": "Playbook",
+    "icon": "🏆",
+    "story": "As the Producer, I want to execute the \"MSP / Incentive\" playbook (Managed service provider incentive campaign with partner materials), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"MSP / Incentive\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-013-rr4z",
+    "component": "Accessory Market",
+    "type": "Playbook",
+    "icon": "🔌",
+    "story": "As the Producer, I want to execute the \"Accessory Market\" playbook (Accessory-focused campaign with product photography and cross-sell), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Accessory Market\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-014-rr4z",
+    "component": "Premium+ / Banner & Training",
+    "type": "Playbook",
+    "icon": "⭐",
+    "story": "As the Producer, I want to execute the \"Premium+ / Banner & Training\" playbook (Premium tier promotion with display advertising and training content), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Premium+ / Banner & Training\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-015-rr4z",
+    "component": "TCO Calculator / Tool",
+    "type": "Playbook",
+    "icon": "🧮",
+    "story": "As the Producer, I want to execute the \"TCO Calculator / Tool\" playbook (Interactive tool campaign with landing page, email, and paid search), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"TCO Calculator / Tool\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-016-rr4z",
+    "component": "Roundtable",
+    "type": "Playbook",
+    "icon": "🪑",
+    "story": "As the Producer, I want to execute the \"Roundtable\" playbook (Executive roundtable event with invitation, content, and follow-up), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Roundtable\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-PB-017-rr4z",
+    "component": "Value Weeks (Seasonal Sales)",
+    "type": "Playbook",
+    "icon": "🏷️",
+    "story": "As the Producer, I want to execute the \"Value Weeks (Seasonal Sales)\" playbook (Seasonal sales event with landing pages, banners, email blasts, and social push), so that the campaign follows a defined, repeatable process.",
+    "acceptance": "\"Value Weeks (Seasonal Sales)\" playbook can be triggered, steps are executed in sequence, and output is collected.",
+    "priority": "High",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-022-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 1",
+    "type": "Playbook Step",
+    "icon": "📋",
+    "story": "As the Director, I want to \"Brief Builder\" (Seasonal sale brief, dates & offers) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 1 \"Brief Builder\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-023-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 2",
+    "type": "Playbook Step",
+    "icon": "🎛️",
+    "story": "As the Producer, I want to \"Producer\" (Plans parallel workstreams) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 2 \"Producer\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-024-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 3",
+    "type": "Playbook Step",
+    "icon": "🖥️",
+    "story": "As the Specialist, I want to \"Landing Page Specialist\" (Tools: LP Copy → Photo Gen → Banner Gen) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 3 \"Landing Page Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-025-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 4",
+    "type": "Playbook Step",
+    "icon": "🖼️",
+    "story": "As the Specialist, I want to \"Banner/Display Specialist\" (Tools: Banner Copy → Banner Gen → Image QA) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 4 \"Banner/Display Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-026-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 5",
+    "type": "Playbook Step",
+    "icon": "📧",
+    "story": "As the Specialist, I want to \"Email Specialist\" (Tools: Email Copy → Photo Gen → Image Grading) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 5 \"Email Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-027-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 6",
+    "type": "Playbook Step",
+    "icon": "📱",
+    "story": "As the Specialist, I want to \"Social Campaign Specialist\" (Tools: Social Copy → Photo Gen → Copy Repurposing) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 6 \"Social Campaign Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-028-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 7",
+    "type": "Playbook Step",
+    "icon": "🔍",
+    "story": "As the Specialist, I want to \"Paid Search Specialist\" (Tools: Google Ads → Audience Creator) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 7 \"Paid Search Specialist\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-029-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 8",
+    "type": "Playbook Step",
+    "icon": "👁️",
+    "story": "As the Director, I want to \"Review All Assets\" (Approve all channel deliverables) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 8 \"Review All Assets\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-030-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 9",
+    "type": "Playbook Step",
+    "icon": "🌐",
+    "story": "As the Specialist, I want to \"AI Translations\" (MAATS: Localize to all 6 markets) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 9 \"AI Translations\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-031-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 10",
+    "type": "Playbook Step",
+    "icon": "🎛️",
+    "story": "As the Producer, I want to \"Producer\" (Assembles & schedules launch) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 10 \"Producer\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  },
+  {
+    "id": "DUSTIN-Step-032-rr4z",
+    "component": "Value Weeks (Seasonal Sales) → Step 11",
+    "type": "Playbook Step",
+    "icon": "✅",
+    "story": "As the Director, I want to \"QA & Sign-off\" (Final approval & go-live) in the \"Value Weeks (Seasonal Sales)\" flow, so that this stage of the campaign is completed.",
+    "acceptance": "Step 11 \"QA & Sign-off\" receives input, processes it, and passes output to the next step.",
+    "priority": "Low",
+    "status": "Open"
+  }
+]

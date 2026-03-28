@@ -1,0 +1,2210 @@
+{
+  "studioName": "Dustin AI Studio",
+  "clientName": "Dustin",
+  "version": "0.1",
+  "templateId": "dustin-studio",
+  "theme": {
+    "neutrals": {
+      "black": "#000000",
+      "darkGray": "#313131",
+      "midGray": "#808080",
+      "lightGray": "#E0E0E0",
+      "white": "#F4F4F4"
+    },
+    "agent": {
+      "dark": "#EB4515",
+      "pop": "#FF450F",
+      "light": "#FFE4DB"
+    },
+    "human": {
+      "dark": "#8D29F1",
+      "pop": "#8914FF",
+      "light": "#EDE0FF"
+    },
+    "accent": {
+      "dark": "#555555",
+      "pop": "#8C8C8C",
+      "light": "#D9D9D9"
+    }
+  },
+  "hierarchy": {
+    "director": {
+      "title": "Director",
+      "icon": "🎬",
+      "subtitle": "Sets the brief · Creative authority · Final approval",
+      "roleType": "human"
+    },
+    "producer": {
+      "title": "Producer",
+      "icon": "🎛️",
+      "subtitle": "Follows playbooks · Orchestrates specialists · Assembles campaign",
+      "roleType": "dual"
+    },
+    "specialists": [
+      {
+        "id": "landing-page-spec",
+        "title": "Landing Page Specialist",
+        "icon": "🖥️",
+        "subtitle": "Full landing page assembly with SEO optimization",
+        "roleType": "dual",
+        "toolChain": [
+          "landing-page-copy",
+          "photo-gen",
+          "image-grading",
+          "banner-gen",
+          "copy-qa",
+          "image-qa",
+          "translation-tool",
+          "seo-geo",
+          "brand-compliance-qa",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "Landing page with hero section, SEO-optimized copy, product photography, CTA banners, and brand-compliant imagery. Translated, QA'd, and published."
+      },
+      {
+        "id": "newsletter-spec",
+        "title": "Newsletter Specialist",
+        "icon": "📰",
+        "subtitle": "End-to-end newsletter production",
+        "roleType": "dual",
+        "toolChain": [
+          "newsletter-brief",
+          "article-copy",
+          "photo-gen",
+          "image-grading",
+          "copy-qa",
+          "translation-tool",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "Newsletter with approved editorial content, graded imagery, translated for all target markets, and distributed via channel publisher."
+      },
+      {
+        "id": "social-campaign-spec",
+        "title": "Social Campaign Specialist",
+        "icon": "📱",
+        "subtitle": "Multi-platform social media campaigns",
+        "roleType": "dual",
+        "toolChain": [
+          "social-media-copy",
+          "photo-gen",
+          "master-prod-image",
+          "banner-gen",
+          "copy-qa",
+          "image-qa",
+          "copy-repurposing",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "Social campaign with platform-specific copy, visuals, and banners across META, LinkedIn, and other channels. QA'd and published."
+      },
+      {
+        "id": "email-spec",
+        "title": "Email Specialist",
+        "icon": "📧",
+        "subtitle": "Targeted email campaign production",
+        "roleType": "dual",
+        "toolChain": [
+          "target-email-copy",
+          "photo-gen",
+          "image-grading",
+          "copy-qa",
+          "translation-tool",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "Email with personalized copy, graded imagery, brand-compliant design, translated and ready for distribution."
+      },
+      {
+        "id": "banner-display-spec",
+        "title": "Banner/Display Specialist",
+        "icon": "🖼️",
+        "subtitle": "Display advertising production",
+        "roleType": "dual",
+        "toolChain": [
+          "banner-copy",
+          "banner-gen",
+          "image-qa",
+          "brand-compliance-qa",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "Banner set across all required IAB sizes, brand-compliant, QA'd for each platform, and published to Bannerflow."
+      },
+      {
+        "id": "article-seo-spec",
+        "title": "Article/SEO Specialist",
+        "icon": "📝",
+        "subtitle": "SEO-optimized editorial content",
+        "roleType": "dual",
+        "toolChain": [
+          "article-copy",
+          "researcher",
+          "seo-geo",
+          "photo-gen",
+          "image-grading",
+          "copy-qa",
+          "smart-summaries",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "Article with researched content, SEO-optimized structure, quality imagery, FAQ summary, and published to CMS."
+      },
+      {
+        "id": "paid-search-spec",
+        "title": "Paid Search Specialist",
+        "icon": "🔍",
+        "subtitle": "Google Ads & paid search campaigns",
+        "roleType": "dual",
+        "toolChain": [
+          "google-ads-copy",
+          "researcher",
+          "audience-creator",
+          "copy-qa",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "Ad groups with headline/description variants, audience targeting, keyword strategy, QA'd copy, and published to Google Ads."
+      },
+      {
+        "id": "video-campaign-spec",
+        "title": "Video Campaign Specialist",
+        "icon": "🎬",
+        "subtitle": "Video content production & localization",
+        "roleType": "dual",
+        "toolChain": [
+          "master-prod-video",
+          "video-qa",
+          "video-localization",
+          "text-to-voice",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "Video assets produced, QA'd, localized with subtitles/voiceover, and published across video platforms."
+      },
+      {
+        "id": "product-facts-spec",
+        "title": "Product Facts Specialist",
+        "icon": "📊",
+        "subtitle": "Product data sheets & fact content",
+        "roleType": "dual",
+        "toolChain": [
+          "researcher",
+          "content-brief",
+          "copy-qa",
+          "translation-tool",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "Product fact sheets with researched specs, QA'd copy, translated for target markets, and published."
+      },
+      {
+        "id": "linkedin-spec",
+        "title": "LinkedIn Specialist",
+        "icon": "💼",
+        "subtitle": "LinkedIn-specific content & campaigns",
+        "roleType": "dual",
+        "toolChain": [
+          "social-media-copy",
+          "photo-gen",
+          "copy-qa",
+          "copy-repurposing",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "LinkedIn posts and articles with professional copy, imagery, repurposed from master content, QA'd and published."
+      },
+      {
+        "id": "proofing-spec",
+        "title": "Proofing Specialist",
+        "icon": "📸",
+        "subtitle": "Screen-captures vendor assets in live channels to document campaign activity",
+        "roleType": "dual",
+        "toolChain": [
+          "channel-screenshotter",
+          "proof-report-gen",
+          "image-qa",
+          "brand-compliance-qa"
+        ],
+        "definitionOfDone": "Timestamped screen captures of all vendor campaign assets across online channels, compiled into a proof-of-activity report ready for claiming."
+      },
+      {
+        "id": "claiming-spec",
+        "title": "Claiming Specialist",
+        "icon": "💰",
+        "subtitle": "Claims vendor marketing funds based on proofing documentation",
+        "roleType": "dual",
+        "toolChain": [
+          "claim-builder",
+          "proof-report-gen",
+          "researcher",
+          "copy-qa"
+        ],
+        "definitionOfDone": "Vendor claim submitted with proof-of-activity documentation, matching campaign spend to vendor agreements, ready for reimbursement."
+      }
+    ],
+    "toolbox": [
+      {
+        "id": "brief-builder",
+        "title": "Brief Builder",
+        "icon": "📋",
+        "subtitle": "Structures the campaign brief",
+        "description": "Human-facing tool that guides the director through campaign brief creation. Pulls from Market Intelligence, Product & Offer, Performance data, and Templates to suggest objectives, audiences, and channel mix.",
+        "roleType": "agent",
+        "accessTags": [
+          "human"
+        ],
+        "knowledgeDeps": [
+          "market-intelligence",
+          "product-offer",
+          "performance",
+          "templates"
+        ]
+      },
+      {
+        "id": "qa-signoff",
+        "title": "QA & Sign-off",
+        "icon": "✅",
+        "subtitle": "Reviews & approves output",
+        "description": "Human-facing approval interface that orchestrates Copy QA, Image QA, Video QA, and Brand Compliance QA to present a unified quality assessment for human sign-off.",
+        "roleType": "agent",
+        "accessTags": [
+          "human"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "guardrails"
+        ]
+      },
+      {
+        "id": "translation-tool",
+        "title": "AI Translations",
+        "icon": "🌐",
+        "subtitle": "MAATS — Multi-Agent Automated Translation System",
+        "description": "10-agent translation system based on MQM evaluation framework. Specialized dimension agents assess the translation in parallel, then an editorial chain synthesizes, rewrites, and selects the optimal output. Win rate: 62.1% vs 30.1% for single-agent (NYU study).",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "translator-agent",
+            "title": "Translator",
+            "icon": "🔤",
+            "description": "Core translation engine using LLM + RAG + Translation Memory. Produces the initial translation from source to target language.",
+            "subAgents": []
+          },
+          {
+            "id": "accuracy-agent",
+            "title": "Accuracy Assessment Agent",
+            "icon": "🎯",
+            "description": "Prevents meaning drift. Catches mistranslations, omissions, additions, and false friends by comparing source and target semantics.",
+            "subAgents": []
+          },
+          {
+            "id": "terminology-agent",
+            "title": "Terminology Assessment Agent",
+            "icon": "📖",
+            "description": "Ensures correct use of product terms and branded terminology. Validates against Product & Offer glossary and Brand Identity terminology.",
+            "subAgents": []
+          },
+          {
+            "id": "linguistic-agent",
+            "title": "Linguistic Conventions Agent",
+            "icon": "📝",
+            "description": "Validates grammar, spelling, and language-specific rules per market profile and locale.",
+            "subAgents": []
+          },
+          {
+            "id": "style-agent",
+            "title": "Style Assessment Agent",
+            "icon": "🎨",
+            "description": "Aligns tone of voice across global and local channels. Ensures brand voice consistency from Brand Identity and Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "audience-appropriateness-agent",
+            "title": "Audience Appropriateness Agent",
+            "icon": "👥",
+            "description": "Shared sub-agent (S7). Ensures the tone is appropriate for the target demographic. Flags culturally insensitive or unnatural expressions using Market Intelligence.",
+            "subAgents": [],
+            "sharedId": "S7"
+          },
+          {
+            "id": "locale-agent",
+            "title": "Locale Conventions Agent",
+            "icon": "📍",
+            "description": "Verifies date, time, currency, and measurement formats per market profile. Ensures locale-specific conventions are correctly applied.",
+            "subAgents": []
+          },
+          {
+            "id": "design-markup-agent",
+            "title": "Design & Markup Agent",
+            "icon": "🖌️",
+            "description": "Validates formatting integrity — character limits, HTML rules, and channel-specific markup from Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "editor-agent",
+            "title": "Editor Agent",
+            "icon": "📋",
+            "description": "Shared sub-agent (S1). Synthesizes reports from all assessment agents (1.2–1.8). Prioritizes and weighs errors by severity to produce a holistic editorial assessment.",
+            "subAgents": [
+              {
+                "id": "rewriting-agent",
+                "title": "Rewriting Agent",
+                "icon": "✏️",
+                "description": "Shared sub-agent (S2). Produces improved alternatives based on the Editor's verdict and original translation.",
+                "subAgents": [],
+                "sharedId": "S2"
+              }
+            ],
+            "sharedId": "S1"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "channel-params",
+          "translation-memory"
+        ]
+      },
+      {
+        "id": "video-localization",
+        "title": "Video Localization",
+        "icon": "🎬",
+        "subtitle": "Video translation & cultural adaptation",
+        "description": "6-agent system for localizing video content. Translates scripts via AI Translations, generates subtitles, adapts cultural references, and synchronizes timing.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "video-translator",
+            "title": "Video Translator Agent",
+            "icon": "🔤",
+            "description": "Uses AI Translations (1) for script translation in video context.",
+            "subAgents": []
+          },
+          {
+            "id": "subtitle-gen",
+            "title": "Subtitle Generation Agent",
+            "icon": "💬",
+            "description": "Generates subtitles from translated script, respecting Channel Parameters for format and timing.",
+            "subAgents": []
+          },
+          {
+            "id": "cultural-adaptation",
+            "title": "Cultural Adaptation Agent",
+            "icon": "🌍",
+            "description": "Adapts cultural references using Market Intelligence market profiles and Guardrails.",
+            "subAgents": []
+          },
+          {
+            "id": "timing-sync",
+            "title": "Timing/Sync Agent",
+            "icon": "⏱️",
+            "description": "Synchronizes subtitle timing with source video pacing.",
+            "subAgents": []
+          },
+          {
+            "id": "video-loc-editor",
+            "title": "Editor Agent",
+            "icon": "📋",
+            "description": "Shared sub-agent (S1). Synthesizes outputs from all video localization agents.",
+            "subAgents": [
+              {
+                "id": "video-loc-rewriter",
+                "title": "Rewriting Agent",
+                "icon": "✏️",
+                "description": "Shared sub-agent (S2). Produces improved alternatives based on Editor verdict.",
+                "subAgents": [],
+                "sharedId": "S2"
+              }
+            ],
+            "sharedId": "S1"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "guardrails",
+          "channel-params",
+          "translation-memory"
+        ]
+      },
+      {
+        "id": "seo-geo",
+        "title": "SEO & GEO Localizations",
+        "icon": "🔎",
+        "subtitle": "Agentic search optimization per market",
+        "description": "6-agent system for market-specific SEO. Researches keywords, analyzes SERPs, adapts content, optimizes technical SEO, and handles local search patterns.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "keyword-research",
+            "title": "Keyword Research Agent",
+            "icon": "🔑",
+            "description": "Identifies high-value keywords per locale using Market Intelligence and Product & Offer data.",
+            "subAgents": []
+          },
+          {
+            "id": "serp-analysis",
+            "title": "SERP Analysis Agent",
+            "icon": "📊",
+            "description": "Analyzes search engine results pages for target keywords. Uses Performance historical ranking data.",
+            "subAgents": []
+          },
+          {
+            "id": "content-adaptation",
+            "title": "Content Adaptation Agent",
+            "icon": "✍️",
+            "description": "Adapts translated content with target keywords while maintaining Brand Identity.",
+            "subAgents": []
+          },
+          {
+            "id": "technical-seo",
+            "title": "Technical SEO Agent",
+            "icon": "⚙️",
+            "description": "Validates technical SEO elements — meta tags, structured data, site specs from Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "local-search",
+            "title": "Local Search Optimization Agent",
+            "icon": "📍",
+            "description": "Optimizes for local search patterns per market using Market Intelligence.",
+            "subAgents": []
+          },
+          {
+            "id": "seo-synthesis",
+            "title": "Synthesis/Recommendation Agent",
+            "icon": "📋",
+            "description": "Combines outputs from all SEO agents into actionable recommendations.",
+            "subAgents": []
+          }
+        ],
+        "knowledgeDeps": [
+          "market-intelligence",
+          "product-offer",
+          "performance",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "copy-qa",
+        "title": "Copy QA",
+        "icon": "📝",
+        "subtitle": "Multi-dimensional copy quality assurance",
+        "description": "7-agent copy quality system. Checks grammar, brand voice, factual accuracy, tone, and legal compliance, then synthesizes and rewrites.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "grammar-spelling",
+            "title": "Grammar & Spelling Agent",
+            "icon": "✍️",
+            "description": "Validates grammar and spelling using market-specific language rules.",
+            "subAgents": []
+          },
+          {
+            "id": "brand-voice-compliance",
+            "title": "Brand Voice Compliance Agent",
+            "icon": "🎨",
+            "description": "Checks tone of voice against Brand Identity approved examples.",
+            "subAgents": []
+          },
+          {
+            "id": "factual-accuracy",
+            "title": "Factual Accuracy Agent",
+            "icon": "🎯",
+            "description": "Validates product specs, pricing, and claims against Product & Offer data.",
+            "subAgents": []
+          },
+          {
+            "id": "tone-audience-fit",
+            "title": "Tone & Audience Fit Agent",
+            "icon": "👥",
+            "description": "Checks audience appropriateness using Market Intelligence buyer personas and Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "legal-compliance",
+            "title": "Legal & Compliance Agent",
+            "icon": "⚖️",
+            "description": "Validates disclaimers, GDPR compliance, and competitor mention rules from Guardrails.",
+            "subAgents": []
+          },
+          {
+            "id": "copy-qa-editor",
+            "title": "Editor Agent",
+            "icon": "📋",
+            "description": "Shared sub-agent (S1). Synthesizes all QA check outputs into a prioritized verdict.",
+            "subAgents": [
+              {
+                "id": "copy-qa-rewriter",
+                "title": "Rewriting Agent",
+                "icon": "✏️",
+                "description": "Shared sub-agent (S2). Produces improved alternatives based on Editor verdict.",
+                "subAgents": [],
+                "sharedId": "S2"
+              }
+            ],
+            "sharedId": "S1"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "guardrails",
+          "product-offer"
+        ]
+      },
+      {
+        "id": "image-qa",
+        "title": "Image QA",
+        "icon": "🖼️",
+        "subtitle": "Visual asset quality assurance",
+        "description": "6-agent image quality system. Checks brand compliance, technical quality, accessibility, audience fit, channel formats, and synthesizes pass/fail.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "img-brand-compliance",
+            "title": "Brand Compliance Agent",
+            "icon": "🎨",
+            "description": "Shared sub-agent (S4). Checks assets against visual identity rules — logo, colors, typography.",
+            "subAgents": [],
+            "sharedId": "S4"
+          },
+          {
+            "id": "technical-quality",
+            "title": "Technical Quality Agent",
+            "icon": "🔬",
+            "description": "Validates resolution, dimensions, and technical specs from Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "img-accessibility",
+            "title": "Accessibility Agent",
+            "icon": "♿",
+            "description": "Shared sub-agent (S5). Checks WCAG compliance, contrast ratios, and alt text readiness.",
+            "subAgents": [],
+            "sharedId": "S5"
+          },
+          {
+            "id": "img-audience",
+            "title": "Audience Appropriateness Agent",
+            "icon": "👥",
+            "description": "Shared sub-agent (S7). Checks cultural fit and sensitivity for target market.",
+            "subAgents": [],
+            "sharedId": "S7"
+          },
+          {
+            "id": "img-channel-format",
+            "title": "Channel Format Agent",
+            "icon": "📐",
+            "description": "Shared sub-agent (S6). Validates asset dimensions, file size, and format specs per platform.",
+            "subAgents": [],
+            "sharedId": "S6"
+          },
+          {
+            "id": "img-synthesis",
+            "title": "Synthesis Agent",
+            "icon": "📋",
+            "description": "Shared sub-agent (S3). Combines quality check results into a pass/fail assessment.",
+            "subAgents": [],
+            "sharedId": "S3"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "guardrails",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "video-qa",
+        "title": "Video QA",
+        "icon": "🎥",
+        "subtitle": "Video asset quality assurance",
+        "description": "7-agent video quality system. Checks audio, subtitles, brand compliance, pacing, accessibility, channel formats, and synthesizes.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "audio-quality",
+            "title": "Audio Quality Agent",
+            "icon": "🔊",
+            "description": "Validates audio quality against Channel Parameters audio specs.",
+            "subAgents": []
+          },
+          {
+            "id": "subtitle-accuracy",
+            "title": "Subtitle Accuracy Agent",
+            "icon": "💬",
+            "description": "Checks subtitle accuracy against AI Translations output and source script.",
+            "subAgents": []
+          },
+          {
+            "id": "vid-brand-compliance",
+            "title": "Brand Compliance Agent",
+            "icon": "🎨",
+            "description": "Shared sub-agent (S4). Checks visual identity and motion guidelines.",
+            "subAgents": [],
+            "sharedId": "S4"
+          },
+          {
+            "id": "pacing-format",
+            "title": "Pacing & Format Agent",
+            "icon": "⏱️",
+            "description": "Validates duration, aspect ratios, and pacing from Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "vid-accessibility",
+            "title": "Accessibility Agent",
+            "icon": "♿",
+            "description": "Shared sub-agent (S5). Checks accessibility requirements from Guardrails.",
+            "subAgents": [],
+            "sharedId": "S5"
+          },
+          {
+            "id": "vid-channel-format",
+            "title": "Channel Format Agent",
+            "icon": "📐",
+            "description": "Shared sub-agent (S6). Validates per-platform video specs.",
+            "subAgents": [],
+            "sharedId": "S6"
+          },
+          {
+            "id": "vid-synthesis",
+            "title": "Synthesis Agent",
+            "icon": "📋",
+            "description": "Shared sub-agent (S3). Combines all video QA outputs into pass/fail.",
+            "subAgents": [],
+            "sharedId": "S3"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "guardrails",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "brand-compliance-qa",
+        "title": "Brand Compliance QA",
+        "icon": "🛡️",
+        "subtitle": "Cross-asset brand & legal compliance",
+        "description": "6-agent brand compliance system. Checks visual identity, tone, legal disclaimers, GDPR, and competitive claims.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "visual-identity",
+            "title": "Visual Identity Agent",
+            "icon": "🎨",
+            "description": "Validates logo, color, and typography rules from Brand Identity.",
+            "subAgents": []
+          },
+          {
+            "id": "tone-of-voice",
+            "title": "Tone of Voice Agent",
+            "icon": "🗣️",
+            "description": "Checks voice guide and approved examples from Brand Identity.",
+            "subAgents": []
+          },
+          {
+            "id": "legal-disclaimer",
+            "title": "Legal & Disclaimer Agent",
+            "icon": "⚖️",
+            "description": "Validates legal disclaimers per market from Guardrails.",
+            "subAgents": []
+          },
+          {
+            "id": "gdpr-privacy",
+            "title": "GDPR & Privacy Agent",
+            "icon": "🔒",
+            "description": "Checks GDPR rules and consent requirements from Guardrails.",
+            "subAgents": []
+          },
+          {
+            "id": "competitive-claims",
+            "title": "Competitive Claims Agent",
+            "icon": "⚔️",
+            "description": "Validates competitor policy and claim rules from Guardrails and Market Intelligence.",
+            "subAgents": []
+          },
+          {
+            "id": "brand-synthesis",
+            "title": "Synthesis Agent",
+            "icon": "📋",
+            "description": "Shared sub-agent (S3). Combines all brand compliance outputs.",
+            "subAgents": [],
+            "sharedId": "S3"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "guardrails"
+        ]
+      },
+      {
+        "id": "master-prod-text",
+        "title": "Master Production — Text",
+        "icon": "📄",
+        "subtitle": "Agentic multi-channel text production",
+        "description": "6-agent text production system. Orchestrates channel-specific copy agents for email, web, social, and ads, with QA verification.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "text-orchestrator",
+            "title": "Orchestrator Agent",
+            "icon": "🎛️",
+            "description": "Coordinates channel-specific copy agents based on Campaign Brief and Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "email-channel-copy",
+            "title": "Email Channel Copy Agent",
+            "icon": "📧",
+            "description": "Produces email-specific copy using Channel Parameters and email Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "web-channel-copy",
+            "title": "Web Channel Copy Agent",
+            "icon": "🌐",
+            "description": "Produces web-specific copy using site Channel Parameters and web Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "social-channel-copy",
+            "title": "Social Channel Copy Agent",
+            "icon": "📱",
+            "description": "Produces social media copy per platform specs.",
+            "subAgents": []
+          },
+          {
+            "id": "ad-channel-copy",
+            "title": "Ad Channel Copy Agent",
+            "icon": "📢",
+            "description": "Produces advertising copy per ad Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "text-qa-agent",
+            "title": "QA Agent",
+            "icon": "✅",
+            "description": "Shared sub-agent (S8). Runs Copy QA for quality verification on all channel outputs.",
+            "subAgents": [],
+            "sharedId": "S8"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "product-offer",
+          "channel-params",
+          "templates"
+        ]
+      },
+      {
+        "id": "master-prod-image",
+        "title": "Master Production — Image",
+        "icon": "🖼️",
+        "subtitle": "AI image generation & adaptation",
+        "description": "4-agent image production system. Generates images, assesses quality via Image QA, refines based on feedback, and adapts formats per channel.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "image-gen-agent",
+            "title": "Image Generation Agent",
+            "icon": "🎨",
+            "description": "Generates images based on Brand Identity visual style and Product & Offer data.",
+            "subAgents": []
+          },
+          {
+            "id": "image-assessment",
+            "title": "Image Assessment Agent",
+            "icon": "🔍",
+            "description": "Runs Image QA for quality verification on generated images.",
+            "subAgents": []
+          },
+          {
+            "id": "image-refinement",
+            "title": "Refinement Agent",
+            "icon": "🔄",
+            "description": "Shared sub-agent (S9). Iterates on generated assets based on assessment feedback.",
+            "subAgents": [],
+            "sharedId": "S9"
+          },
+          {
+            "id": "image-format-adapt",
+            "title": "Format Adaptation Agent",
+            "icon": "📐",
+            "description": "Shared sub-agent (S10). Resizes, crops, or reformats assets for different channels.",
+            "subAgents": [],
+            "sharedId": "S10"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "product-offer",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "master-prod-video",
+        "title": "Master Production — Video",
+        "icon": "🎬",
+        "subtitle": "AI video generation & adaptation",
+        "description": "4-agent video production system. Generates videos, assesses quality via Video QA, refines, and adapts formats per platform.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "video-gen-agent",
+            "title": "Video Generation Agent",
+            "icon": "🎥",
+            "description": "Generates video content based on Brand Identity motion guidelines and Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "video-assessment",
+            "title": "Video Assessment Agent",
+            "icon": "🔍",
+            "description": "Runs Video QA for quality verification on generated video.",
+            "subAgents": []
+          },
+          {
+            "id": "video-refinement",
+            "title": "Refinement Agent",
+            "icon": "🔄",
+            "description": "Shared sub-agent (S9). Iterates on video assets based on assessment feedback.",
+            "subAgents": [],
+            "sharedId": "S9"
+          },
+          {
+            "id": "video-format-adapt",
+            "title": "Format Adaptation Agent",
+            "icon": "📐",
+            "description": "Shared sub-agent (S10). Reformats video for different platform specs.",
+            "subAgents": [],
+            "sharedId": "S10"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "product-offer",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "copy-repurposing",
+        "title": "Copy Repurposing",
+        "icon": "♻️",
+        "subtitle": "Channel-specific copy adaptation",
+        "description": "6-agent copy repurposing system. Rewrites master copy for LinkedIn, Meta, banner, email, and Google Ads, with QA verification.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "linkedin-rewrite",
+            "title": "LinkedIn Rewrite Agent",
+            "icon": "💼",
+            "description": "Adapts copy for LinkedIn format and tone using Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "meta-rewrite",
+            "title": "Meta/Facebook Rewrite Agent",
+            "icon": "📱",
+            "description": "Adapts copy for Meta platforms using Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "banner-headline-rewrite",
+            "title": "Banner Headline Rewrite Agent",
+            "icon": "🖼️",
+            "description": "Adapts copy for banner headline constraints using Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "email-rewrite",
+            "title": "Email Rewrite Agent",
+            "icon": "📧",
+            "description": "Adapts copy for email format using Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "google-ads-rewrite",
+            "title": "Google Ads Rewrite Agent",
+            "icon": "🔍",
+            "description": "Adapts copy for Google Ads character limits using Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "repurpose-qa",
+            "title": "QA Agent",
+            "icon": "✅",
+            "description": "Shared sub-agent (S8). Runs Copy QA for quality verification on all repurposed outputs.",
+            "subAgents": [],
+            "sharedId": "S8"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "channel-params",
+          "templates"
+        ]
+      },
+      {
+        "id": "customer-feedback",
+        "title": "Analyze Customer Feedback",
+        "icon": "💬",
+        "subtitle": "Sentiment, topics & trend analysis",
+        "description": "4-agent feedback analysis system. Performs sentiment analysis, topic clustering, trend identification, and insight extraction.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "sentiment-analysis",
+            "title": "Sentiment Analysis Agent",
+            "icon": "😊",
+            "description": "Analyzes customer sentiment across feedback sources.",
+            "subAgents": []
+          },
+          {
+            "id": "topic-clustering",
+            "title": "Topic Clustering Agent",
+            "icon": "🏷️",
+            "description": "Clusters feedback by topic using Product & Offer category taxonomy.",
+            "subAgents": []
+          },
+          {
+            "id": "trend-identification",
+            "title": "Trend Identification Agent",
+            "icon": "📈",
+            "description": "Identifies trends using Performance historical data for comparison.",
+            "subAgents": []
+          },
+          {
+            "id": "insight-extraction",
+            "title": "Insight Extraction Agent",
+            "icon": "💡",
+            "description": "Combines outputs from all feedback agents with Market Intelligence to extract actionable insights.",
+            "subAgents": []
+          }
+        ],
+        "knowledgeDeps": [
+          "market-intelligence",
+          "product-offer",
+          "performance"
+        ]
+      },
+      {
+        "id": "target-email-copy",
+        "title": "Target Email Copy",
+        "icon": "📧",
+        "subtitle": "Personalized email marketing copy",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "templates"
+        ]
+      },
+      {
+        "id": "article-copy",
+        "title": "Article Copy",
+        "icon": "📰",
+        "subtitle": "Editorial & article content",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "templates"
+        ]
+      },
+      {
+        "id": "google-ads-copy",
+        "title": "Google Ads Copy",
+        "icon": "🔍",
+        "subtitle": "Search ad headlines & descriptions",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "performance"
+        ]
+      },
+      {
+        "id": "landing-page-copy",
+        "title": "Landing Page Copy",
+        "icon": "🖥️",
+        "subtitle": "Conversion-optimized page copy",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "templates"
+        ]
+      },
+      {
+        "id": "banner-copy",
+        "title": "Banner Copy",
+        "icon": "🖼️",
+        "subtitle": "Display advertising copy",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "product-offer",
+          "channel-params",
+          "templates"
+        ]
+      },
+      {
+        "id": "social-media-copy",
+        "title": "Social Media Copy",
+        "icon": "📱",
+        "subtitle": "Platform-specific social content",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "campaign-brief",
+        "title": "Campaign Brief",
+        "icon": "📋",
+        "subtitle": "Structured campaign brief generation",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "market-intelligence",
+          "product-offer",
+          "performance",
+          "templates"
+        ]
+      },
+      {
+        "id": "newsletter-brief",
+        "title": "Newsletter Brief",
+        "icon": "📰",
+        "subtitle": "Newsletter planning & structure",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "templates"
+        ]
+      },
+      {
+        "id": "content-brief",
+        "title": "Content Brief",
+        "icon": "📄",
+        "subtitle": "Content strategy & briefs",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "templates"
+        ]
+      },
+      {
+        "id": "text-to-voice",
+        "title": "Text to Voice",
+        "icon": "🔊",
+        "subtitle": "AI voiceover generation",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence"
+        ]
+      },
+      {
+        "id": "smart-summaries",
+        "title": "Smart Summaries (FAQ)",
+        "icon": "❓",
+        "subtitle": "Auto-generated FAQ & summaries",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "product-offer",
+          "performance"
+        ]
+      },
+      {
+        "id": "llm-data-feeds",
+        "title": "LLM Data Feeds for GEO",
+        "icon": "📡",
+        "subtitle": "Generative engine optimization feeds",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "product-offer",
+          "brand-identity"
+        ]
+      },
+      {
+        "id": "audience-creator",
+        "title": "Audience Creator",
+        "icon": "🎯",
+        "subtitle": "AI-powered audience segmentation",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "market-intelligence",
+          "performance",
+          "product-offer"
+        ]
+      },
+      {
+        "id": "researcher",
+        "title": "Researcher",
+        "icon": "🔬",
+        "subtitle": "Market & product research agent",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "market-intelligence",
+          "product-offer",
+          "performance"
+        ]
+      },
+      {
+        "id": "concept-creator",
+        "title": "Concept Creator",
+        "icon": "💡",
+        "subtitle": "Creative concept generation",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "templates"
+        ]
+      },
+      {
+        "id": "channel-publisher",
+        "title": "Channel Publisher",
+        "icon": "📤",
+        "subtitle": "Multi-channel asset distribution",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "channel-params"
+        ]
+      },
+      {
+        "id": "photo-gen",
+        "title": "Photo Gen",
+        "icon": "📷",
+        "subtitle": "AI product photography generation",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "product-offer"
+        ]
+      },
+      {
+        "id": "banner-gen",
+        "title": "Banner Gen",
+        "icon": "🖼️",
+        "subtitle": "Display banner generation",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "channel-params",
+          "templates"
+        ]
+      },
+      {
+        "id": "image-grading",
+        "title": "Image Grading",
+        "icon": "🎨",
+        "subtitle": "Image quality evaluation & correction",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "guardrails"
+        ]
+      },
+      {
+        "id": "channel-screenshotter",
+        "title": "Channel Screenshotter",
+        "icon": "📸",
+        "subtitle": "Captures timestamped screenshots of live campaign assets across vendor channels",
+        "description": "Automated screen-capture agent that crawls vendor online channels (e-commerce, social, display, search) and takes timestamped screenshots of active campaign placements. Outputs include full-page captures, cropped asset views, and metadata (URL, timestamp, placement position, vendor name).",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "url-crawler",
+            "title": "URL Crawler",
+            "icon": "🕷️",
+            "subtitle": "Discovers campaign placement URLs across vendor channels"
+          },
+          {
+            "id": "screenshot-engine",
+            "title": "Screenshot Engine",
+            "icon": "📷",
+            "subtitle": "Takes full-page and cropped screenshots with timestamps"
+          },
+          {
+            "id": "metadata-tagger",
+            "title": "Metadata Tagger",
+            "icon": "🏷️",
+            "subtitle": "Tags captures with URL, timestamp, vendor, placement, and campaign ID"
+          }
+        ],
+        "knowledgeDeps": [
+          "channel-params",
+          "vendor-agreements"
+        ]
+      },
+      {
+        "id": "proof-report-gen",
+        "title": "Proof Report Generator",
+        "icon": "📋",
+        "subtitle": "Compiles screenshots and metadata into proof-of-activity reports",
+        "description": "Assembles screen captures, timestamps, and placement metadata into structured proof-of-activity reports per vendor agreement. Matches captured placements against agreed campaign specs to verify fulfillment.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "evidence-compiler",
+            "title": "Evidence Compiler",
+            "icon": "📁",
+            "subtitle": "Groups captures by vendor, campaign, and channel"
+          },
+          {
+            "id": "fulfillment-matcher",
+            "title": "Fulfillment Matcher",
+            "icon": "✔️",
+            "subtitle": "Matches captured placements against vendor agreement requirements"
+          },
+          {
+            "id": "report-formatter",
+            "title": "Report Formatter",
+            "icon": "📄",
+            "subtitle": "Generates formatted proof-of-activity PDF/document"
+          }
+        ],
+        "knowledgeDeps": [
+          "vendor-agreements",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "claim-builder",
+        "title": "Claim Builder",
+        "icon": "💰",
+        "subtitle": "Generates vendor reimbursement claims from proof reports",
+        "description": "Takes proof-of-activity reports and vendor agreements to generate structured claim documents. Calculates claimable amounts, maps spend to agreement line items, and produces submission-ready claim packages.",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "agreement-parser",
+            "title": "Agreement Parser",
+            "icon": "📜",
+            "subtitle": "Extracts claimable line items and rules from vendor agreements"
+          },
+          {
+            "id": "spend-mapper",
+            "title": "Spend Mapper",
+            "icon": "🧮",
+            "subtitle": "Maps campaign spend to agreement line items and calculates claimable amounts"
+          },
+          {
+            "id": "claim-formatter",
+            "title": "Claim Formatter",
+            "icon": "📝",
+            "subtitle": "Produces submission-ready claim documents per vendor format"
+          },
+          {
+            "id": "claim-tracker",
+            "title": "Claim Tracker",
+            "icon": "📊",
+            "subtitle": "Tracks claim status, deadlines, and reimbursement progress"
+          }
+        ],
+        "knowledgeDeps": [
+          "vendor-agreements",
+          "performance"
+        ]
+      }
+    ],
+    "knowledge": [
+      {
+        "id": "brand-identity",
+        "title": "Brand Identity",
+        "icon": "🎨",
+        "subtitle": "Brand guidelines, tone of voice, visual identity, photography style, co-branding rules — 10 items",
+        "items": [
+          "Brand guidelines master document",
+          "Tone of voice guide",
+          "Visual identity system",
+          "Color palette",
+          "Typography",
+          "Photography style guide",
+          "Iconography & illustration",
+          "Brand voice examples",
+          "Sub-brand / co-branding rules",
+          "Motion & animation guidelines"
+        ]
+      },
+      {
+        "id": "market-intelligence",
+        "title": "Market Intelligence",
+        "icon": "👥",
+        "subtitle": "Buyer personas (SMB/Enterprise/Public), 6 market profiles, competitor intel, seasonal patterns — 13 items",
+        "items": [
+          "Buyer personas — SMB",
+          "Buyer personas — Enterprise",
+          "Buyer personas — Public Sector",
+          "Market profile — Sweden",
+          "Market profile — Norway",
+          "Market profile — Finland",
+          "Market profile — Denmark",
+          "Market profile — Netherlands",
+          "Market profile — Belgium",
+          "Competitor intelligence",
+          "Industry trends & terminology",
+          "Seasonal patterns",
+          "Customer segmentation model"
+        ]
+      },
+      {
+        "id": "product-offer",
+        "title": "Product & Offer",
+        "icon": "📦",
+        "subtitle": "Product catalog, pricing, vendor info, service offerings, cross-sell mappings — 9 items",
+        "items": [
+          "Product catalog (full)",
+          "Product imagery",
+          "Pricing & availability",
+          "Value propositions per category",
+          "Vendor partner information",
+          "Service offerings",
+          "Product comparison data",
+          "Promotional offers",
+          "Cross-sell / upsell mappings"
+        ]
+      },
+      {
+        "id": "guardrails",
+        "title": "Guardrails",
+        "icon": "⚖️",
+        "subtitle": "GDPR, legal disclaimers, accessibility, competitor policy, AI disclosure — 10 items",
+        "items": [
+          "GDPR compliance rules",
+          "Marketing legal disclaimers",
+          "Environmental / sustainability claims",
+          "Accessibility requirements",
+          "Competitor mention policy",
+          "Vendor co-op guidelines",
+          "Email compliance",
+          "Pricing display rules",
+          "Image rights & licensing",
+          "AI disclosure requirements"
+        ]
+      },
+      {
+        "id": "performance",
+        "title": "Performance",
+        "icon": "📈",
+        "subtitle": "Campaign history, channel benchmarks, A/B test results, attribution data — 7 items",
+        "items": [
+          "Campaign performance history",
+          "Channel benchmarks",
+          "A/B test results",
+          "Attribution data",
+          "Customer lifetime value by segment",
+          "Seasonal performance patterns",
+          "Content performance"
+        ]
+      },
+      {
+        "id": "channel-params",
+        "title": "Channel Parameters",
+        "icon": "📐",
+        "subtitle": "Channel specs & format rules — 10 items",
+        "items": [
+          "META ad specs",
+          "LinkedIn ad specs",
+          "Google Ads specs",
+          "Google Demand Gen specs",
+          "YouTube Bumper specs",
+          "Programmatic Display specs",
+          "Email template specs",
+          "Dustin site page specs",
+          "Bannerflow specs",
+          "Landing page specs"
+        ]
+      },
+      {
+        "id": "templates",
+        "title": "Templates",
+        "icon": "📄",
+        "subtitle": "Email, landing page, banner, social, article, presentation, product fact sheet templates — 7 items",
+        "items": [
+          "Email templates",
+          "Landing page templates",
+          "Banner templates",
+          "Social media templates",
+          "Article / guide templates",
+          "Presentation templates",
+          "Product fact sheet templates"
+        ]
+      },
+      {
+        "id": "vendor-agreements",
+        "title": "Vendor Agreements",
+        "icon": "🤝",
+        "subtitle": "Vendor marketing fund agreements, claiming rules, deadlines, and reimbursement terms — 10 items",
+        "items": [
+          "Vendor MDF agreements (per vendor)",
+          "Co-op fund terms & conditions",
+          "Claiming deadlines calendar",
+          "Proof-of-activity requirements per vendor",
+          "Approved channel list per agreement",
+          "Spend thresholds & reimbursement rates",
+          "Claim submission templates",
+          "Vendor portal access & credentials",
+          "Historical claim records & approval rates",
+          "Dispute resolution procedures"
+        ]
+      },
+      {
+        "id": "translation-memory",
+        "title": "Translation Memory",
+        "icon": "🧠",
+        "subtitle": "Approved translations, glossaries, and linguistic assets per market — 8 items",
+        "items": [
+          "Translation memory database (TM)",
+          "Term base / glossary per market",
+          "Approved brand name translations",
+          "Do-not-translate list",
+          "Style guide per language",
+          "Previously approved campaign translations",
+          "Product naming conventions per market",
+          "Locale-specific phrasing & idioms"
+        ]
+      }
+    ]
+  },
+  "playbooks": [
+    {
+      "id": "event-seminar",
+      "title": "Event Seminar",
+      "icon": "🎤",
+      "description": "Pre-event promotion, registration drive, post-event follow-up"
+    },
+    {
+      "id": "event-webinar",
+      "title": "Event Webinar",
+      "icon": "💻",
+      "description": "Webinar promotion, landing page, email sequence, post-event content"
+    },
+    {
+      "id": "product-launch",
+      "title": "Product Launch",
+      "icon": "🚀",
+      "description": "Multi-channel product introduction with landing page, email, social, and paid search"
+    },
+    {
+      "id": "vendor-push",
+      "title": "Vendor Push / Product Push",
+      "icon": "📣",
+      "description": "Vendor partnership promotion across newsletters, landing pages, and display ads"
+    },
+    {
+      "id": "spotlight-campaign",
+      "title": "Spotlight Campaign (Theme)",
+      "icon": "🔦",
+      "description": "Themed campaign around a seasonal or strategic focus area"
+    },
+    {
+      "id": "sem-always-on",
+      "title": "SEM / Always-On",
+      "icon": "🔁",
+      "description": "Continuous paid search optimization with rolling ad copy updates"
+    },
+    {
+      "id": "nurturing-campaign",
+      "title": "Nurturing Campaign",
+      "icon": "🌱",
+      "description": "Multi-touch email nurture sequence with progressive content"
+    },
+    {
+      "id": "sales-training",
+      "title": "Sales Training / Lunch & Learn",
+      "icon": "🎓",
+      "description": "Internal training content, presentations, and follow-up materials"
+    },
+    {
+      "id": "event-sales-connect",
+      "title": "Event / Sales Connect",
+      "icon": "🤝",
+      "description": "Event-driven sales enablement with targeted outreach materials"
+    },
+    {
+      "id": "customer-case",
+      "title": "Customer Case / Content",
+      "icon": "📖",
+      "description": "Customer success story production across article, video, and social"
+    },
+    {
+      "id": "brand-film",
+      "title": "Brand / Film Campaign",
+      "icon": "🎬",
+      "description": "Brand video production with localization and multi-channel distribution"
+    },
+    {
+      "id": "msp-incentive",
+      "title": "MSP / Incentive",
+      "icon": "🏆",
+      "description": "Managed service provider incentive campaign with partner materials"
+    },
+    {
+      "id": "accessory-market",
+      "title": "Accessory Market",
+      "icon": "🔌",
+      "description": "Accessory-focused campaign with product photography and cross-sell"
+    },
+    {
+      "id": "premium-banner-training",
+      "title": "Premium+ / Banner & Training",
+      "icon": "⭐",
+      "description": "Premium tier promotion with display advertising and training content"
+    },
+    {
+      "id": "tco-calculator",
+      "title": "TCO Calculator / Tool",
+      "icon": "🧮",
+      "description": "Interactive tool campaign with landing page, email, and paid search"
+    },
+    {
+      "id": "roundtable",
+      "title": "Roundtable",
+      "icon": "🪑",
+      "description": "Executive roundtable event with invitation, content, and follow-up"
+    },
+    {
+      "id": "value-weeks",
+      "title": "Value Weeks (Seasonal Sales)",
+      "icon": "🏷️",
+      "description": "Seasonal sales event with landing pages, banners, email blasts, and social push"
+    }
+  ],
+  "campaigns": [
+    {
+      "id": "product-launch",
+      "title": "Product Launch",
+      "description": "Multi-channel product launch orchestrating Landing Page, Newsletter, Social, Email, Banner, and Paid Search specialists with human review gates at each stage.",
+      "swimlaneSteps": [
+        {
+          "id": "sw-pl-1",
+          "stepNum": 1,
+          "actor": "human",
+          "title": "Brief Builder",
+          "subtitle": "Product launch brief & objectives",
+          "icon": "📋"
+        },
+        {
+          "id": "sw-pl-2",
+          "stepNum": 2,
+          "actor": "producer",
+          "title": "Producer",
+          "subtitle": "Plans workstreams & assigns specialists",
+          "icon": "🎛️"
+        },
+        {
+          "id": "sw-pl-3",
+          "stepNum": 3,
+          "actor": "specialist",
+          "title": "Landing Page Specialist",
+          "subtitle": "Tools: LP Copy → Photo Gen → SEO → Banner Gen",
+          "icon": "🖥️"
+        },
+        {
+          "id": "sw-pl-4",
+          "stepNum": 4,
+          "actor": "human",
+          "title": "Review Landing Page",
+          "subtitle": "Approve page design, copy & SEO",
+          "icon": "👁️"
+        },
+        {
+          "id": "sw-pl-5",
+          "stepNum": 5,
+          "actor": "specialist",
+          "title": "Email Specialist",
+          "subtitle": "Tools: Email Copy → Photo Gen → Image Grading",
+          "icon": "📧"
+        },
+        {
+          "id": "sw-pl-6",
+          "stepNum": 6,
+          "actor": "specialist",
+          "title": "Social Campaign Specialist",
+          "subtitle": "Tools: Social Copy → Photo Gen → Banner Gen",
+          "icon": "📱"
+        },
+        {
+          "id": "sw-pl-7",
+          "stepNum": 7,
+          "actor": "specialist",
+          "title": "Paid Search Specialist",
+          "subtitle": "Tools: Google Ads → Researcher → Audience Creator",
+          "icon": "🔍"
+        },
+        {
+          "id": "sw-pl-8",
+          "stepNum": 8,
+          "actor": "human",
+          "title": "Review All Channels",
+          "subtitle": "Approve email, social & paid search",
+          "icon": "👁️"
+        },
+        {
+          "id": "sw-pl-9",
+          "stepNum": 9,
+          "actor": "specialist",
+          "title": "AI Translations",
+          "subtitle": "MAATS: Localize all assets to target markets",
+          "icon": "🌐"
+        },
+        {
+          "id": "sw-pl-10",
+          "stepNum": 10,
+          "actor": "producer",
+          "title": "Producer",
+          "subtitle": "Assembles final launch package",
+          "icon": "🎛️"
+        },
+        {
+          "id": "sw-pl-11",
+          "stepNum": 11,
+          "actor": "human",
+          "title": "QA & Sign-off",
+          "subtitle": "Final approval & publish",
+          "icon": "✅"
+        }
+      ],
+      "arrows": [
+        {
+          "from": 1,
+          "to": 2,
+          "color": "human",
+          "label": "Brief"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "color": "producer",
+          "label": "LP task"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "color": "specialist",
+          "label": "LP ready"
+        },
+        {
+          "from": 4,
+          "to": 5,
+          "color": "human",
+          "label": "Approved → email"
+        },
+        {
+          "from": 4,
+          "to": 6,
+          "color": "human",
+          "label": "Approved → social"
+        },
+        {
+          "from": 4,
+          "to": 7,
+          "color": "human",
+          "label": "Approved → paid"
+        },
+        {
+          "from": 5,
+          "to": 8,
+          "color": "specialist",
+          "label": "Email ready"
+        },
+        {
+          "from": 6,
+          "to": 8,
+          "color": "specialist",
+          "label": "Social ready"
+        },
+        {
+          "from": 7,
+          "to": 8,
+          "color": "specialist",
+          "label": "Ads ready"
+        },
+        {
+          "from": 8,
+          "to": 9,
+          "color": "human",
+          "label": "Approved → localize"
+        },
+        {
+          "from": 9,
+          "to": 10,
+          "color": "specialist",
+          "label": "Translations done"
+        },
+        {
+          "from": 10,
+          "to": 11,
+          "color": "producer",
+          "label": "Package ready"
+        }
+      ]
+    },
+    {
+      "id": "vendor-push",
+      "title": "Vendor Push / Product Push",
+      "description": "Vendor partnership promotion using Newsletter, Landing Page, and Banner specialists with human review gates.",
+      "swimlaneSteps": [
+        {
+          "id": "sw-vp-1",
+          "stepNum": 1,
+          "actor": "human",
+          "title": "Brief Builder",
+          "subtitle": "Vendor campaign brief & objectives",
+          "icon": "📋"
+        },
+        {
+          "id": "sw-vp-2",
+          "stepNum": 2,
+          "actor": "producer",
+          "title": "Producer",
+          "subtitle": "Plans workstreams & assigns specialists",
+          "icon": "🎛️"
+        },
+        {
+          "id": "sw-vp-3",
+          "stepNum": 3,
+          "actor": "specialist",
+          "title": "Newsletter Specialist",
+          "subtitle": "Tools: Article Copy → Photo Gen → Image Grading",
+          "icon": "📰"
+        },
+        {
+          "id": "sw-vp-4",
+          "stepNum": 4,
+          "actor": "human",
+          "title": "Review Newsletter",
+          "subtitle": "Approve content, layout & imagery",
+          "icon": "👁️"
+        },
+        {
+          "id": "sw-vp-5",
+          "stepNum": 5,
+          "actor": "specialist",
+          "title": "Landing Page Specialist",
+          "subtitle": "Tools: LP Copy → Photo Gen → Banner Gen → SEO",
+          "icon": "🖥️"
+        },
+        {
+          "id": "sw-vp-6",
+          "stepNum": 6,
+          "actor": "human",
+          "title": "Review Landing Page",
+          "subtitle": "Approve page design & CTA flow",
+          "icon": "👁️"
+        },
+        {
+          "id": "sw-vp-7",
+          "stepNum": 7,
+          "actor": "specialist",
+          "title": "Banner/Display Specialist",
+          "subtitle": "Tools: Banner Copy → Banner Gen → Image QA",
+          "icon": "🖼️"
+        },
+        {
+          "id": "sw-vp-8",
+          "stepNum": 8,
+          "actor": "specialist",
+          "title": "AI Translations",
+          "subtitle": "MAATS: Localize all assets",
+          "icon": "🌐"
+        },
+        {
+          "id": "sw-vp-9",
+          "stepNum": 9,
+          "actor": "producer",
+          "title": "Producer",
+          "subtitle": "Assembles final campaign package",
+          "icon": "🎛️"
+        },
+        {
+          "id": "sw-vp-10",
+          "stepNum": 10,
+          "actor": "human",
+          "title": "QA & Sign-off",
+          "subtitle": "Final approval & publish",
+          "icon": "✅"
+        }
+      ],
+      "arrows": [
+        {
+          "from": 1,
+          "to": 2,
+          "color": "human",
+          "label": "Brief"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "color": "producer",
+          "label": "Newsletter task"
+        },
+        {
+          "from": 3,
+          "to": 4,
+          "color": "specialist",
+          "label": "Draft ready"
+        },
+        {
+          "from": 4,
+          "to": 5,
+          "color": "human",
+          "label": "Approved → LP"
+        },
+        {
+          "from": 5,
+          "to": 6,
+          "color": "specialist",
+          "label": "LP ready"
+        },
+        {
+          "from": 6,
+          "to": 7,
+          "color": "human",
+          "label": "Approved → banners"
+        },
+        {
+          "from": 7,
+          "to": 8,
+          "color": "specialist",
+          "label": "Banners ready → localize"
+        },
+        {
+          "from": 8,
+          "to": 9,
+          "color": "specialist",
+          "label": "Translations done"
+        },
+        {
+          "from": 9,
+          "to": 10,
+          "color": "producer",
+          "label": "Package ready"
+        }
+      ]
+    },
+    {
+      "id": "value-weeks",
+      "title": "Value Weeks (Seasonal Sales)",
+      "description": "High-intensity seasonal sales event with landing pages, banners, email blasts, social push, and paid search running in parallel.",
+      "swimlaneSteps": [
+        {
+          "id": "sw-vw-1",
+          "stepNum": 1,
+          "actor": "human",
+          "title": "Brief Builder",
+          "subtitle": "Seasonal sale brief, dates & offers",
+          "icon": "📋"
+        },
+        {
+          "id": "sw-vw-2",
+          "stepNum": 2,
+          "actor": "producer",
+          "title": "Producer",
+          "subtitle": "Plans parallel workstreams",
+          "icon": "🎛️"
+        },
+        {
+          "id": "sw-vw-3",
+          "stepNum": 3,
+          "actor": "specialist",
+          "title": "Landing Page Specialist",
+          "subtitle": "Tools: LP Copy → Photo Gen → Banner Gen",
+          "icon": "🖥️"
+        },
+        {
+          "id": "sw-vw-4",
+          "stepNum": 4,
+          "actor": "specialist",
+          "title": "Banner/Display Specialist",
+          "subtitle": "Tools: Banner Copy → Banner Gen → Image QA",
+          "icon": "🖼️"
+        },
+        {
+          "id": "sw-vw-5",
+          "stepNum": 5,
+          "actor": "specialist",
+          "title": "Email Specialist",
+          "subtitle": "Tools: Email Copy → Photo Gen → Image Grading",
+          "icon": "📧"
+        },
+        {
+          "id": "sw-vw-6",
+          "stepNum": 6,
+          "actor": "specialist",
+          "title": "Social Campaign Specialist",
+          "subtitle": "Tools: Social Copy → Photo Gen → Copy Repurposing",
+          "icon": "📱"
+        },
+        {
+          "id": "sw-vw-7",
+          "stepNum": 7,
+          "actor": "specialist",
+          "title": "Paid Search Specialist",
+          "subtitle": "Tools: Google Ads → Audience Creator",
+          "icon": "🔍"
+        },
+        {
+          "id": "sw-vw-8",
+          "stepNum": 8,
+          "actor": "human",
+          "title": "Review All Assets",
+          "subtitle": "Approve all channel deliverables",
+          "icon": "👁️"
+        },
+        {
+          "id": "sw-vw-9",
+          "stepNum": 9,
+          "actor": "specialist",
+          "title": "AI Translations",
+          "subtitle": "MAATS: Localize to all 6 markets",
+          "icon": "🌐"
+        },
+        {
+          "id": "sw-vw-10",
+          "stepNum": 10,
+          "actor": "producer",
+          "title": "Producer",
+          "subtitle": "Assembles & schedules launch",
+          "icon": "🎛️"
+        },
+        {
+          "id": "sw-vw-11",
+          "stepNum": 11,
+          "actor": "human",
+          "title": "QA & Sign-off",
+          "subtitle": "Final approval & go-live",
+          "icon": "✅"
+        }
+      ],
+      "arrows": [
+        {
+          "from": 1,
+          "to": 2,
+          "color": "human",
+          "label": "Brief"
+        },
+        {
+          "from": 2,
+          "to": 3,
+          "color": "producer",
+          "label": "LP task"
+        },
+        {
+          "from": 2,
+          "to": 4,
+          "color": "producer",
+          "label": "Banner task"
+        },
+        {
+          "from": 2,
+          "to": 5,
+          "color": "producer",
+          "label": "Email task"
+        },
+        {
+          "from": 2,
+          "to": 6,
+          "color": "producer",
+          "label": "Social task"
+        },
+        {
+          "from": 2,
+          "to": 7,
+          "color": "producer",
+          "label": "Paid task"
+        },
+        {
+          "from": 3,
+          "to": 8,
+          "color": "specialist",
+          "label": "LP ready"
+        },
+        {
+          "from": 4,
+          "to": 8,
+          "color": "specialist",
+          "label": "Banners ready"
+        },
+        {
+          "from": 5,
+          "to": 8,
+          "color": "specialist",
+          "label": "Email ready"
+        },
+        {
+          "from": 6,
+          "to": 8,
+          "color": "specialist",
+          "label": "Social ready"
+        },
+        {
+          "from": 7,
+          "to": 8,
+          "color": "specialist",
+          "label": "Ads ready"
+        },
+        {
+          "from": 8,
+          "to": 9,
+          "color": "human",
+          "label": "Approved → localize"
+        },
+        {
+          "from": 9,
+          "to": 10,
+          "color": "specialist",
+          "label": "All markets done"
+        },
+        {
+          "from": 10,
+          "to": 11,
+          "color": "producer",
+          "label": "Launch package"
+        }
+      ]
+    },
+    {
+      "id": "event-seminar",
+      "title": "Event Seminar",
+      "description": "Pre-event promotion, registration drive, post-event follow-up",
+      "swimlaneSteps": [],
+      "arrows": []
+    },
+    {
+      "id": "accessory-market",
+      "title": "Accessory Market",
+      "description": "Accessory-focused campaign with product photography and cross-sell",
+      "swimlaneSteps": [],
+      "arrows": []
+    }
+  ]
+}
