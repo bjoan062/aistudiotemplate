@@ -237,7 +237,7 @@
         "title": "Translations",
         "icon": "🌐",
         "subtitle": "MAATS — Multi-Agent Automated Translation System",
-        "description": "10-agent translation system based on MQM evaluation framework. Specialized dimension agents assess the translation in parallel, then an editorial chain synthesizes, rewrites, and selects the optimal output. Win rate: 62.1% vs 30.1% for single-agent (NYU study).",
+        "description": "13-agent translation system based on MQM evaluation framework. Specialized dimension agents assess the translation in parallel, then Synthesis combines scores. The Editor (S1) produces a holistic verdict and the Rewriter (S2) generates alternatives until the QA Gate passes. Shares Grammar & Spelling (S13), Brand Voice (S11), Format Validation (S6), Audience (S7), Legal (S12), Synthesis (S3), and QA Gate (S8) with the QA tools. Win rate: 62.1% vs 30.1% for single-agent (NYU study).",
         "roleType": "agent",
         "accessTags": [
           "human",
@@ -267,17 +267,19 @@
           },
           {
             "id": "linguistic-agent",
-            "title": "Linguistic Conventions Agent",
-            "icon": "📝",
-            "description": "Validates grammar, spelling, and language-specific rules per market profile and locale.",
-            "subAgents": []
+            "title": "Grammar & Spelling Agent",
+            "icon": "✍️",
+            "description": "Shared sub-agent (S13). Maps to MQM Linguistic Conventions dimension. Validates grammar, fluency, spelling, and language-specific rules per market profile and locale.",
+            "subAgents": [],
+            "sharedId": "S13"
           },
           {
             "id": "style-agent",
-            "title": "Style Assessment Agent",
-            "icon": "🎨",
-            "description": "Aligns tone of voice across global and local channels. Ensures brand voice consistency from Brand Identity and Channel Parameters.",
-            "subAgents": []
+            "title": "Brand Voice Agent",
+            "icon": "🗣️",
+            "description": "Shared sub-agent (S11). Maps to MQM Style dimension. Validates tone of voice and brand voice consistency against Brand Identity approved examples and Channel Parameters.",
+            "subAgents": [],
+            "sharedId": "S11"
           },
           {
             "id": "audience-appropriateness-agent",
@@ -288,6 +290,14 @@
             "sharedId": "S7"
           },
           {
+            "id": "legal-compliance-agent",
+            "title": "Legal & Compliance Agent",
+            "icon": "⚖️",
+            "description": "Shared sub-agent (S12). Validates legal disclaimers, GDPR compliance, and market-specific regulatory requirements from Guardrails.",
+            "subAgents": [],
+            "sharedId": "S12"
+          },
+          {
             "id": "locale-agent",
             "title": "Locale Conventions Agent",
             "icon": "📍",
@@ -295,28 +305,44 @@
             "subAgents": []
           },
           {
-            "id": "design-markup-agent",
-            "title": "Design & Markup Agent",
-            "icon": "🖌️",
-            "description": "Validates formatting integrity — character limits, HTML rules, and channel-specific markup from Channel Parameters.",
-            "subAgents": []
+            "id": "format-validation-agent",
+            "title": "Format Validation Agent",
+            "icon": "📐",
+            "description": "Shared sub-agent (S6). Maps to MQM Design & Markup dimension. Validates formatting integrity — character limits, HTML/tag rules, UI elements, and channel-specific markup from Channel Parameters.",
+            "subAgents": [],
+            "sharedId": "S6"
           },
           {
-            "id": "editor-agent",
+            "id": "translation-synthesis",
+            "title": "Synthesis Agent",
+            "icon": "🧮",
+            "description": "Shared sub-agent (S3). Combines all assessment dimension scores into a single weighted quality assessment.",
+            "subAgents": [],
+            "sharedId": "S3"
+          },
+          {
+            "id": "translation-editor",
             "title": "Editor Agent",
             "icon": "📋",
-            "description": "Shared sub-agent (S1). Synthesizes reports from all assessment agents (1.2–1.8). Prioritizes and weighs errors by severity to produce a holistic editorial assessment.",
-            "subAgents": [
-              {
-                "id": "rewriting-agent",
-                "title": "Rewriting Agent",
-                "icon": "✏️",
-                "description": "Shared sub-agent (S2). Produces improved alternatives based on the Editor's verdict and original translation.",
-                "subAgents": [],
-                "sharedId": "S2"
-              }
-            ],
+            "description": "Shared sub-agent (S1). Synthesizes reports from all dimension agents into a holistic editorial verdict. Prioritizes errors by severity and applies customizable dimension weighting.",
+            "subAgents": [],
             "sharedId": "S1"
+          },
+          {
+            "id": "translation-rewriter",
+            "title": "Rewriter Agent",
+            "icon": "✏️",
+            "description": "Shared sub-agent (S2). Generates three alternative translations to address identified errors. The Decision Agent selects or merges the best elements to produce the optimal localized version.",
+            "subAgents": [],
+            "sharedId": "S2"
+          },
+          {
+            "id": "translation-qa-gate",
+            "title": "QA Gate Agent",
+            "icon": "✅",
+            "description": "Shared sub-agent (S8). Final pass/fail gate — loops back to the Editor if quality threshold is not met.",
+            "subAgents": [],
+            "sharedId": "S8"
           }
         ],
         "knowledgeDeps": [
@@ -324,8 +350,60 @@
           "market-intelligence",
           "product-offer",
           "channel-params",
+          "guardrails",
           "translation-memory"
-        ]
+        ],
+        "knowledgeItemDeps": {
+          "brand-identity": [
+            "Brand guidelines master document",
+            "Tone of voice guide",
+            "Brand voice examples",
+            "Sub-brand / co-branding rules"
+          ],
+          "market-intelligence": [
+            "Buyer personas — SMB",
+            "Buyer personas — Enterprise",
+            "Buyer personas — Public Sector",
+            "Market profile — Sweden",
+            "Market profile — Norway",
+            "Market profile — Finland",
+            "Market profile — Denmark",
+            "Market profile — Netherlands",
+            "Market profile — Belgium",
+            "Industry trends & terminology",
+            "Customer segmentation model"
+          ],
+          "product-offer": [
+            "Product catalog (full)",
+            "Value propositions per category",
+            "Service offerings"
+          ],
+          "channel-params": [
+            "META ad specs",
+            "LinkedIn ad specs",
+            "Google Ads specs",
+            "Email template specs",
+            "Dustin site page specs",
+            "Landing page specs"
+          ],
+          "guardrails": [
+            "GDPR compliance rules",
+            "Marketing legal disclaimers",
+            "Environmental / sustainability claims",
+            "Competitor mention policy",
+            "AI disclosure requirements"
+          ],
+          "translation-memory": [
+            "Translation memory database — per market",
+            "Term base / glossary — per market",
+            "Approved brand name translations — per market",
+            "Do-not-translate list — per market",
+            "Style guide — per market",
+            "Previously approved campaign translations — per market",
+            "Product naming conventions — per market",
+            "Locale-specific phrasing & idioms — per market"
+          ]
+        }
       },
       {
         "id": "customer-feedback",
@@ -684,7 +762,7 @@
         "title": "Copy QA",
         "icon": "📝",
         "subtitle": "Multi-dimensional copy quality assurance",
-        "description": "7-agent copy quality system. Checks grammar, brand voice, factual accuracy, tone, and legal compliance, then synthesizes and rewrites.",
+        "description": "6-agent copy quality system. Checks grammar, brand voice, factual accuracy, tone, and legal compliance, then Synthesis combines scores. The tool's built-in editorial engine (S1) produces a verdict and rewrites (S2) until the QA Gate passes.",
         "roleType": "agent",
         "accessTags": [
           "agent"
@@ -694,8 +772,9 @@
             "id": "grammar-spelling",
             "title": "Grammar & Spelling Agent",
             "icon": "✍️",
-            "description": "Validates grammar and spelling using market-specific language rules.",
-            "subAgents": []
+            "description": "Shared sub-agent (S13). Maps to MQM Linguistic Conventions dimension. Validates grammar, fluency, spelling, and language-specific rules per market profile and locale.",
+            "subAgents": [],
+            "sharedId": "S13"
           },
           {
             "id": "brand-voice-compliance",
@@ -729,21 +808,12 @@
             "sharedId": "S12"
           },
           {
-            "id": "copy-qa-editor",
-            "title": "Editor Agent",
-            "icon": "📋",
-            "description": "Shared sub-agent (S1). Synthesizes all QA check outputs into a prioritized verdict.",
-            "subAgents": [
-              {
-                "id": "copy-qa-rewriter",
-                "title": "Rewriting Agent",
-                "icon": "✏️",
-                "description": "Shared sub-agent (S2). Produces improved alternatives based on Editor verdict.",
-                "subAgents": [],
-                "sharedId": "S2"
-              }
-            ],
-            "sharedId": "S1"
+            "id": "copy-qa-synthesis",
+            "title": "Synthesis Agent",
+            "icon": "🧮",
+            "description": "Shared sub-agent (S3). Combines all copy quality scores into a single weighted assessment.",
+            "subAgents": [],
+            "sharedId": "S3"
           },
           {
             "id": "copy-qa-gate",
@@ -879,7 +949,7 @@
           },
           {
             "id": "img-channel-format",
-            "title": "Channel Format Agent",
+            "title": "Format Validation Agent",
             "icon": "📐",
             "description": "Shared sub-agent (S6). Validates asset dimensions, file size, and format specs per platform.",
             "subAgents": [],
@@ -1236,7 +1306,7 @@
         "title": "Video Localization",
         "icon": "🎬",
         "subtitle": "Video translation & cultural adaptation",
-        "description": "6-agent system for localizing video content. Translates scripts via AI Translations, generates subtitles, adapts cultural references, and synchronizes timing.",
+        "description": "4-agent system for localizing video content. Translates scripts via Translations tool, generates subtitles, adapts cultural references, and synchronizes timing. The tool's built-in editorial engine (S1) synthesizes outputs and rewrites (S2) until quality is met.",
         "roleType": "agent",
         "accessTags": [
           "agent"
@@ -1246,7 +1316,7 @@
             "id": "video-translator",
             "title": "Video Translator Agent",
             "icon": "🌐",
-            "description": "Uses AI Translations (1) for script translation in video context.",
+            "description": "Uses Translations tool for script translation in video context.",
             "subAgents": []
           },
           {
@@ -1269,23 +1339,6 @@
             "icon": "⏱️",
             "description": "Synchronizes subtitle timing with source video pacing.",
             "subAgents": []
-          },
-          {
-            "id": "video-loc-editor",
-            "title": "Editor Agent",
-            "icon": "📋",
-            "description": "Shared sub-agent (S1). Synthesizes outputs from all video localization agents.",
-            "subAgents": [
-              {
-                "id": "video-loc-rewriter",
-                "title": "Rewriting Agent",
-                "icon": "✏️",
-                "description": "Shared sub-agent (S2). Produces improved alternatives based on Editor verdict.",
-                "subAgents": [],
-                "sharedId": "S2"
-              }
-            ],
-            "sharedId": "S1"
           }
         ],
         "knowledgeDeps": [
@@ -1346,7 +1399,7 @@
           },
           {
             "id": "vid-channel-format",
-            "title": "Channel Format Agent",
+            "title": "Format Validation Agent",
             "icon": "📐",
             "description": "Shared sub-agent (S6). Validates per-platform video specs.",
             "subAgents": [],
@@ -1523,14 +1576,14 @@
         "icon": "🧠",
         "subtitle": "Approved translations, glossaries, and linguistic assets per market — 8 items",
         "items": [
-          "Translation memory database (TM)",
-          "Term base / glossary per market",
-          "Approved brand name translations",
-          "Do-not-translate list",
-          "Style guide per language",
-          "Previously approved campaign translations",
-          "Product naming conventions per market",
-          "Locale-specific phrasing & idioms"
+          "Translation memory database — per market",
+          "Term base / glossary — per market",
+          "Approved brand name translations — per market",
+          "Do-not-translate list — per market",
+          "Style guide — per market",
+          "Previously approved campaign translations — per market",
+          "Product naming conventions — per market",
+          "Locale-specific phrasing & idioms — per market"
         ]
       }
     ],
@@ -1540,7 +1593,7 @@
         "sharedId": "S1",
         "title": "Editor",
         "icon": "📋",
-        "description": "Synthesizes assessment reports from all dimension agents. Prioritizes and weighs errors by severity to produce a holistic editorial verdict.",
+        "description": "Built-in editorial engine shared across tools. Synthesizes assessment reports from all dimension agents, prioritizes and weighs errors by severity, and produces a holistic editorial verdict that drives the rewrite loop.",
         "usedBy": [
           "translation-tool",
           "video-localization",
@@ -1550,7 +1603,8 @@
         ],
         "knowledgeDeps": [
           "brand-identity",
-          "templates"
+          "templates",
+          "translation-memory"
         ]
       },
       {
@@ -1558,7 +1612,7 @@
         "sharedId": "S2",
         "title": "Rewriter",
         "icon": "✏️",
-        "description": "Produces improved alternatives based on the Editor verdict. Generates multiple candidates for the quality loop to reassess.",
+        "description": "Built-in rewriting engine shared across tools. Produces improved alternatives based on the Editor verdict and generates multiple candidates for the quality loop to reassess.",
         "usedBy": [
           "translation-tool",
           "video-localization",
@@ -1568,7 +1622,8 @@
         ],
         "knowledgeDeps": [
           "brand-identity",
-          "templates"
+          "templates",
+          "translation-memory"
         ]
       },
       {
@@ -1578,6 +1633,8 @@
         "icon": "🧮",
         "description": "Combines multi-dimensional quality scores into a single weighted assessment. Determines pass/fail against configurable thresholds.",
         "usedBy": [
+          "translation-tool",
+          "copy-qa",
           "image-qa",
           "video-qa",
           "brand-compliance-qa",
@@ -1618,10 +1675,11 @@
       {
         "id": "shared-channel-format",
         "sharedId": "S6",
-        "title": "Channel Format",
+        "title": "Format Validation",
         "icon": "📐",
-        "description": "Validates asset dimensions, file size, and format specs per platform against Channel Parameters.",
+        "description": "Maps to MQM Design & Markup dimension. Validates asset dimensions, file size, format specs, and UI element formatting per platform against Channel Parameters.",
         "usedBy": [
+          "translation-tool",
           "image-qa",
           "video-qa"
         ],
@@ -1652,6 +1710,7 @@
         "icon": "✅",
         "description": "Internal quality gate that runs before tool output. Checks against quality threshold — if below, triggers the rewrite/refinement loop.",
         "usedBy": [
+          "translation-tool",
           "copy-qa",
           "image-qa",
           "video-qa",
@@ -1693,13 +1752,29 @@
         "sharedId": "S11",
         "title": "Brand Voice",
         "icon": "🗣️",
-        "description": "Validates tone of voice, brand voice guidelines, and approved examples against Brand Identity.",
+        "description": "Maps to MQM Style dimension. Validates tone of voice, brand voice guidelines, and approved examples against Brand Identity.",
         "usedBy": [
+          "translation-tool",
           "copy-qa",
           "brand-compliance-qa"
         ],
         "knowledgeDeps": [
           "brand-identity"
+        ]
+      },
+      {
+        "id": "shared-grammar-spelling",
+        "sharedId": "S13",
+        "title": "Grammar & Spelling",
+        "icon": "✍️",
+        "description": "Maps to MQM Linguistic Conventions dimension. Validates grammar, fluency, spelling, punctuation, and language-specific rules per market profile and locale.",
+        "usedBy": [
+          "translation-tool",
+          "copy-qa"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "translation-memory"
         ]
       },
       {
@@ -1709,6 +1784,7 @@
         "icon": "⚖️",
         "description": "Validates legal disclaimers, GDPR compliance, privacy rules, and competitor mention policies from Guardrails.",
         "usedBy": [
+          "translation-tool",
           "copy-qa",
           "brand-compliance-qa"
         ],
