@@ -1079,7 +1079,7 @@
         "id": "researcher",
         "title": "Researcher",
         "icon": "🔬",
-        "subtitle": "Market & product research agent",
+        "subtitle": "Multi-source research & intelligence agent",
         "roleType": "agent",
         "accessTags": [
           "human",
@@ -1088,7 +1088,58 @@
         "knowledgeDeps": [
           "market-intelligence",
           "product-offer",
-          "performance"
+          "performance",
+          "brand-identity",
+          "guardrails",
+          "channel-params",
+          "vendor-agreements",
+          "templates"
+        ],
+        "description": "6-agent research system. Searches online sources, queries the company knowledge base, and analyzes provided materials (spec sheets, vendor documentation, articles, competitive reports) to produce structured research briefs. Supports both human-initiated deep dives and agent-triggered fact-checking.",
+        "subAgents": [
+          {
+            "id": "web-research-agent",
+            "title": "Web Research Agent",
+            "icon": "🌐",
+            "description": "Searches online sources — industry reports, news, competitor sites, social listening, and public databases. Returns structured findings with source attribution.",
+            "subAgents": []
+          },
+          {
+            "id": "knowledge-base-agent",
+            "title": "Knowledge Base Agent",
+            "icon": "🧠",
+            "description": "Queries the company brain — brand guidelines, market intelligence, product specs, performance data, vendor agreements, and all internal knowledge domains. Cross-references across domains.",
+            "subAgents": []
+          },
+          {
+            "id": "document-analysis-agent",
+            "title": "Document Analysis Agent",
+            "icon": "📄",
+            "description": "Ingests and analyzes provided materials — spec sheets, vendor catalogs, articles, whitepapers, competitive teardowns, and any uploaded documents. Extracts key data points and structures them.",
+            "subAgents": []
+          },
+          {
+            "id": "data-analysis-agent",
+            "title": "Data Analysis Agent",
+            "icon": "📊",
+            "description": "Analyzes quantitative data — performance metrics, market sizing, pricing comparisons, trend analysis. Produces charts, tables, and statistical summaries.",
+            "subAgents": []
+          },
+          {
+            "id": "synthesis-agent-research",
+            "title": "Synthesis Agent",
+            "icon": "🧮",
+            "description": "Shared sub-agent (S3). Combines findings from all research agents into a unified research brief with key insights, recommendations, and confidence scores.",
+            "sharedId": "S3",
+            "subAgents": []
+          },
+          {
+            "id": "fact-check-agent",
+            "title": "Fact-Check Agent",
+            "icon": "✅",
+            "description": "Validates claims, statistics, and assertions against multiple sources. Flags unverified claims and assigns confidence levels. Used by other tools for inline verification.",
+            "subAgents": []
+          }
         ]
       },
       {
@@ -1496,6 +1547,10 @@
           "copy-qa",
           "copy-generator",
           "copy-repurposing"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "templates"
         ]
       },
       {
@@ -1510,6 +1565,10 @@
           "copy-qa",
           "copy-generator",
           "copy-repurposing"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "templates"
         ]
       },
       {
@@ -1523,8 +1582,10 @@
           "video-qa",
           "brand-compliance-qa",
           "master-prod-image",
-          "master-prod-video"
-        ]
+          "master-prod-video",
+          "researcher"
+        ],
+        "knowledgeDeps": []
       },
       {
         "id": "shared-brand-compliance",
@@ -1535,6 +1596,9 @@
         "usedBy": [
           "image-qa",
           "video-qa"
+        ],
+        "knowledgeDeps": [
+          "brand-identity"
         ]
       },
       {
@@ -1546,6 +1610,9 @@
         "usedBy": [
           "image-qa",
           "video-qa"
+        ],
+        "knowledgeDeps": [
+          "guardrails"
         ]
       },
       {
@@ -1557,6 +1624,9 @@
         "usedBy": [
           "image-qa",
           "video-qa"
+        ],
+        "knowledgeDeps": [
+          "channel-params"
         ]
       },
       {
@@ -1569,6 +1639,10 @@
           "translation-tool",
           "image-qa",
           "copy-qa"
+        ],
+        "knowledgeDeps": [
+          "market-intelligence",
+          "channel-params"
         ]
       },
       {
@@ -1582,7 +1656,8 @@
           "image-qa",
           "video-qa",
           "brand-compliance-qa"
-        ]
+        ],
+        "knowledgeDeps": []
       },
       {
         "id": "shared-refinement",
@@ -1593,6 +1668,10 @@
         "usedBy": [
           "master-prod-image",
           "master-prod-video"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "templates"
         ]
       },
       {
@@ -1604,6 +1683,9 @@
         "usedBy": [
           "master-prod-image",
           "master-prod-video"
+        ],
+        "knowledgeDeps": [
+          "channel-params"
         ]
       },
       {
@@ -1615,6 +1697,9 @@
         "usedBy": [
           "copy-qa",
           "brand-compliance-qa"
+        ],
+        "knowledgeDeps": [
+          "brand-identity"
         ]
       },
       {
@@ -1626,6 +1711,10 @@
         "usedBy": [
           "copy-qa",
           "brand-compliance-qa"
+        ],
+        "knowledgeDeps": [
+          "guardrails",
+          "market-intelligence"
         ]
       }
     ]
