@@ -351,7 +351,7 @@
           "product-offer",
           "channel-params",
           "guardrails",
-          "translation-memory"
+          "localization"
         ],
         "knowledgeItemDeps": {
           "brand-identity": [
@@ -384,6 +384,7 @@
             "Google Ads specs",
             "Email template specs",
             "Dustin site page specs",
+            "Banner specs",
             "Landing page specs"
           ],
           "guardrails": [
@@ -393,7 +394,7 @@
             "Competitor mention policy",
             "AI disclosure requirements"
           ],
-          "translation-memory": [
+          "localization": [
             "Translation memory database — per market",
             "Term base / glossary — per market",
             "Approved brand name translations — per market",
@@ -401,7 +402,8 @@
             "Style guide — per market",
             "Previously approved campaign translations — per market",
             "Product naming conventions — per market",
-            "Locale-specific phrasing & idioms — per market"
+            "Locale-specific phrasing & idioms — per market",
+            "MQM dimension weights & error typology"
           ]
         }
       },
@@ -1346,7 +1348,7 @@
           "market-intelligence",
           "guardrails",
           "channel-params",
-          "translation-memory"
+          "localization"
         ]
       },
       {
@@ -1533,7 +1535,7 @@
           "Programmatic Display specs",
           "Email template specs",
           "Dustin site page specs",
-          "Bannerflow specs",
+          "Banner specs",
           "Landing page specs"
         ]
       },
@@ -1571,10 +1573,10 @@
         ]
       },
       {
-        "id": "translation-memory",
-        "title": "Translation Memory",
+        "id": "localization",
+        "title": "Localization Knowledge",
         "icon": "🧠",
-        "subtitle": "Approved translations, glossaries, and linguistic assets per market — 8 items",
+        "subtitle": "Translation memory, glossaries, and linguistic assets per market — 9 items",
         "items": [
           "Translation memory database — per market",
           "Term base / glossary — per market",
@@ -1583,7 +1585,8 @@
           "Style guide — per market",
           "Previously approved campaign translations — per market",
           "Product naming conventions — per market",
-          "Locale-specific phrasing & idioms — per market"
+          "Locale-specific phrasing & idioms — per market",
+          "MQM dimension weights & error typology"
         ]
       }
     ],
@@ -1604,7 +1607,7 @@
         "knowledgeDeps": [
           "brand-identity",
           "templates",
-          "translation-memory"
+          "localization"
         ]
       },
       {
@@ -1623,7 +1626,7 @@
         "knowledgeDeps": [
           "brand-identity",
           "templates",
-          "translation-memory"
+          "localization"
         ]
       },
       {
@@ -1774,7 +1777,7 @@
         ],
         "knowledgeDeps": [
           "brand-identity",
-          "translation-memory"
+          "localization"
         ]
       },
       {
