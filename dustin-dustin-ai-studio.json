@@ -233,161 +233,8 @@
     ],
     "toolbox": [
       {
-        "id": "brief-builder",
-        "title": "Brief Builder",
-        "icon": "📋",
-        "subtitle": "Structures the campaign brief",
-        "description": "Human-facing tool that guides the director through campaign brief creation. Pulls from Market Intelligence, Product & Offer, Performance data, and Templates to suggest objectives, audiences, and channel mix.",
-        "roleType": "agent",
-        "accessTags": [
-          "human"
-        ],
-        "knowledgeDeps": [
-          "market-intelligence",
-          "product-offer",
-          "performance",
-          "templates"
-        ]
-      },
-      {
-        "id": "qa-signoff",
-        "title": "QA & Sign-off",
-        "icon": "✅",
-        "subtitle": "Reviews & approves output",
-        "description": "Human-facing approval interface that orchestrates Copy QA, Image QA, Video QA, and Brand Compliance QA to present a unified quality assessment for human sign-off.",
-        "roleType": "agent",
-        "accessTags": [
-          "human"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "guardrails"
-        ]
-      },
-      {
-        "id": "copy-generator",
-        "title": "Copy Generator",
-        "icon": "✍️",
-        "subtitle": "Context-driven multi-channel copy creation",
-        "description": "8-agent copy generation system. Creates net new copy for any channel from a brief. Channel Parameters and Brand Identity drive tone, format, and specs — one tool, many outputs.",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "copy-orchestrator",
-            "title": "Orchestrator Agent",
-            "icon": "🎛️",
-            "description": "Routes briefs to the right channel agent based on Campaign Brief and Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "email-copy-agent",
-            "title": "Email Copy Agent",
-            "icon": "📧",
-            "description": "Produces email marketing copy using Channel Parameters and email Templates.",
-            "subAgents": []
-          },
-          {
-            "id": "web-copy-agent",
-            "title": "Web / Landing Page Copy Agent",
-            "icon": "🌐",
-            "description": "Produces landing page and site copy using web Channel Parameters, SEO context, and Templates.",
-            "subAgents": []
-          },
-          {
-            "id": "social-copy-agent",
-            "title": "Social Copy Agent",
-            "icon": "📱",
-            "description": "Produces platform-specific social media copy per META, LinkedIn, and other channel specs.",
-            "subAgents": []
-          },
-          {
-            "id": "ads-copy-agent",
-            "title": "Ads Copy Agent",
-            "icon": "📢",
-            "description": "Produces search and display ad copy per Google Ads, programmatic, and banner Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "article-copy-agent",
-            "title": "Article / Editorial Copy Agent",
-            "icon": "📰",
-            "description": "Produces long-form editorial, article, and guide content using Brand Identity tone and Templates.",
-            "subAgents": []
-          },
-          {
-            "id": "banner-copy-agent",
-            "title": "Banner Copy Agent",
-            "icon": "🖼️",
-            "description": "Produces display banner headlines and CTAs per IAB specs and Bannerflow Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "copy-gen-qa",
-            "title": "QA Agent",
-            "icon": "✅",
-            "description": "Shared sub-agent (S8). Runs Copy QA for quality verification on all channel outputs.",
-            "subAgents": [],
-            "sharedId": "S8"
-          }
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence",
-          "product-offer",
-          "channel-params",
-          "templates",
-          "performance"
-        ]
-      },
-      {
-        "id": "brief-engine",
-        "title": "Brief Engine",
-        "icon": "📋",
-        "subtitle": "Variant-driven brief generation",
-        "description": "3-agent brief system. Generates campaign, newsletter, or content briefs from Templates, Market Intelligence, and Performance data. Template-driven — one engine, multiple brief types.",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "campaign-brief-agent",
-            "title": "Campaign Brief Agent",
-            "icon": "📣",
-            "description": "Generates structured campaign briefs with objectives, audiences, and channel mix from Market Intelligence and Performance.",
-            "subAgents": []
-          },
-          {
-            "id": "newsletter-brief-agent",
-            "title": "Newsletter Brief Agent",
-            "icon": "📰",
-            "description": "Plans newsletter structure, editorial angles, and content slots using Brand Identity and Templates.",
-            "subAgents": []
-          },
-          {
-            "id": "content-brief-agent",
-            "title": "Content Brief Agent",
-            "icon": "📄",
-            "description": "Creates content strategy briefs with SEO angles, topic clusters, and format recommendations.",
-            "subAgents": []
-          }
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence",
-          "product-offer",
-          "performance",
-          "templates"
-        ]
-      },
-      {
         "id": "translation-tool",
-        "title": "AI Translations",
+        "title": "Translations",
         "icon": "🌐",
         "subtitle": "MAATS — Multi-Agent Automated Translation System",
         "description": "10-agent translation system based on MQM evaluation framework. Specialized dimension agents assess the translation in parallel, then an editorial chain synthesizes, rewrites, and selects the optimal output. Win rate: 62.1% vs 30.1% for single-agent (NYU study).",
@@ -481,52 +328,414 @@
         ]
       },
       {
-        "id": "video-localization",
-        "title": "Video Localization",
-        "icon": "🎬",
-        "subtitle": "Video translation & cultural adaptation",
-        "description": "6-agent system for localizing video content. Translates scripts via AI Translations, generates subtitles, adapts cultural references, and synchronizes timing.",
+        "id": "customer-feedback",
+        "title": "Analyze Customer Feedback",
+        "icon": "💬",
+        "subtitle": "Sentiment, topics & trend analysis",
+        "description": "4-agent feedback analysis system. Performs sentiment analysis, topic clustering, trend identification, and insight extraction.",
         "roleType": "agent",
         "accessTags": [
           "agent"
         ],
         "subAgents": [
           {
-            "id": "video-translator",
-            "title": "Video Translator Agent",
-            "icon": "🔤",
-            "description": "Uses AI Translations (1) for script translation in video context.",
+            "id": "sentiment-analysis",
+            "title": "Sentiment Analysis Agent",
+            "icon": "😊",
+            "description": "Analyzes customer sentiment across feedback sources.",
             "subAgents": []
           },
           {
-            "id": "subtitle-gen",
-            "title": "Subtitle Generation Agent",
-            "icon": "💬",
-            "description": "Generates subtitles from translated script, respecting Channel Parameters for format and timing.",
+            "id": "topic-clustering",
+            "title": "Topic Clustering Agent",
+            "icon": "🏷️",
+            "description": "Clusters feedback by topic using Product & Offer category taxonomy.",
             "subAgents": []
           },
           {
-            "id": "cultural-adaptation",
-            "title": "Cultural Adaptation Agent",
-            "icon": "🌍",
-            "description": "Adapts cultural references using Market Intelligence market profiles and Guardrails.",
+            "id": "trend-identification",
+            "title": "Trend Identification Agent",
+            "icon": "📈",
+            "description": "Identifies trends using Performance historical data for comparison.",
             "subAgents": []
           },
           {
-            "id": "timing-sync",
-            "title": "Timing/Sync Agent",
-            "icon": "⏱️",
-            "description": "Synchronizes subtitle timing with source video pacing.",
+            "id": "insight-extraction",
+            "title": "Insight Extraction Agent",
+            "icon": "💡",
+            "description": "Combines outputs from all feedback agents with Market Intelligence to extract actionable insights.",
+            "subAgents": []
+          }
+        ],
+        "knowledgeDeps": [
+          "market-intelligence",
+          "product-offer",
+          "performance"
+        ]
+      },
+      {
+        "id": "audience-creator",
+        "title": "Audience Creator",
+        "icon": "🎯",
+        "subtitle": "AI-powered audience segmentation",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "market-intelligence",
+          "performance",
+          "product-offer"
+        ]
+      },
+      {
+        "id": "brand-compliance-qa",
+        "title": "Brand Compliance QA",
+        "icon": "🛡️",
+        "subtitle": "Cross-asset brand & legal compliance",
+        "description": "6-agent brand compliance system. Checks visual identity, tone, legal disclaimers, GDPR, and competitive claims.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "visual-identity",
+            "title": "Visual Identity Agent",
+            "icon": "🎨",
+            "description": "Validates logo, color, and typography rules from Brand Identity.",
             "subAgents": []
           },
           {
-            "id": "video-loc-editor",
+            "id": "tone-of-voice",
+            "title": "Brand Voice Agent",
+            "icon": "🗣️",
+            "description": "Shared sub-agent (S11). Checks voice guide and approved examples from Brand Identity.",
+            "subAgents": [],
+            "sharedId": "S11"
+          },
+          {
+            "id": "brand-legal-compliance",
+            "title": "Legal & Compliance Agent",
+            "icon": "⚖️",
+            "sharedId": "S12",
+            "description": "Shared sub-agent (S12). Validates legal disclaimers, GDPR rules, and privacy requirements from Guardrails.",
+            "subAgents": []
+          },
+          {
+            "id": "competitive-claims",
+            "title": "Competitive Claims Agent",
+            "icon": "⚔️",
+            "description": "Validates competitor policy and claim rules from Guardrails and Market Intelligence.",
+            "subAgents": []
+          },
+          {
+            "id": "brand-synthesis",
+            "title": "Synthesis Agent",
+            "icon": "📋",
+            "description": "Shared sub-agent (S3). Combines all brand compliance outputs.",
+            "subAgents": [],
+            "sharedId": "S3"
+          },
+          {
+            "id": "brand-qa-gate",
+            "title": "QA Gate Agent",
+            "icon": "✅",
+            "sharedId": "S8",
+            "description": "Shared sub-agent (S8). Final pass/fail gate for brand compliance.",
+            "subAgents": []
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "guardrails"
+        ]
+      },
+      {
+        "id": "brief-engine",
+        "title": "Brief Engine",
+        "icon": "📋",
+        "subtitle": "Variant-driven brief generation",
+        "description": "3-agent brief system. Generates campaign, newsletter, or content briefs from Templates, Market Intelligence, and Performance data. Template-driven — one engine, multiple brief types.",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "campaign-brief-agent",
+            "title": "Campaign Brief Agent",
+            "icon": "📣",
+            "description": "Generates structured campaign briefs with objectives, audiences, and channel mix from Market Intelligence and Performance.",
+            "subAgents": []
+          },
+          {
+            "id": "newsletter-brief-agent",
+            "title": "Newsletter Brief Agent",
+            "icon": "📰",
+            "description": "Plans newsletter structure, editorial angles, and content slots using Brand Identity and Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "content-brief-agent",
+            "title": "Content Brief Agent",
+            "icon": "📄",
+            "description": "Creates content strategy briefs with SEO angles, topic clusters, and format recommendations.",
+            "subAgents": []
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "performance",
+          "templates"
+        ]
+      },
+      {
+        "id": "channel-publisher",
+        "title": "Channel Publisher",
+        "icon": "📤",
+        "subtitle": "Multi-channel asset distribution",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "channel-params"
+        ]
+      },
+      {
+        "id": "channel-screenshotter",
+        "title": "Channel Screenshotter",
+        "icon": "📸",
+        "subtitle": "Captures timestamped screenshots of live campaign assets across vendor channels",
+        "description": "Automated screen-capture agent that crawls vendor online channels (e-commerce, social, display, search) and takes timestamped screenshots of active campaign placements. Outputs include full-page captures, cropped asset views, and metadata (URL, timestamp, placement position, vendor name).",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "url-crawler",
+            "title": "URL Crawler",
+            "icon": "🕷️",
+            "subtitle": "Discovers campaign placement URLs across vendor channels"
+          },
+          {
+            "id": "screenshot-engine",
+            "title": "Screenshot Engine",
+            "icon": "📷",
+            "subtitle": "Takes full-page and cropped screenshots with timestamps"
+          },
+          {
+            "id": "metadata-tagger",
+            "title": "Metadata Tagger",
+            "icon": "🏷️",
+            "subtitle": "Tags captures with URL, timestamp, vendor, placement, and campaign ID"
+          }
+        ],
+        "knowledgeDeps": [
+          "channel-params",
+          "vendor-agreements"
+        ]
+      },
+      {
+        "id": "claim-builder",
+        "title": "Claim Builder",
+        "icon": "💰",
+        "subtitle": "Generates vendor reimbursement claims from proof reports",
+        "description": "Takes proof-of-activity reports and vendor agreements to generate structured claim documents. Calculates claimable amounts, maps spend to agreement line items, and produces submission-ready claim packages.",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "agreement-parser",
+            "title": "Agreement Parser",
+            "icon": "📜",
+            "subtitle": "Extracts claimable line items and rules from vendor agreements"
+          },
+          {
+            "id": "spend-mapper",
+            "title": "Spend Mapper",
+            "icon": "🧮",
+            "subtitle": "Maps campaign spend to agreement line items and calculates claimable amounts"
+          },
+          {
+            "id": "claim-formatter",
+            "title": "Claim Formatter",
+            "icon": "📝",
+            "subtitle": "Produces submission-ready claim documents per vendor format"
+          },
+          {
+            "id": "claim-tracker",
+            "title": "Claim Tracker",
+            "icon": "📊",
+            "subtitle": "Tracks claim status, deadlines, and reimbursement progress"
+          }
+        ],
+        "knowledgeDeps": [
+          "vendor-agreements",
+          "performance"
+        ]
+      },
+      {
+        "id": "concept-creator",
+        "title": "Concept Creator",
+        "icon": "💡",
+        "subtitle": "Creative concept generation",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "templates"
+        ]
+      },
+      {
+        "id": "copy-generator",
+        "title": "Copy Generator",
+        "icon": "✍️",
+        "subtitle": "Context-driven multi-channel copy creation",
+        "description": "8-agent copy generation system. Creates net new copy for any channel from a brief. Channel Parameters and Brand Identity drive tone, format, and specs — one tool, many outputs.",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "copy-orchestrator",
+            "title": "Orchestrator Agent",
+            "icon": "🎛️",
+            "description": "Routes briefs to the right channel agent based on Campaign Brief and Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "email-copy-agent",
+            "title": "Email Copy Agent",
+            "icon": "📧",
+            "description": "Produces email marketing copy using Channel Parameters and email Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "web-copy-agent",
+            "title": "Web / Landing Page Copy Agent",
+            "icon": "🌐",
+            "description": "Produces landing page and site copy using web Channel Parameters, SEO context, and Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "social-copy-agent",
+            "title": "Social Copy Agent",
+            "icon": "📱",
+            "description": "Produces platform-specific social media copy per META, LinkedIn, and other channel specs.",
+            "subAgents": []
+          },
+          {
+            "id": "ads-copy-agent",
+            "title": "Ads Copy Agent",
+            "icon": "📢",
+            "description": "Produces search and display ad copy per Google Ads, programmatic, and banner Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "article-copy-agent",
+            "title": "Article / Editorial Copy Agent",
+            "icon": "📰",
+            "description": "Produces long-form editorial, article, and guide content using Brand Identity tone and Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "banner-copy-agent",
+            "title": "Banner Copy Agent",
+            "icon": "🖼️",
+            "description": "Produces display banner headlines and CTAs per IAB specs and Bannerflow Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "copy-gen-qa",
+            "title": "Copy QA Agent",
+            "icon": "📝",
+            "description": "Calls Copy QA internally to score all channel outputs across 5 quality dimensions. Triggers the Editor (S1) and Rewriter (S2) loop until quality threshold is met.",
+            "subAgents": []
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence",
+          "product-offer",
+          "channel-params",
+          "templates",
+          "performance"
+        ]
+      },
+      {
+        "id": "copy-qa",
+        "title": "Copy QA",
+        "icon": "📝",
+        "subtitle": "Multi-dimensional copy quality assurance",
+        "description": "7-agent copy quality system. Checks grammar, brand voice, factual accuracy, tone, and legal compliance, then synthesizes and rewrites.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "grammar-spelling",
+            "title": "Grammar & Spelling Agent",
+            "icon": "✍️",
+            "description": "Validates grammar and spelling using market-specific language rules.",
+            "subAgents": []
+          },
+          {
+            "id": "brand-voice-compliance",
+            "title": "Brand Voice Agent",
+            "icon": "🗣️",
+            "description": "Shared sub-agent (S11). Checks tone of voice against Brand Identity approved examples.",
+            "subAgents": [],
+            "sharedId": "S11"
+          },
+          {
+            "id": "factual-accuracy",
+            "title": "Factual Accuracy Agent",
+            "icon": "🎯",
+            "description": "Validates product specs, pricing, and claims against Product & Offer data.",
+            "subAgents": []
+          },
+          {
+            "id": "tone-audience-fit",
+            "title": "Audience Appropriateness Agent",
+            "icon": "👥",
+            "description": "Shared sub-agent (S7). Checks audience appropriateness using Market Intelligence buyer personas and Channel Parameters.",
+            "subAgents": [],
+            "sharedId": "S7"
+          },
+          {
+            "id": "legal-compliance",
+            "title": "Legal & Compliance Agent",
+            "icon": "⚖️",
+            "description": "Shared sub-agent (S12). Validates disclaimers, GDPR compliance, and competitor mention rules from Guardrails.",
+            "subAgents": [],
+            "sharedId": "S12"
+          },
+          {
+            "id": "copy-qa-editor",
             "title": "Editor Agent",
             "icon": "📋",
-            "description": "Shared sub-agent (S1). Synthesizes outputs from all video localization agents.",
+            "description": "Shared sub-agent (S1). Synthesizes all QA check outputs into a prioritized verdict.",
             "subAgents": [
               {
-                "id": "video-loc-rewriter",
+                "id": "copy-qa-rewriter",
                 "title": "Rewriting Agent",
                 "icon": "✏️",
                 "description": "Shared sub-agent (S2). Produces improved alternatives based on Editor verdict.",
@@ -535,14 +744,351 @@
               }
             ],
             "sharedId": "S1"
+          },
+          {
+            "id": "copy-qa-gate",
+            "title": "QA Gate Agent",
+            "icon": "✅",
+            "sharedId": "S8",
+            "description": "Shared sub-agent (S8). Final pass/fail gate — loops back to Editor if threshold not met.",
+            "subAgents": []
           }
         ],
         "knowledgeDeps": [
           "brand-identity",
-          "market-intelligence",
           "guardrails",
+          "product-offer"
+        ]
+      },
+      {
+        "id": "copy-repurposing",
+        "title": "Copy Repurposing",
+        "icon": "♻️",
+        "subtitle": "Channel-specific copy adaptation",
+        "description": "6-agent copy repurposing system. Rewrites master copy for LinkedIn, Meta, banner, email, and Google Ads, with QA verification.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "linkedin-rewrite",
+            "title": "LinkedIn Rewrite Agent",
+            "icon": "💼",
+            "description": "Adapts copy for LinkedIn format and tone using Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "meta-rewrite",
+            "title": "Meta/Facebook Rewrite Agent",
+            "icon": "📱",
+            "description": "Adapts copy for Meta platforms using Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "banner-headline-rewrite",
+            "title": "Banner Headline Rewrite Agent",
+            "icon": "🖼️",
+            "description": "Adapts copy for banner headline constraints using Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "email-rewrite",
+            "title": "Email Rewrite Agent",
+            "icon": "📧",
+            "description": "Adapts copy for email format using Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "google-ads-rewrite",
+            "title": "Google Ads Rewrite Agent",
+            "icon": "🔍",
+            "description": "Adapts copy for Google Ads character limits using Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "repurpose-qa",
+            "title": "Copy QA Agent",
+            "icon": "📝",
+            "description": "Calls Copy QA internally to score all repurposed outputs across 5 quality dimensions. Triggers the Editor (S1) and Rewriter (S2) loop until quality threshold is met.",
+            "subAgents": []
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
           "channel-params",
-          "translation-memory"
+          "templates"
+        ]
+      },
+      {
+        "id": "image-grading",
+        "title": "Image Grading",
+        "icon": "🎨",
+        "subtitle": "Image quality evaluation & correction",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "guardrails"
+        ]
+      },
+      {
+        "id": "image-qa",
+        "title": "Image QA",
+        "icon": "🖼️",
+        "subtitle": "Visual asset quality assurance",
+        "description": "6-agent image quality system. Checks brand compliance, technical quality, accessibility, audience fit, channel formats, and synthesizes pass/fail.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "img-brand-compliance",
+            "title": "Brand Compliance Agent",
+            "icon": "🎨",
+            "description": "Shared sub-agent (S4). Checks assets against visual identity rules — logo, colors, typography.",
+            "subAgents": [],
+            "sharedId": "S4"
+          },
+          {
+            "id": "technical-quality",
+            "title": "Technical Quality Agent",
+            "icon": "🔬",
+            "description": "Validates resolution, dimensions, and technical specs from Channel Parameters.",
+            "subAgents": []
+          },
+          {
+            "id": "img-accessibility",
+            "title": "Accessibility Agent",
+            "icon": "♿",
+            "description": "Shared sub-agent (S5). Checks WCAG compliance, contrast ratios, and alt text readiness.",
+            "subAgents": [],
+            "sharedId": "S5"
+          },
+          {
+            "id": "img-audience",
+            "title": "Audience Appropriateness Agent",
+            "icon": "👥",
+            "description": "Shared sub-agent (S7). Checks cultural fit and sensitivity for target market.",
+            "subAgents": [],
+            "sharedId": "S7"
+          },
+          {
+            "id": "img-channel-format",
+            "title": "Channel Format Agent",
+            "icon": "📐",
+            "description": "Shared sub-agent (S6). Validates asset dimensions, file size, and format specs per platform.",
+            "subAgents": [],
+            "sharedId": "S6"
+          },
+          {
+            "id": "img-synthesis",
+            "title": "Synthesis Agent",
+            "icon": "📋",
+            "description": "Shared sub-agent (S3). Combines quality check results into a pass/fail assessment.",
+            "subAgents": [],
+            "sharedId": "S3"
+          },
+          {
+            "id": "image-qa-gate",
+            "title": "QA Gate Agent",
+            "icon": "✅",
+            "sharedId": "S8",
+            "description": "Shared sub-agent (S8). Final pass/fail gate — determines if asset meets quality threshold.",
+            "subAgents": []
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "guardrails",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "llm-data-feeds",
+        "title": "LLM Data Feeds for GEO",
+        "icon": "📡",
+        "subtitle": "Generative engine optimization feeds",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "product-offer",
+          "brand-identity"
+        ]
+      },
+      {
+        "id": "master-prod-image",
+        "title": "Master Production — Image",
+        "icon": "🖼️",
+        "subtitle": "AI image generation & adaptation",
+        "description": "5-agent image production system. Generates product photography and creative images, assesses quality via Image QA, refines based on feedback, and adapts formats per channel.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "photo-gen-agent",
+            "title": "Product Photography Agent",
+            "icon": "📷",
+            "description": "Generates AI product photography based on Brand Identity visual style and Product & Offer catalog data.",
+            "subAgents": []
+          },
+          {
+            "id": "image-gen-agent",
+            "title": "Image Generation Agent",
+            "icon": "🎨",
+            "description": "Generates images based on Brand Identity visual style and Product & Offer data.",
+            "subAgents": []
+          },
+          {
+            "id": "image-assessment",
+            "title": "Image Assessment Agent",
+            "icon": "🖼️",
+            "description": "Runs Image QA for quality verification on generated images.",
+            "subAgents": []
+          },
+          {
+            "id": "image-refinement",
+            "title": "Refinement Agent",
+            "icon": "🔄",
+            "description": "Shared sub-agent (S9). Iterates on generated assets based on assessment feedback.",
+            "subAgents": [],
+            "sharedId": "S9"
+          },
+          {
+            "id": "image-format-adapt",
+            "title": "Format Adaptation Agent",
+            "icon": "📐",
+            "description": "Shared sub-agent (S10). Resizes, crops, or reformats assets for different channels.",
+            "subAgents": [],
+            "sharedId": "S10"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "product-offer",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "master-prod-video",
+        "title": "Master Production — Video",
+        "icon": "🎬",
+        "subtitle": "AI video generation & adaptation",
+        "description": "4-agent video production system. Generates videos, assesses quality via Video QA, refines, and adapts formats per platform.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "video-gen-agent",
+            "title": "Video Generation Agent",
+            "icon": "🎥",
+            "description": "Generates video content based on Brand Identity motion guidelines and Templates.",
+            "subAgents": []
+          },
+          {
+            "id": "video-assessment",
+            "title": "Video Assessment Agent",
+            "icon": "🎥",
+            "description": "Runs Video QA for quality verification on generated video.",
+            "subAgents": []
+          },
+          {
+            "id": "video-refinement",
+            "title": "Refinement Agent",
+            "icon": "🔄",
+            "description": "Shared sub-agent (S9). Iterates on video assets based on assessment feedback.",
+            "subAgents": [],
+            "sharedId": "S9"
+          },
+          {
+            "id": "video-format-adapt",
+            "title": "Format Adaptation Agent",
+            "icon": "📐",
+            "description": "Shared sub-agent (S10). Reformats video for different platform specs.",
+            "subAgents": [],
+            "sharedId": "S10"
+          }
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "product-offer",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "proof-report-gen",
+        "title": "Proof Report Generator",
+        "icon": "📋",
+        "subtitle": "Compiles screenshots and metadata into proof-of-activity reports",
+        "description": "Assembles screen captures, timestamps, and placement metadata into structured proof-of-activity reports per vendor agreement. Matches captured placements against agreed campaign specs to verify fulfillment.",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "subAgents": [
+          {
+            "id": "evidence-compiler",
+            "title": "Evidence Compiler",
+            "icon": "📁",
+            "subtitle": "Groups captures by vendor, campaign, and channel"
+          },
+          {
+            "id": "fulfillment-matcher",
+            "title": "Fulfillment Matcher",
+            "icon": "✔️",
+            "subtitle": "Matches captured placements against vendor agreement requirements"
+          },
+          {
+            "id": "report-formatter",
+            "title": "Report Formatter",
+            "icon": "📄",
+            "subtitle": "Generates formatted proof-of-activity PDF/document"
+          }
+        ],
+        "knowledgeDeps": [
+          "vendor-agreements",
+          "channel-params"
+        ]
+      },
+      {
+        "id": "qa-signoff",
+        "title": "QA & Sign-off",
+        "icon": "✅",
+        "subtitle": "Reviews & approves output",
+        "description": "Human-facing approval interface that orchestrates Copy QA, Image QA, Video QA, and Brand Compliance QA to present a unified quality assessment for human sign-off.",
+        "roleType": "agent",
+        "accessTags": [
+          "human"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "guardrails"
+        ]
+      },
+      {
+        "id": "researcher",
+        "title": "Researcher",
+        "icon": "🔬",
+        "subtitle": "Market & product research agent",
+        "roleType": "agent",
+        "accessTags": [
+          "human",
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "market-intelligence",
+          "product-offer",
+          "performance"
         ]
       },
       {
@@ -607,59 +1153,80 @@
         ]
       },
       {
-        "id": "copy-qa",
-        "title": "Copy QA",
-        "icon": "📝",
-        "subtitle": "Multi-dimensional copy quality assurance",
-        "description": "7-agent copy quality system. Checks grammar, brand voice, factual accuracy, tone, and legal compliance, then synthesizes and rewrites.",
+        "id": "smart-summaries",
+        "title": "Smart Summaries (FAQ)",
+        "icon": "❓",
+        "subtitle": "Auto-generated FAQ & summaries",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "product-offer",
+          "performance"
+        ]
+      },
+      {
+        "id": "text-to-voice",
+        "title": "Text to Voice",
+        "icon": "🔊",
+        "subtitle": "AI voiceover generation",
+        "roleType": "agent",
+        "accessTags": [
+          "agent"
+        ],
+        "knowledgeDeps": [
+          "brand-identity",
+          "market-intelligence"
+        ]
+      },
+      {
+        "id": "video-localization",
+        "title": "Video Localization",
+        "icon": "🎬",
+        "subtitle": "Video translation & cultural adaptation",
+        "description": "6-agent system for localizing video content. Translates scripts via AI Translations, generates subtitles, adapts cultural references, and synchronizes timing.",
         "roleType": "agent",
         "accessTags": [
           "agent"
         ],
         "subAgents": [
           {
-            "id": "grammar-spelling",
-            "title": "Grammar & Spelling Agent",
-            "icon": "✍️",
-            "description": "Validates grammar and spelling using market-specific language rules.",
+            "id": "video-translator",
+            "title": "Video Translator Agent",
+            "icon": "🌐",
+            "description": "Uses AI Translations (1) for script translation in video context.",
             "subAgents": []
           },
           {
-            "id": "brand-voice-compliance",
-            "title": "Brand Voice Compliance Agent",
-            "icon": "🎨",
-            "description": "Checks tone of voice against Brand Identity approved examples.",
+            "id": "subtitle-gen",
+            "title": "Subtitle Generation Agent",
+            "icon": "💬",
+            "description": "Generates subtitles from translated script, respecting Channel Parameters for format and timing.",
             "subAgents": []
           },
           {
-            "id": "factual-accuracy",
-            "title": "Factual Accuracy Agent",
-            "icon": "🎯",
-            "description": "Validates product specs, pricing, and claims against Product & Offer data.",
+            "id": "cultural-adaptation",
+            "title": "Cultural Adaptation Agent",
+            "icon": "🌍",
+            "description": "Adapts cultural references using Market Intelligence market profiles and Guardrails.",
             "subAgents": []
           },
           {
-            "id": "tone-audience-fit",
-            "title": "Tone & Audience Fit Agent",
-            "icon": "👥",
-            "description": "Checks audience appropriateness using Market Intelligence buyer personas and Channel Parameters.",
+            "id": "timing-sync",
+            "title": "Timing/Sync Agent",
+            "icon": "⏱️",
+            "description": "Synchronizes subtitle timing with source video pacing.",
             "subAgents": []
           },
           {
-            "id": "legal-compliance",
-            "title": "Legal & Compliance Agent",
-            "icon": "⚖️",
-            "description": "Validates disclaimers, GDPR compliance, and competitor mention rules from Guardrails.",
-            "subAgents": []
-          },
-          {
-            "id": "copy-qa-editor",
+            "id": "video-loc-editor",
             "title": "Editor Agent",
             "icon": "📋",
-            "description": "Shared sub-agent (S1). Synthesizes all QA check outputs into a prioritized verdict.",
+            "description": "Shared sub-agent (S1). Synthesizes outputs from all video localization agents.",
             "subAgents": [
               {
-                "id": "copy-qa-rewriter",
+                "id": "video-loc-rewriter",
                 "title": "Rewriting Agent",
                 "icon": "✏️",
                 "description": "Shared sub-agent (S2). Produces improved alternatives based on Editor verdict.",
@@ -672,73 +1239,10 @@
         ],
         "knowledgeDeps": [
           "brand-identity",
+          "market-intelligence",
           "guardrails",
-          "product-offer"
-        ]
-      },
-      {
-        "id": "image-qa",
-        "title": "Image QA",
-        "icon": "🖼️",
-        "subtitle": "Visual asset quality assurance",
-        "description": "6-agent image quality system. Checks brand compliance, technical quality, accessibility, audience fit, channel formats, and synthesizes pass/fail.",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "img-brand-compliance",
-            "title": "Brand Compliance Agent",
-            "icon": "🎨",
-            "description": "Shared sub-agent (S4). Checks assets against visual identity rules — logo, colors, typography.",
-            "subAgents": [],
-            "sharedId": "S4"
-          },
-          {
-            "id": "technical-quality",
-            "title": "Technical Quality Agent",
-            "icon": "🔬",
-            "description": "Validates resolution, dimensions, and technical specs from Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "img-accessibility",
-            "title": "Accessibility Agent",
-            "icon": "♿",
-            "description": "Shared sub-agent (S5). Checks WCAG compliance, contrast ratios, and alt text readiness.",
-            "subAgents": [],
-            "sharedId": "S5"
-          },
-          {
-            "id": "img-audience",
-            "title": "Audience Appropriateness Agent",
-            "icon": "👥",
-            "description": "Shared sub-agent (S7). Checks cultural fit and sensitivity for target market.",
-            "subAgents": [],
-            "sharedId": "S7"
-          },
-          {
-            "id": "img-channel-format",
-            "title": "Channel Format Agent",
-            "icon": "📐",
-            "description": "Shared sub-agent (S6). Validates asset dimensions, file size, and format specs per platform.",
-            "subAgents": [],
-            "sharedId": "S6"
-          },
-          {
-            "id": "img-synthesis",
-            "title": "Synthesis Agent",
-            "icon": "📋",
-            "description": "Shared sub-agent (S3). Combines quality check results into a pass/fail assessment.",
-            "subAgents": [],
-            "sharedId": "S3"
-          }
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "guardrails",
-          "channel-params"
+          "channel-params",
+          "translation-memory"
         ]
       },
       {
@@ -804,513 +1308,20 @@
             "description": "Shared sub-agent (S3). Combines all video QA outputs into pass/fail.",
             "subAgents": [],
             "sharedId": "S3"
+          },
+          {
+            "id": "video-qa-gate",
+            "title": "QA Gate Agent",
+            "icon": "✅",
+            "sharedId": "S8",
+            "description": "Shared sub-agent (S8). Final pass/fail gate — determines if asset meets quality threshold.",
+            "subAgents": []
           }
         ],
         "knowledgeDeps": [
           "brand-identity",
           "guardrails",
           "channel-params"
-        ]
-      },
-      {
-        "id": "brand-compliance-qa",
-        "title": "Brand Compliance QA",
-        "icon": "🛡️",
-        "subtitle": "Cross-asset brand & legal compliance",
-        "description": "6-agent brand compliance system. Checks visual identity, tone, legal disclaimers, GDPR, and competitive claims.",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "visual-identity",
-            "title": "Visual Identity Agent",
-            "icon": "🎨",
-            "description": "Validates logo, color, and typography rules from Brand Identity.",
-            "subAgents": []
-          },
-          {
-            "id": "tone-of-voice",
-            "title": "Tone of Voice Agent",
-            "icon": "🗣️",
-            "description": "Checks voice guide and approved examples from Brand Identity.",
-            "subAgents": []
-          },
-          {
-            "id": "legal-disclaimer",
-            "title": "Legal & Disclaimer Agent",
-            "icon": "⚖️",
-            "description": "Validates legal disclaimers per market from Guardrails.",
-            "subAgents": []
-          },
-          {
-            "id": "gdpr-privacy",
-            "title": "GDPR & Privacy Agent",
-            "icon": "🔒",
-            "description": "Checks GDPR rules and consent requirements from Guardrails.",
-            "subAgents": []
-          },
-          {
-            "id": "competitive-claims",
-            "title": "Competitive Claims Agent",
-            "icon": "⚔️",
-            "description": "Validates competitor policy and claim rules from Guardrails and Market Intelligence.",
-            "subAgents": []
-          },
-          {
-            "id": "brand-synthesis",
-            "title": "Synthesis Agent",
-            "icon": "📋",
-            "description": "Shared sub-agent (S3). Combines all brand compliance outputs.",
-            "subAgents": [],
-            "sharedId": "S3"
-          }
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "guardrails"
-        ]
-      },
-      {
-        "id": "master-prod-image",
-        "title": "Master Production — Image",
-        "icon": "🖼️",
-        "subtitle": "AI image generation & adaptation",
-        "description": "5-agent image production system. Generates product photography and creative images, assesses quality via Image QA, refines based on feedback, and adapts formats per channel.",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "photo-gen-agent",
-            "title": "Product Photography Agent",
-            "icon": "📷",
-            "description": "Generates AI product photography based on Brand Identity visual style and Product & Offer catalog data.",
-            "subAgents": []
-          },
-          {
-            "id": "image-gen-agent",
-            "title": "Image Generation Agent",
-            "icon": "🎨",
-            "description": "Generates images based on Brand Identity visual style and Product & Offer data.",
-            "subAgents": []
-          },
-          {
-            "id": "image-assessment",
-            "title": "Image Assessment Agent",
-            "icon": "🔍",
-            "description": "Runs Image QA for quality verification on generated images.",
-            "subAgents": []
-          },
-          {
-            "id": "image-refinement",
-            "title": "Refinement Agent",
-            "icon": "🔄",
-            "description": "Shared sub-agent (S9). Iterates on generated assets based on assessment feedback.",
-            "subAgents": [],
-            "sharedId": "S9"
-          },
-          {
-            "id": "image-format-adapt",
-            "title": "Format Adaptation Agent",
-            "icon": "📐",
-            "description": "Shared sub-agent (S10). Resizes, crops, or reformats assets for different channels.",
-            "subAgents": [],
-            "sharedId": "S10"
-          }
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "product-offer",
-          "channel-params"
-        ]
-      },
-      {
-        "id": "master-prod-video",
-        "title": "Master Production — Video",
-        "icon": "🎬",
-        "subtitle": "AI video generation & adaptation",
-        "description": "4-agent video production system. Generates videos, assesses quality via Video QA, refines, and adapts formats per platform.",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "video-gen-agent",
-            "title": "Video Generation Agent",
-            "icon": "🎥",
-            "description": "Generates video content based on Brand Identity motion guidelines and Templates.",
-            "subAgents": []
-          },
-          {
-            "id": "video-assessment",
-            "title": "Video Assessment Agent",
-            "icon": "🔍",
-            "description": "Runs Video QA for quality verification on generated video.",
-            "subAgents": []
-          },
-          {
-            "id": "video-refinement",
-            "title": "Refinement Agent",
-            "icon": "🔄",
-            "description": "Shared sub-agent (S9). Iterates on video assets based on assessment feedback.",
-            "subAgents": [],
-            "sharedId": "S9"
-          },
-          {
-            "id": "video-format-adapt",
-            "title": "Format Adaptation Agent",
-            "icon": "📐",
-            "description": "Shared sub-agent (S10). Reformats video for different platform specs.",
-            "subAgents": [],
-            "sharedId": "S10"
-          }
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "product-offer",
-          "channel-params"
-        ]
-      },
-      {
-        "id": "copy-repurposing",
-        "title": "Copy Repurposing",
-        "icon": "♻️",
-        "subtitle": "Channel-specific copy adaptation",
-        "description": "6-agent copy repurposing system. Rewrites master copy for LinkedIn, Meta, banner, email, and Google Ads, with QA verification.",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "linkedin-rewrite",
-            "title": "LinkedIn Rewrite Agent",
-            "icon": "💼",
-            "description": "Adapts copy for LinkedIn format and tone using Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "meta-rewrite",
-            "title": "Meta/Facebook Rewrite Agent",
-            "icon": "📱",
-            "description": "Adapts copy for Meta platforms using Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "banner-headline-rewrite",
-            "title": "Banner Headline Rewrite Agent",
-            "icon": "🖼️",
-            "description": "Adapts copy for banner headline constraints using Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "email-rewrite",
-            "title": "Email Rewrite Agent",
-            "icon": "📧",
-            "description": "Adapts copy for email format using Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "google-ads-rewrite",
-            "title": "Google Ads Rewrite Agent",
-            "icon": "🔍",
-            "description": "Adapts copy for Google Ads character limits using Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "repurpose-qa",
-            "title": "QA Agent",
-            "icon": "✅",
-            "description": "Shared sub-agent (S8). Runs Copy QA for quality verification on all repurposed outputs.",
-            "subAgents": [],
-            "sharedId": "S8"
-          }
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "channel-params",
-          "templates"
-        ]
-      },
-      {
-        "id": "customer-feedback",
-        "title": "Analyze Customer Feedback",
-        "icon": "💬",
-        "subtitle": "Sentiment, topics & trend analysis",
-        "description": "4-agent feedback analysis system. Performs sentiment analysis, topic clustering, trend identification, and insight extraction.",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "sentiment-analysis",
-            "title": "Sentiment Analysis Agent",
-            "icon": "😊",
-            "description": "Analyzes customer sentiment across feedback sources.",
-            "subAgents": []
-          },
-          {
-            "id": "topic-clustering",
-            "title": "Topic Clustering Agent",
-            "icon": "🏷️",
-            "description": "Clusters feedback by topic using Product & Offer category taxonomy.",
-            "subAgents": []
-          },
-          {
-            "id": "trend-identification",
-            "title": "Trend Identification Agent",
-            "icon": "📈",
-            "description": "Identifies trends using Performance historical data for comparison.",
-            "subAgents": []
-          },
-          {
-            "id": "insight-extraction",
-            "title": "Insight Extraction Agent",
-            "icon": "💡",
-            "description": "Combines outputs from all feedback agents with Market Intelligence to extract actionable insights.",
-            "subAgents": []
-          }
-        ],
-        "knowledgeDeps": [
-          "market-intelligence",
-          "product-offer",
-          "performance"
-        ]
-      },
-      {
-        "id": "text-to-voice",
-        "title": "Text to Voice",
-        "icon": "🔊",
-        "subtitle": "AI voiceover generation",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence"
-        ]
-      },
-      {
-        "id": "smart-summaries",
-        "title": "Smart Summaries (FAQ)",
-        "icon": "❓",
-        "subtitle": "Auto-generated FAQ & summaries",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "product-offer",
-          "performance"
-        ]
-      },
-      {
-        "id": "llm-data-feeds",
-        "title": "LLM Data Feeds for GEO",
-        "icon": "📡",
-        "subtitle": "Generative engine optimization feeds",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "product-offer",
-          "brand-identity"
-        ]
-      },
-      {
-        "id": "audience-creator",
-        "title": "Audience Creator",
-        "icon": "🎯",
-        "subtitle": "AI-powered audience segmentation",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "market-intelligence",
-          "performance",
-          "product-offer"
-        ]
-      },
-      {
-        "id": "researcher",
-        "title": "Researcher",
-        "icon": "🔬",
-        "subtitle": "Market & product research agent",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "market-intelligence",
-          "product-offer",
-          "performance"
-        ]
-      },
-      {
-        "id": "concept-creator",
-        "title": "Concept Creator",
-        "icon": "💡",
-        "subtitle": "Creative concept generation",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "market-intelligence",
-          "product-offer",
-          "templates"
-        ]
-      },
-      {
-        "id": "channel-publisher",
-        "title": "Channel Publisher",
-        "icon": "📤",
-        "subtitle": "Multi-channel asset distribution",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "channel-params"
-        ]
-      },
-      {
-        "id": "image-grading",
-        "title": "Image Grading",
-        "icon": "🎨",
-        "subtitle": "Image quality evaluation & correction",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "knowledgeDeps": [
-          "brand-identity",
-          "guardrails"
-        ]
-      },
-      {
-        "id": "channel-screenshotter",
-        "title": "Channel Screenshotter",
-        "icon": "📸",
-        "subtitle": "Captures timestamped screenshots of live campaign assets across vendor channels",
-        "description": "Automated screen-capture agent that crawls vendor online channels (e-commerce, social, display, search) and takes timestamped screenshots of active campaign placements. Outputs include full-page captures, cropped asset views, and metadata (URL, timestamp, placement position, vendor name).",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "url-crawler",
-            "title": "URL Crawler",
-            "icon": "🕷️",
-            "subtitle": "Discovers campaign placement URLs across vendor channels"
-          },
-          {
-            "id": "screenshot-engine",
-            "title": "Screenshot Engine",
-            "icon": "📷",
-            "subtitle": "Takes full-page and cropped screenshots with timestamps"
-          },
-          {
-            "id": "metadata-tagger",
-            "title": "Metadata Tagger",
-            "icon": "🏷️",
-            "subtitle": "Tags captures with URL, timestamp, vendor, placement, and campaign ID"
-          }
-        ],
-        "knowledgeDeps": [
-          "channel-params",
-          "vendor-agreements"
-        ]
-      },
-      {
-        "id": "proof-report-gen",
-        "title": "Proof Report Generator",
-        "icon": "📋",
-        "subtitle": "Compiles screenshots and metadata into proof-of-activity reports",
-        "description": "Assembles screen captures, timestamps, and placement metadata into structured proof-of-activity reports per vendor agreement. Matches captured placements against agreed campaign specs to verify fulfillment.",
-        "roleType": "agent",
-        "accessTags": [
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "evidence-compiler",
-            "title": "Evidence Compiler",
-            "icon": "📁",
-            "subtitle": "Groups captures by vendor, campaign, and channel"
-          },
-          {
-            "id": "fulfillment-matcher",
-            "title": "Fulfillment Matcher",
-            "icon": "✔️",
-            "subtitle": "Matches captured placements against vendor agreement requirements"
-          },
-          {
-            "id": "report-formatter",
-            "title": "Report Formatter",
-            "icon": "📄",
-            "subtitle": "Generates formatted proof-of-activity PDF/document"
-          }
-        ],
-        "knowledgeDeps": [
-          "vendor-agreements",
-          "channel-params"
-        ]
-      },
-      {
-        "id": "claim-builder",
-        "title": "Claim Builder",
-        "icon": "💰",
-        "subtitle": "Generates vendor reimbursement claims from proof reports",
-        "description": "Takes proof-of-activity reports and vendor agreements to generate structured claim documents. Calculates claimable amounts, maps spend to agreement line items, and produces submission-ready claim packages.",
-        "roleType": "agent",
-        "accessTags": [
-          "human",
-          "agent"
-        ],
-        "subAgents": [
-          {
-            "id": "agreement-parser",
-            "title": "Agreement Parser",
-            "icon": "📜",
-            "subtitle": "Extracts claimable line items and rules from vendor agreements"
-          },
-          {
-            "id": "spend-mapper",
-            "title": "Spend Mapper",
-            "icon": "🧮",
-            "subtitle": "Maps campaign spend to agreement line items and calculates claimable amounts"
-          },
-          {
-            "id": "claim-formatter",
-            "title": "Claim Formatter",
-            "icon": "📝",
-            "subtitle": "Produces submission-ready claim documents per vendor format"
-          },
-          {
-            "id": "claim-tracker",
-            "title": "Claim Tracker",
-            "icon": "📊",
-            "subtitle": "Tracks claim status, deadlines, and reimbursement progress"
-          }
-        ],
-        "knowledgeDeps": [
-          "vendor-agreements",
-          "performance"
         ]
       }
     ],
@@ -1471,6 +1482,152 @@
           "Locale-specific phrasing & idioms"
         ]
       }
+    ],
+    "sharedAgents": [
+      {
+        "id": "shared-editor",
+        "sharedId": "S1",
+        "title": "Editor",
+        "icon": "📋",
+        "description": "Synthesizes assessment reports from all dimension agents. Prioritizes and weighs errors by severity to produce a holistic editorial verdict.",
+        "usedBy": [
+          "translation-tool",
+          "video-localization",
+          "copy-qa",
+          "copy-generator",
+          "copy-repurposing"
+        ]
+      },
+      {
+        "id": "shared-rewriter",
+        "sharedId": "S2",
+        "title": "Rewriter",
+        "icon": "✏️",
+        "description": "Produces improved alternatives based on the Editor verdict. Generates multiple candidates for the quality loop to reassess.",
+        "usedBy": [
+          "translation-tool",
+          "video-localization",
+          "copy-qa",
+          "copy-generator",
+          "copy-repurposing"
+        ]
+      },
+      {
+        "id": "shared-synthesis",
+        "sharedId": "S3",
+        "title": "Synthesis",
+        "icon": "🧮",
+        "description": "Combines multi-dimensional quality scores into a single weighted assessment. Determines pass/fail against configurable thresholds.",
+        "usedBy": [
+          "image-qa",
+          "video-qa",
+          "brand-compliance-qa",
+          "master-prod-image",
+          "master-prod-video"
+        ]
+      },
+      {
+        "id": "shared-brand-compliance",
+        "sharedId": "S4",
+        "title": "Brand Compliance",
+        "icon": "🎨",
+        "description": "Checks assets against visual identity rules — logo usage, color palette, typography, and co-branding guidelines from Brand Identity.",
+        "usedBy": [
+          "image-qa",
+          "video-qa"
+        ]
+      },
+      {
+        "id": "shared-accessibility",
+        "sharedId": "S5",
+        "title": "Accessibility",
+        "icon": "♿",
+        "description": "Validates WCAG compliance, contrast ratios, alt text readiness, and inclusive design requirements from Guardrails.",
+        "usedBy": [
+          "image-qa",
+          "video-qa"
+        ]
+      },
+      {
+        "id": "shared-channel-format",
+        "sharedId": "S6",
+        "title": "Channel Format",
+        "icon": "📐",
+        "description": "Validates asset dimensions, file size, and format specs per platform against Channel Parameters.",
+        "usedBy": [
+          "image-qa",
+          "video-qa"
+        ]
+      },
+      {
+        "id": "shared-audience",
+        "sharedId": "S7",
+        "title": "Audience Appropriateness",
+        "icon": "👥",
+        "description": "Ensures tone and content are appropriate for the target demographic. Flags culturally insensitive or unnatural expressions using Market Intelligence.",
+        "usedBy": [
+          "translation-tool",
+          "image-qa",
+          "copy-qa"
+        ]
+      },
+      {
+        "id": "shared-qa-gate",
+        "sharedId": "S8",
+        "title": "QA Gate",
+        "icon": "✅",
+        "description": "Internal quality gate that runs before tool output. Checks against quality threshold — if below, triggers the rewrite/refinement loop.",
+        "usedBy": [
+          "copy-qa",
+          "image-qa",
+          "video-qa",
+          "brand-compliance-qa"
+        ]
+      },
+      {
+        "id": "shared-refinement",
+        "sharedId": "S9",
+        "title": "Refinement",
+        "icon": "🔄",
+        "description": "Iterates on generated assets based on assessment feedback. Loops with the QA dimension agents until quality threshold is met.",
+        "usedBy": [
+          "master-prod-image",
+          "master-prod-video"
+        ]
+      },
+      {
+        "id": "shared-format-adapt",
+        "sharedId": "S10",
+        "title": "Format Adaptation",
+        "icon": "🔀",
+        "description": "Resizes, crops, or reformats assets for different channel specs. Produces multi-format output from a single master asset.",
+        "usedBy": [
+          "master-prod-image",
+          "master-prod-video"
+        ]
+      },
+      {
+        "id": "shared-brand-voice",
+        "sharedId": "S11",
+        "title": "Brand Voice",
+        "icon": "🗣️",
+        "description": "Validates tone of voice, brand voice guidelines, and approved examples against Brand Identity.",
+        "usedBy": [
+          "copy-qa",
+          "brand-compliance-qa"
+        ]
+      },
+      {
+        "id": "shared-legal-compliance",
+        "sharedId": "S12",
+        "title": "Legal & Compliance",
+        "icon": "⚖️",
+        "description": "Validates legal disclaimers, GDPR compliance, privacy rules, and competitor mention policies from Guardrails.",
+        "usedBy": [
+          "copy-qa",
+          "brand-compliance-qa"
+        ]
+      }
     ]
   },
   "playbooks": [
@@ -1587,7 +1744,7 @@
           "id": "sw-pl-1",
           "stepNum": 1,
           "actor": "human",
-          "title": "Brief Builder",
+          "title": "Brief Engine",
           "subtitle": "Product launch brief & objectives",
           "icon": "📋"
         },
@@ -1756,7 +1913,7 @@
           "id": "sw-vp-1",
           "stepNum": 1,
           "actor": "human",
-          "title": "Brief Builder",
+          "title": "Brief Engine",
           "subtitle": "Vendor campaign brief & objectives",
           "icon": "📋"
         },
@@ -1899,7 +2056,7 @@
           "id": "sw-vw-1",
           "stepNum": 1,
           "actor": "human",
-          "title": "Brief Builder",
+          "title": "Brief Engine",
           "subtitle": "Seasonal sale brief, dates & offers",
           "icon": "📋"
         },
@@ -2070,20 +2227,6 @@
           "label": "Launch package"
         }
       ]
-    },
-    {
-      "id": "event-seminar",
-      "title": "Event Seminar",
-      "description": "Pre-event promotion, registration drive, post-event follow-up",
-      "swimlaneSteps": [],
-      "arrows": []
-    },
-    {
-      "id": "accessory-market",
-      "title": "Accessory Market",
-      "description": "Accessory-focused campaign with product photography and cross-sell",
-      "swimlaneSteps": [],
-      "arrows": []
     }
   ]
 }
