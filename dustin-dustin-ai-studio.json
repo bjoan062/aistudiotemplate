@@ -110,6 +110,22 @@
         "definitionOfDone": "Email with personalized copy, graded imagery, brand-compliant design, translated and ready for distribution."
       },
       {
+        "id": "event-spec",
+        "title": "Event Specialist",
+        "icon": "🎪",
+        "subtitle": "Event production for digital and physical channels",
+        "roleType": "dual",
+        "toolChain": [
+          "brief-engine",
+          "copy-generator",
+          "master-prod-image",
+          "copy-qa",
+          "translation-tool",
+          "channel-publisher"
+        ],
+        "definitionOfDone": "Event fully produced with registration page, email invitations, signage, agenda, presentation template, on-site collateral, and post-event summary. Translated, QA'd, and published."
+      },
+      {
         "id": "banner-display-spec",
         "title": "Banner/Display Specialist",
         "icon": "🖼️",
@@ -570,9 +586,66 @@
           "brand-identity",
           "market-intelligence",
           "product-offer",
+          "channel-params",
           "performance",
-          "templates"
-        ]
+          "templates",
+          "guardrails"
+        ],
+        "knowledgeItemDeps": {
+          "brand-identity": [
+            "Brand guidelines master document",
+            "Tone of voice guide"
+          ],
+          "market-intelligence": [
+            "Buyer personas — SMB",
+            "Buyer personas — Enterprise",
+            "Buyer personas — Public Sector",
+            "Market profile — Sweden",
+            "Market profile — Norway",
+            "Market profile — Finland",
+            "Market profile — Denmark",
+            "Market profile — Netherlands",
+            "Market profile — Belgium",
+            "Industry trends & terminology",
+            "Seasonal patterns",
+            "Customer segmentation model"
+          ],
+          "product-offer": [
+            "Product catalog (full)",
+            "Value propositions per category",
+            "Service offerings",
+            "Promotional offers",
+            "Cross-sell / upsell mappings"
+          ],
+          "channel-params": [
+            "META ad specs",
+            "LinkedIn ad specs",
+            "Google Ads specs",
+            "Email template specs",
+            "Dustin site page specs",
+            "Banner specs",
+            "Landing page specs"
+          ],
+          "performance": [
+            "Campaign performance history",
+            "Channel benchmarks",
+            "A/B test results",
+            "Seasonal performance patterns",
+            "Content performance"
+          ],
+          "templates": [
+            "Email templates",
+            "Landing page templates",
+            "Banner templates",
+            "Social media templates",
+            "Article / guide templates"
+          ],
+          "guardrails": [
+            "Marketing legal disclaimers",
+            "Environmental / sustainability claims",
+            "Competitor mention policy"
+          ]
+        }
       },
       {
         "id": "channel-publisher",
@@ -686,7 +759,11 @@
         "title": "Copy Generator",
         "icon": "✍️",
         "subtitle": "Context-driven multi-channel copy creation",
-        "description": "8-agent copy generation system. Creates net new copy for any channel from a brief. Channel Parameters and Brand Identity drive tone, format, and specs — one tool, many outputs.",
+        "description": "7-agent copy generation system. Creates net new copy for any channel from a brief. Uses Researcher for fact-gathering and context enrichment. Channel Parameters and Brand Identity drive tone, format, and specs — one tool, many outputs. Outputs are passed to Copy QA for quality scoring and rewriting.",
+        "toolDeps": [
+          "researcher",
+          "copy-qa"
+        ],
         "roleType": "agent",
         "accessTags": [
           "human",
@@ -739,14 +816,7 @@
             "id": "banner-copy-agent",
             "title": "Banner Copy Agent",
             "icon": "🖼️",
-            "description": "Produces display banner headlines and CTAs per IAB specs and Bannerflow Channel Parameters.",
-            "subAgents": []
-          },
-          {
-            "id": "copy-gen-qa",
-            "title": "Copy QA Agent",
-            "icon": "📝",
-            "description": "Calls Copy QA internally to score all channel outputs across 5 quality dimensions. Triggers the Editor (S1) and Rewriter (S2) loop until quality threshold is met.",
+            "description": "Produces display banner headlines and CTAs per IAB specs and Banner Channel Parameters.",
             "subAgents": []
           }
         ],
@@ -756,15 +826,71 @@
           "product-offer",
           "channel-params",
           "templates",
-          "performance"
-        ]
+          "performance",
+          "guardrails"
+        ],
+        "knowledgeItemDeps": {
+          "brand-identity": [
+            "Brand guidelines master document",
+            "Tone of voice guide",
+            "Brand voice examples"
+          ],
+          "market-intelligence": [
+            "Buyer personas — SMB",
+            "Buyer personas — Enterprise",
+            "Buyer personas — Public Sector",
+            "Market profile — Sweden",
+            "Market profile — Norway",
+            "Market profile — Finland",
+            "Market profile — Denmark",
+            "Market profile — Netherlands",
+            "Market profile — Belgium",
+            "Customer segmentation model"
+          ],
+          "product-offer": [
+            "Product catalog (full)",
+            "Value propositions per category",
+            "Service offerings",
+            "Promotional offers"
+          ],
+          "channel-params": [
+            "META ad specs",
+            "LinkedIn ad specs",
+            "Google Ads specs",
+            "Email template specs",
+            "Dustin site page specs",
+            "Banner specs",
+            "Landing page specs"
+          ],
+          "templates": [
+            "Email templates",
+            "Landing page templates",
+            "Banner templates",
+            "Social media templates",
+            "Article / guide templates"
+          ],
+          "performance": [
+            "Campaign performance history",
+            "Channel benchmarks",
+            "A/B test results",
+            "Content performance"
+          ],
+          "guardrails": [
+            "GDPR compliance rules",
+            "Marketing legal disclaimers",
+            "Environmental / sustainability claims",
+            "Competitor mention policy",
+            "Pricing display rules",
+            "AI disclosure requirements"
+          ]
+        }
       },
       {
         "id": "copy-qa",
         "title": "Copy QA",
         "icon": "📝",
         "subtitle": "Multi-dimensional copy quality assurance",
-        "description": "6-agent copy quality system. Checks grammar, brand voice, factual accuracy, tone, and legal compliance, then Synthesis combines scores. The tool's built-in editorial engine (S1) produces a verdict and rewrites (S2) until the QA Gate passes.",
+        "description": "10-agent copy quality system. Checks grammar, brand voice, factual accuracy, audience fit, legal compliance, and format validation, then Synthesis combines scores. The Editor (S1) produces a holistic verdict and the Rewriter (S2) generates alternatives until the QA Gate passes.",
         "roleType": "agent",
         "accessTags": [
           "agent"
@@ -782,7 +908,7 @@
             "id": "brand-voice-compliance",
             "title": "Brand Voice Agent",
             "icon": "🗣️",
-            "description": "Shared sub-agent (S11). Checks tone of voice against Brand Identity approved examples.",
+            "description": "Shared sub-agent (S11). Maps to MQM Style dimension. Validates tone of voice and brand voice consistency against Brand Identity approved examples and Channel Parameters.",
             "subAgents": [],
             "sharedId": "S11"
           },
@@ -810,6 +936,14 @@
             "sharedId": "S12"
           },
           {
+            "id": "copy-qa-format",
+            "title": "Format Validation Agent",
+            "icon": "📐",
+            "description": "Shared sub-agent (S6). Maps to MQM Design & Markup dimension. Validates character limits, markup rules, and channel-specific format specs from Channel Parameters.",
+            "subAgents": [],
+            "sharedId": "S6"
+          },
+          {
             "id": "copy-qa-synthesis",
             "title": "Synthesis Agent",
             "icon": "🧮",
@@ -818,19 +952,72 @@
             "sharedId": "S3"
           },
           {
+            "id": "copy-qa-editor",
+            "title": "Editor Agent",
+            "icon": "📋",
+            "description": "Shared sub-agent (S1). Synthesizes reports from all dimension agents into a holistic editorial verdict. Prioritizes errors by severity and applies customizable dimension weighting.",
+            "subAgents": [],
+            "sharedId": "S1"
+          },
+          {
+            "id": "copy-qa-rewriter",
+            "title": "Rewriter Agent",
+            "icon": "✏️",
+            "description": "Shared sub-agent (S2). Generates alternative copy versions to address identified errors. Produces multiple candidates for the quality loop to reassess.",
+            "subAgents": [],
+            "sharedId": "S2"
+          },
+          {
             "id": "copy-qa-gate",
             "title": "QA Gate Agent",
             "icon": "✅",
-            "sharedId": "S8",
             "description": "Shared sub-agent (S8). Final pass/fail gate — loops back to Editor if threshold not met.",
-            "subAgents": []
+            "subAgents": [],
+            "sharedId": "S8"
           }
         ],
         "knowledgeDeps": [
           "brand-identity",
-          "guardrails",
-          "product-offer"
-        ]
+          "market-intelligence",
+          "product-offer",
+          "channel-params",
+          "guardrails"
+        ],
+        "knowledgeItemDeps": {
+          "brand-identity": [
+            "Brand guidelines master document",
+            "Tone of voice guide",
+            "Brand voice examples"
+          ],
+          "market-intelligence": [
+            "Buyer personas — SMB",
+            "Buyer personas — Enterprise",
+            "Buyer personas — Public Sector",
+            "Customer segmentation model"
+          ],
+          "product-offer": [
+            "Product catalog (full)",
+            "Value propositions per category",
+            "Pricing & availability"
+          ],
+          "channel-params": [
+            "META ad specs",
+            "LinkedIn ad specs",
+            "Google Ads specs",
+            "Email template specs",
+            "Dustin site page specs",
+            "Banner specs",
+            "Landing page specs"
+          ],
+          "guardrails": [
+            "GDPR compliance rules",
+            "Marketing legal disclaimers",
+            "Environmental / sustainability claims",
+            "Competitor mention policy",
+            "Pricing display rules",
+            "AI disclosure requirements"
+          ]
+        }
       },
       {
         "id": "copy-repurposing",
@@ -1601,7 +1788,6 @@
           "translation-tool",
           "video-localization",
           "copy-qa",
-          "copy-generator",
           "copy-repurposing"
         ],
         "knowledgeDeps": [
@@ -1620,7 +1806,6 @@
           "translation-tool",
           "video-localization",
           "copy-qa",
-          "copy-generator",
           "copy-repurposing"
         ],
         "knowledgeDeps": [
@@ -1684,7 +1869,8 @@
         "usedBy": [
           "translation-tool",
           "image-qa",
-          "video-qa"
+          "video-qa",
+          "copy-qa"
         ],
         "knowledgeDeps": [
           "channel-params"
@@ -2111,7 +2297,7 @@
         },
         {
           "id": "sw-vp-5",
-          "stepNum": 5,
+          "stepNum": 6,
           "actor": "specialist",
           "title": "Landing Page Specialist",
           "subtitle": "Tools: LP Copy → Photo Gen → Banner Gen → SEO",
@@ -2119,7 +2305,7 @@
         },
         {
           "id": "sw-vp-6",
-          "stepNum": 6,
+          "stepNum": 7,
           "actor": "human",
           "title": "Review Landing Page",
           "subtitle": "Approve page design & CTA flow",
@@ -2127,7 +2313,7 @@
         },
         {
           "id": "sw-vp-7",
-          "stepNum": 7,
+          "stepNum": 4,
           "actor": "specialist",
           "title": "Banner/Display Specialist",
           "subtitle": "Tools: Banner Copy → Banner Gen → Image QA",
@@ -2163,55 +2349,55 @@
           "from": 1,
           "to": 2,
           "color": "human",
-          "label": "Brief"
+          "label": ""
         },
         {
           "from": 2,
           "to": 3,
           "color": "producer",
-          "label": "Newsletter task"
+          "label": ""
         },
         {
           "from": 3,
           "to": 4,
           "color": "specialist",
-          "label": "Draft ready"
+          "label": ""
         },
         {
           "from": 4,
-          "to": 5,
+          "to": 4,
           "color": "human",
-          "label": "Approved → LP"
+          "label": ""
         },
         {
-          "from": 5,
+          "from": 4,
           "to": 6,
           "color": "specialist",
-          "label": "LP ready"
+          "label": ""
         },
         {
           "from": 6,
           "to": 7,
-          "color": "human",
-          "label": "Approved → banners"
+          "color": "specialist",
+          "label": ""
         },
         {
           "from": 7,
           "to": 8,
-          "color": "specialist",
-          "label": "Banners ready → localize"
+          "color": "human",
+          "label": ""
         },
         {
           "from": 8,
           "to": 9,
           "color": "specialist",
-          "label": "Translations done"
+          "label": ""
         },
         {
           "from": 9,
           "to": 10,
           "color": "producer",
-          "label": "Package ready"
+          "label": ""
         }
       ]
     },
